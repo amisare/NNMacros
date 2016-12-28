@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.default_subspec         = 'Core'
 
   s.subspec 'Core' do |ss|
-    sp.source_files         = 'HJMacros/*.{h,m}'
+    ss.source_files         = 'HJMacros/*.{h,m}'
   end
 
 end
