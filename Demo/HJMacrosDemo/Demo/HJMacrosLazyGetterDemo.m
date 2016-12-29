@@ -99,7 +99,7 @@ lazygetter(NSMutableArray, arr_issue_0, {
     /*
     [self.arr_issue_0 addObjectsFromArray:@[@"str_x_0", @"str_x_1"]];
      */
-    //解决方法，在数组外面加上大括号
+    //解决方法，在数组外面加上小括号
     [self.arr_issue_0 addObjectsFromArray:(@[@"arr_objc_0", @"arr_objc_1"])];
 })
 
@@ -113,7 +113,7 @@ lazygetter(NSMutableDictionary, dic_issue_0, {
      [self.dic_issue_0 setValuesForKeysWithDictionary:@{@"key0":@"value0",
                                                         @"key1":@"value1"}];
      */
-    //解决方法，在数组外面加上大括号
+    //解决方法，在数组外面加上小括号
     [self.dic_issue_0 setValuesForKeysWithDictionary:(@{@"key0":@"value0",
                                                         @"key1":@"value1"})];
 })
