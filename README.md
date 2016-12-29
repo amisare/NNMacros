@@ -4,11 +4,11 @@
 - 分享自己在iOS开发中编写和收集有利于开发的OC宏
 
 ### 感谢
-- 宏的可变参数使用`metamacros.h`分析，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)，感谢他们开源了这么优秀的响应式编程框架
+- 宏的可变参数分析由`metamacros.h`实现，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)，感谢他们开源了这么优秀的响应式编程框架
 - demo中屏幕log输出使用[HAMLogOutputWindow](https://github.com/DaiYue/HAMLogOutputWindow)实现😁
 
 ## 宏lazygetter
-lazygetter宏替换了懒加载getter方法中的if判断语句部分，极大的简化了懒加载的书写。
+lazygetter宏替换懒加载getter方法中的if判断语句部分，简化了懒加载的书写，尤其在属性较多时非常有帮助。
 
 ### 示例：
 
