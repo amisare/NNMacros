@@ -8,7 +8,7 @@
 - demo中屏幕log输出使用[HAMLogOutputWindow](https://github.com/DaiYue/HAMLogOutputWindow)实现😁
 
 ## 宏lazygetter
-lazygetter宏替换懒加载getter方法中的if判断语句部分，简化了懒加载的书写，尤其在属性较多时非常有帮助。
+lazygetter宏替换了懒加载getter方法中的if判断部分，简化了懒加载的书写，精简代码，在属性较多时会尤为明显。
 
 ### 示例：
 
