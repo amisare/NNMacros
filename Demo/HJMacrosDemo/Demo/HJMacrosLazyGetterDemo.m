@@ -37,29 +37,29 @@
 - (void)macroTest
 {
     
-    [HAMLogOutputWindow printLogWithFormat:@"lazygetter宏的使用"];
+    HJM_DLog(@"lazygetter宏的使用");
     
-    [HAMLogOutputWindow printLogWithFormat:@"懒加载实例化可变字符串对象"];
+    HJM_DLog(@"懒加载实例化可变字符串对象");
     [self.str_0 appendString:@"str_0"];
     [self.str_1 appendString:@"str_1"];
     [self.str_2 appendString:@"str_2"];
     [self.str_3 appendString:@"str_3"];
     [self.str_4 appendString:@"str_4"];
-    [HAMLogOutputWindow printLogWithFormat:@"%@", self.str_0];
-    [HAMLogOutputWindow printLogWithFormat:@"%@", self.str_1];
-    [HAMLogOutputWindow printLogWithFormat:@"%@", self.str_2];
-    [HAMLogOutputWindow printLogWithFormat:@"%@", self.str_3];
-    [HAMLogOutputWindow printLogWithFormat:@"%@", self.str_4];
+    HJM_DLog(@"%@", self.str_0);
+    HJM_DLog(@"%@", self.str_1);
+    HJM_DLog(@"%@", self.str_2);
+    HJM_DLog(@"%@", self.str_3);
+    HJM_DLog(@"%@", self.str_4);
     
-    [HAMLogOutputWindow printLogWithFormat:@"懒加载实例化可变数组对象"];
+    HJM_DLog(@"懒加载实例化可变数组对象");
     [self.arr_issue_0 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [HAMLogOutputWindow printLogWithFormat:@"%@", obj];
+        HJM_DLog(@"%@", obj);
     }];
     
-    [HAMLogOutputWindow printLogWithFormat:@"懒加载实例化可变字典对象"];
+    HJM_DLog(@"懒加载实例化可变字典对象");
     
     for (NSString *key in [self.dic_issue_0 allKeys]) {
-        [HAMLogOutputWindow printLogWithFormat:@"key:%@,value:%@", key, self.dic_issue_0[key]];
+        HJM_DLog(@"key:%@,value:%@", key, self.dic_issue_0[key]);
     }
 }
 

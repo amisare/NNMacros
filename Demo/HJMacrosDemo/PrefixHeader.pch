@@ -9,7 +9,5 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "HAMLogOutputWindow.h"
-#import "HAMLogOutputWindow+Category.h"
 
 #endif /* PrefixHeader_pch */

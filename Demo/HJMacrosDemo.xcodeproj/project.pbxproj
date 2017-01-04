@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B0663F21E153928001C9B23 /* HJMacrosLazyGetterDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0663F11E153928001C9B23 /* HJMacrosLazyGetterDemo.m */; };
-		8B0663F91E15393F001C9B23 /* HAMLogOutputWindow+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0663F51E15393F001C9B23 /* HAMLogOutputWindow+Category.m */; };
-		8B0663FA1E15393F001C9B23 /* HAMLogOutputWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0663F81E15393F001C9B23 /* HAMLogOutputWindow.m */; };
+		8B825FF91E1CD9150037EA04 /* HJMacrosVersionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B825FF81E1CD9150037EA04 /* HJMacrosVersionDemo.m */; };
 		8BC98E021E13AAB700E416A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E011E13AAB700E416A1 /* main.m */; };
 		8BC98E051E13AAB700E416A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E041E13AAB700E416A1 /* AppDelegate.m */; };
 		8BC98E081E13AAB700E416A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E071E13AAB700E416A1 /* ViewController.m */; };
@@ -41,11 +40,15 @@
 		8B0663EB1E15233F001C9B23 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8B0663F01E153928001C9B23 /* HJMacrosLazyGetterDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosLazyGetterDemo.h; sourceTree = "<group>"; };
 		8B0663F11E153928001C9B23 /* HJMacrosLazyGetterDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosLazyGetterDemo.m; sourceTree = "<group>"; };
-		8B0663F41E15393F001C9B23 /* HAMLogOutputWindow+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HAMLogOutputWindow+Category.h"; sourceTree = "<group>"; };
-		8B0663F51E15393F001C9B23 /* HAMLogOutputWindow+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HAMLogOutputWindow+Category.m"; sourceTree = "<group>"; };
-		8B0663F71E15393F001C9B23 /* HAMLogOutputWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAMLogOutputWindow.h; sourceTree = "<group>"; };
-		8B0663F81E15393F001C9B23 /* HAMLogOutputWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAMLogOutputWindow.m; sourceTree = "<group>"; };
 		8B825FF01E1CA7B70037EA04 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		8B825FF11E1CC3B60037EA04 /* HJMacrosDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosDLog.h; sourceTree = "<group>"; };
+		8B825FF21E1CC4AA0037EA04 /* HJMacrosRGBColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosRGBColor.h; sourceTree = "<group>"; };
+		8B825FF31E1CC6D80037EA04 /* HJMacrosString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosString.h; sourceTree = "<group>"; };
+		8B825FF41E1CCA7F0037EA04 /* HJMacrosSandboxPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosSandboxPath.h; sourceTree = "<group>"; };
+		8B825FF51E1CCCBC0037EA04 /* HJMacrosScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosScreen.h; sourceTree = "<group>"; };
+		8B825FF61E1CD70C0037EA04 /* HJMacrosVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosVersion.h; sourceTree = "<group>"; };
+		8B825FF71E1CD9150037EA04 /* HJMacrosVersionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosVersionDemo.h; sourceTree = "<group>"; };
+		8B825FF81E1CD9150037EA04 /* HJMacrosVersionDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosVersionDemo.m; sourceTree = "<group>"; };
 		8BC98DFD1E13AAB700E416A1 /* HJMacrosDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJMacrosDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC98E011E13AAB700E416A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BC98E031E13AAB700E416A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,27 +99,10 @@
 			children = (
 				8B0663F01E153928001C9B23 /* HJMacrosLazyGetterDemo.h */,
 				8B0663F11E153928001C9B23 /* HJMacrosLazyGetterDemo.m */,
+				8B825FF71E1CD9150037EA04 /* HJMacrosVersionDemo.h */,
+				8B825FF81E1CD9150037EA04 /* HJMacrosVersionDemo.m */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		8B0663F31E15393F001C9B23 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-				8B0663F41E15393F001C9B23 /* HAMLogOutputWindow+Category.h */,
-				8B0663F51E15393F001C9B23 /* HAMLogOutputWindow+Category.m */,
-				8B0663F61E15393F001C9B23 /* LogOutputWindow */,
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
-		8B0663F61E15393F001C9B23 /* LogOutputWindow */ = {
-			isa = PBXGroup;
-			children = (
-				8B0663F71E15393F001C9B23 /* HAMLogOutputWindow.h */,
-				8B0663F81E15393F001C9B23 /* HAMLogOutputWindow.m */,
-			);
-			path = LogOutputWindow;
 			sourceTree = "<group>";
 		};
 		8B825FEF1E1CA7B70037EA04 /* Bases */ = {
@@ -161,7 +147,6 @@
 				8BC98E0E1E13AAB700E416A1 /* LaunchScreen.storyboard */,
 				8BC98E111E13AAB700E416A1 /* Info.plist */,
 				8B0663EB1E15233F001C9B23 /* PrefixHeader.pch */,
-				8B0663F31E15393F001C9B23 /* Vender */,
 				8BC98E001E13AAB700E416A1 /* Supporting Files */,
 			);
 			path = HJMacrosDemo;
@@ -199,6 +184,12 @@
 				8B825FEF1E1CA7B70037EA04 /* Bases */,
 				8BC98E731E13AC4D00E416A1 /* HJMacros.h */,
 				8BC98E741E13AC4D00E416A1 /* HJMacrosLazyGetter.h */,
+				8B825FF21E1CC4AA0037EA04 /* HJMacrosRGBColor.h */,
+				8B825FF11E1CC3B60037EA04 /* HJMacrosDLog.h */,
+				8B825FF31E1CC6D80037EA04 /* HJMacrosString.h */,
+				8B825FF41E1CCA7F0037EA04 /* HJMacrosSandboxPath.h */,
+				8B825FF51E1CCCBC0037EA04 /* HJMacrosScreen.h */,
+				8B825FF61E1CD70C0037EA04 /* HJMacrosVersion.h */,
 			);
 			name = HJMacros;
 			path = ../../HJMacros;
@@ -267,7 +258,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = HaijunGu;
+				ORGANIZATIONNAME = "顾海军";
 				TargetAttributes = {
 					8BC98DFC1E13AAB700E416A1 = {
 						CreatedOnToolsVersion = 8.1;
@@ -340,11 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B825FF91E1CD9150037EA04 /* HJMacrosVersionDemo.m in Sources */,
 				8B0663F21E153928001C9B23 /* HJMacrosLazyGetterDemo.m in Sources */,
 				8BC98E081E13AAB700E416A1 /* ViewController.m in Sources */,
-				8B0663F91E15393F001C9B23 /* HAMLogOutputWindow+Category.m in Sources */,
 				8BC98E051E13AAB700E416A1 /* AppDelegate.m in Sources */,
-				8B0663FA1E15393F001C9B23 /* HAMLogOutputWindow.m in Sources */,
 				8BC98E021E13AAB700E416A1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
