@@ -45,6 +45,7 @@
 		8B0663F51E15393F001C9B23 /* HAMLogOutputWindow+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HAMLogOutputWindow+Category.m"; sourceTree = "<group>"; };
 		8B0663F71E15393F001C9B23 /* HAMLogOutputWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAMLogOutputWindow.h; sourceTree = "<group>"; };
 		8B0663F81E15393F001C9B23 /* HAMLogOutputWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAMLogOutputWindow.m; sourceTree = "<group>"; };
+		8B825FF01E1CA7B70037EA04 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		8BC98DFD1E13AAB700E416A1 /* HJMacrosDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJMacrosDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC98E011E13AAB700E416A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BC98E031E13AAB700E416A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		8BC98E271E13AAB800E416A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BC98E731E13AC4D00E416A1 /* HJMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacros.h; sourceTree = "<group>"; };
 		8BC98E741E13AC4D00E416A1 /* HJMacrosLazyGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosLazyGetter.h; sourceTree = "<group>"; };
-		8BC98E751E13AC4D00E416A1 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +117,14 @@
 				8B0663F81E15393F001C9B23 /* HAMLogOutputWindow.m */,
 			);
 			path = LogOutputWindow;
+			sourceTree = "<group>";
+		};
+		8B825FEF1E1CA7B70037EA04 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				8B825FF01E1CA7B70037EA04 /* metamacros.h */,
+			);
+			path = Bases;
 			sourceTree = "<group>";
 		};
 		8BC98DF41E13AAB700E416A1 = {
@@ -188,9 +196,9 @@
 		8BC98E721E13AC4D00E416A1 /* HJMacros */ = {
 			isa = PBXGroup;
 			children = (
+				8B825FEF1E1CA7B70037EA04 /* Bases */,
 				8BC98E731E13AC4D00E416A1 /* HJMacros.h */,
 				8BC98E741E13AC4D00E416A1 /* HJMacrosLazyGetter.h */,
-				8BC98E751E13AC4D00E416A1 /* metamacros.h */,
 			);
 			name = HJMacros;
 			path = ../../HJMacros;

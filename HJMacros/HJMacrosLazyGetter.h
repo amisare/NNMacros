@@ -74,7 +74,6 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(lazygetterparams2(type, __VA
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
 
-
 #define lazygetterparams4(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
@@ -84,7 +83,6 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(lazygetterparams2(type, __VA
     \
     return metamacro_at(2, __VA_ARGS__);\
 }\
-
 
 
 #endif /* HJMacrosLazyGetter_h */

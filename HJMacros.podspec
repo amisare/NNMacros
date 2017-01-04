@@ -13,14 +13,15 @@ Pod::Spec.new do |s|
   s.social_media_url        = "http://www.jianshu.com/users/9df9f28ff266/latest_articles"
 
   s.source        = { :git => "https://github.com/amisare/HJMacros.git", :tag => s.version }
-  s.requires_arc  = true
   s.ios.deployment_target   = '6.0'
   s.osx.deployment_target   = '10.8'
+  s.requires_arc  = true
+  
+  s.source_files  = 'HJMacros/*.{h,m}'
 
-  s.default_subspec         = 'Core'
-
-  s.subspec 'Core' do |ss|
-    ss.source_files         = 'HJMacros/*.{h,m}'
+  s.default_subspec         = 'Bases'
+  s.subspec 'Bases' do |ss|
+    ss.source_files         = 'HJMacros/Bases/*.{h,m}'
   end
 
 end
