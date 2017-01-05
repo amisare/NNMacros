@@ -9,6 +9,8 @@
 #ifndef HJMacrosDLog_h
 #define HJMacrosDLog_h
 
+#import <CoreGraphics/CoreGraphics.h>
+
 #ifdef DEBUG
 #   define HJM_DLog(fmt, ...)   {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
 #   define HJM_ELog(err)        {if(err) DLog(@"%@", err)}
@@ -16,5 +18,16 @@
 #   define HJM_DLog(...)
 #   define HJM_ELog(err)
 #endif
+
+#define HJM_DlogCG(CG) \
+\
+({\
+    if(sizeof(CG) == sizeof(CGSize)) {\
+    NSLog(@"\n{x = %f y = %f}", ((CGSize *)(&CG))->width, ((CGSize *)(&CG))->height);\
+    }\
+    else if (sizeof(CG) == sizeof(CGRect)) {\
+        NSLog(@"\n{x = %f y = %f\n w = %f h = %f}", ((CGRect *)(&CG))->origin.x, ((CGRect *)(&CG))->origin.x, ((CGRect *)(&CG))->size.width, ((CGRect *)(&CG))->size.height);\
+    }\
+})
 
 #endif /* HJMacrosDLog_h */

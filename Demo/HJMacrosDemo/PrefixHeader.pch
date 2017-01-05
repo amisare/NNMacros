@@ -9,5 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "HJMacros.h"
+
 
 #endif /* PrefixHeader_pch */

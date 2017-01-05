@@ -15,4 +15,10 @@
 #define HJM_StringConst(name, value)        NSString *const name  = value;
 #define HJM_StringStatic(name, value)       static NSString *name = value;
 
+#define HJM_AppName             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+#define HJM_AppVersion          [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define HJM_AppVersionBuild     [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+
+#define HJM_DeviceModel         [[UIDevice currentDevice] model]
+
 #endif /* HJMacrosString_h */

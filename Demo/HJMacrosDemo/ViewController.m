@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "HJMacrosLazyGetterDemo.h"
-#import "HJMacrosVersionDemo.h"
 
 @interface ViewController ()
 
@@ -31,11 +30,23 @@
     HJMacrosLazyGetterDemo *lazyGetterDemo = [HJMacrosLazyGetterDemo new];
     [lazyGetterDemo macroTest];
     
-#pragma mark - HJMacrosVersion宏demo
-    HJMacrosVersionDemo *versionDemo = [HJMacrosVersionDemo new];
-    [versionDemo macroTest];
+    if(HJM_ScreenIs3Dot5inch)
+    {
+        HJM_DLog()
+    }
+//    HJM_DlogCG(CGRectZero);
 }
 
+
+- (void)log:(CGSize)CG
+{
+    if(sizeof(CG) == sizeof(CGSize)) {
+        NSLog(@"{x = %f y = %f}", ((CGSize *)(&CG))->width, ((CGSize *)(&CG))->height);
+    }
+    else if (sizeof(CG) == sizeof(CGRect)) {
+        NSLog(@"{x = %f y = %f\nw = %f h = %f}", ((CGRect *)(&CG))->origin.x, ((CGRect *)(&CG))->origin.x, ((CGRect *)(&CG))->size.width, ((CGRect *)(&CG))->size.height);
+    }
+}
 
 - (void)redirectNotificationHandle:(NSNotification *)notification{
     NSData *data = [[notification userInfo] objectForKey:NSFileHandleNotificationDataItem];

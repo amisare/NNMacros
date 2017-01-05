@@ -7,7 +7,6 @@
 //
 
 #import "HJMacrosLazyGetterDemo.h"
-#import "HJMacros.h"
 
 
 @interface HJMacrosLazyGetterDemo()
@@ -37,7 +36,7 @@
 - (void)macroTest
 {
     
-    HJM_DLog(@"lazygetter宏的使用");
+    HJM_ELog(@"lazygetter宏的使用");
     
     HJM_DLog(@"懒加载实例化可变字符串对象");
     [self.str_0 appendString:@"str_0"];
@@ -52,9 +51,9 @@
     HJM_DLog(@"%@", self.str_4);
     
     HJM_DLog(@"懒加载实例化可变数组对象");
-    [self.arr_issue_0 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        HJM_DLog(@"%@", obj);
-    }];
+//    [self.arr_issue_0 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+////        HJM_DLog(@"%@", obj);
+//    }];
     
     HJM_DLog(@"懒加载实例化可变字典对象");
     
