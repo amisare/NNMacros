@@ -9,6 +9,8 @@
 #ifndef HJMacros_h
 #define HJMacros_h
 
+
+
 #import "HJMacrosLazyGetter.h"
 #import "HJMacrosRGBColor.h"
 #import "HJMacrosDLog.h"
@@ -16,5 +18,8 @@
 #import "HJMacrosSandboxPath.h"
 #import "HJMacrosScreen.h"
 #import "HJMacrosVersion.h"
+
+
+
 
 #endif /* HJMacros_h */
