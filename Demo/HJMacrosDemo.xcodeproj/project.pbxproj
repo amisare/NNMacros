@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8B0663F21E153928001C9B23 /* HJMacrosLazyGetterDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0663F11E153928001C9B23 /* HJMacrosLazyGetterDemo.m */; };
+		8B8260151E1F307F0037EA04 /* HJMacrosSandboxPathDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260141E1F307F0037EA04 /* HJMacrosSandboxPathDemo.m */; };
+		8B8260181E1F30B80037EA04 /* HJMacrosScreenDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260171E1F30B80037EA04 /* HJMacrosScreenDemo.m */; };
+		8B82601B1E1F30ED0037EA04 /* HJMacrosAppDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B82601A1E1F30ED0037EA04 /* HJMacrosAppDemo.m */; };
+		8B82601E1E1F31190037EA04 /* HJMacrosStringDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B82601D1E1F31190037EA04 /* HJMacrosStringDemo.m */; };
+		8B8260221E1F73840037EA04 /* HJMacrosDeviceDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260211E1F73840037EA04 /* HJMacrosDeviceDemo.m */; };
+		8B8260251E1F9F140037EA04 /* HJM_NSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260231E1F9F140037EA04 /* HJM_NSLog.m */; };
 		8BC98E021E13AAB700E416A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E011E13AAB700E416A1 /* main.m */; };
 		8BC98E051E13AAB700E416A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E041E13AAB700E416A1 /* AppDelegate.m */; };
 		8BC98E081E13AAB700E416A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E071E13AAB700E416A1 /* ViewController.m */; };
@@ -45,6 +51,22 @@
 		8B825FF31E1CC6D80037EA04 /* HJMacrosString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosString.h; sourceTree = "<group>"; };
 		8B825FF41E1CCA7F0037EA04 /* HJMacrosSandboxPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosSandboxPath.h; sourceTree = "<group>"; };
 		8B825FF51E1CCCBC0037EA04 /* HJMacrosScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosScreen.h; sourceTree = "<group>"; };
+		8B82600C1E1F2AB10037EA04 /* HJMacrosApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosApp.h; sourceTree = "<group>"; };
+		8B82600D1E1F2AC40037EA04 /* HJMacrosDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosDevice.h; sourceTree = "<group>"; };
+		8B8260121E1F301D0037EA04 /* HJMacrosShortHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosShortHead.h; sourceTree = "<group>"; };
+		8B8260131E1F307F0037EA04 /* HJMacrosSandboxPathDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosSandboxPathDemo.h; sourceTree = "<group>"; };
+		8B8260141E1F307F0037EA04 /* HJMacrosSandboxPathDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosSandboxPathDemo.m; sourceTree = "<group>"; };
+		8B8260161E1F30B80037EA04 /* HJMacrosScreenDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosScreenDemo.h; sourceTree = "<group>"; };
+		8B8260171E1F30B80037EA04 /* HJMacrosScreenDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosScreenDemo.m; sourceTree = "<group>"; };
+		8B8260191E1F30ED0037EA04 /* HJMacrosAppDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosAppDemo.h; sourceTree = "<group>"; };
+		8B82601A1E1F30ED0037EA04 /* HJMacrosAppDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosAppDemo.m; sourceTree = "<group>"; };
+		8B82601C1E1F31190037EA04 /* HJMacrosStringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosStringDemo.h; sourceTree = "<group>"; };
+		8B82601D1E1F31190037EA04 /* HJMacrosStringDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosStringDemo.m; sourceTree = "<group>"; };
+		8B82601F1E1F4E700037EA04 /* HJMacrosDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosDemo.h; sourceTree = "<group>"; };
+		8B8260201E1F73840037EA04 /* HJMacrosDeviceDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosDeviceDemo.h; sourceTree = "<group>"; };
+		8B8260211E1F73840037EA04 /* HJMacrosDeviceDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosDeviceDemo.m; sourceTree = "<group>"; };
+		8B8260231E1F9F140037EA04 /* HJM_NSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HJM_NSLog.m; path = Bases/HJM_NSLog.m; sourceTree = "<group>"; };
+		8B8260241E1F9F140037EA04 /* HJM_NSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HJM_NSLog.h; path = Bases/HJM_NSLog.h; sourceTree = "<group>"; };
 		8BC98DFD1E13AAB700E416A1 /* HJMacrosDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJMacrosDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC98E011E13AAB700E416A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BC98E031E13AAB700E416A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,8 +115,20 @@
 		8B0663EF1E153928001C9B23 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				8B8260121E1F301D0037EA04 /* HJMacrosShortHead.h */,
+				8B82601F1E1F4E700037EA04 /* HJMacrosDemo.h */,
 				8B0663F01E153928001C9B23 /* HJMacrosLazyGetterDemo.h */,
 				8B0663F11E153928001C9B23 /* HJMacrosLazyGetterDemo.m */,
+				8B82601C1E1F31190037EA04 /* HJMacrosStringDemo.h */,
+				8B82601D1E1F31190037EA04 /* HJMacrosStringDemo.m */,
+				8B8260131E1F307F0037EA04 /* HJMacrosSandboxPathDemo.h */,
+				8B8260141E1F307F0037EA04 /* HJMacrosSandboxPathDemo.m */,
+				8B8260191E1F30ED0037EA04 /* HJMacrosAppDemo.h */,
+				8B82601A1E1F30ED0037EA04 /* HJMacrosAppDemo.m */,
+				8B8260201E1F73840037EA04 /* HJMacrosDeviceDemo.h */,
+				8B8260211E1F73840037EA04 /* HJMacrosDeviceDemo.m */,
+				8B8260161E1F30B80037EA04 /* HJMacrosScreenDemo.h */,
+				8B8260171E1F30B80037EA04 /* HJMacrosScreenDemo.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -132,10 +166,10 @@
 			children = (
 				8BC98E721E13AC4D00E416A1 /* HJMacros */,
 				8B0663EF1E153928001C9B23 /* Demo */,
-				8BC98E031E13AAB700E416A1 /* AppDelegate.h */,
-				8BC98E041E13AAB700E416A1 /* AppDelegate.m */,
 				8BC98E061E13AAB700E416A1 /* ViewController.h */,
 				8BC98E071E13AAB700E416A1 /* ViewController.m */,
+				8BC98E031E13AAB700E416A1 /* AppDelegate.h */,
+				8BC98E041E13AAB700E416A1 /* AppDelegate.m */,
 				8BC98E091E13AAB700E416A1 /* Main.storyboard */,
 				8BC98E0C1E13AAB700E416A1 /* Assets.xcassets */,
 				8BC98E0E1E13AAB700E416A1 /* LaunchScreen.storyboard */,
@@ -177,11 +211,15 @@
 			children = (
 				8B825FEF1E1CA7B70037EA04 /* Bases */,
 				8BC98E731E13AC4D00E416A1 /* HJMacros.h */,
+				8B8260241E1F9F140037EA04 /* HJM_NSLog.h */,
+				8B8260231E1F9F140037EA04 /* HJM_NSLog.m */,
 				8BC98E741E13AC4D00E416A1 /* HJMacrosLazyGetter.h */,
 				8B825FF21E1CC4AA0037EA04 /* HJMacrosRGBColor.h */,
 				8B825FF11E1CC3B60037EA04 /* HJMacrosDLog.h */,
 				8B825FF31E1CC6D80037EA04 /* HJMacrosString.h */,
 				8B825FF41E1CCA7F0037EA04 /* HJMacrosSandboxPath.h */,
+				8B82600C1E1F2AB10037EA04 /* HJMacrosApp.h */,
+				8B82600D1E1F2AC40037EA04 /* HJMacrosDevice.h */,
 				8B825FF51E1CCCBC0037EA04 /* HJMacrosScreen.h */,
 			);
 			name = HJMacros;
@@ -326,8 +364,14 @@
 			files = (
 				8B0663F21E153928001C9B23 /* HJMacrosLazyGetterDemo.m in Sources */,
 				8BC98E081E13AAB700E416A1 /* ViewController.m in Sources */,
+				8B82601E1E1F31190037EA04 /* HJMacrosStringDemo.m in Sources */,
 				8BC98E051E13AAB700E416A1 /* AppDelegate.m in Sources */,
+				8B82601B1E1F30ED0037EA04 /* HJMacrosAppDemo.m in Sources */,
+				8B8260221E1F73840037EA04 /* HJMacrosDeviceDemo.m in Sources */,
+				8B8260251E1F9F140037EA04 /* HJM_NSLog.m in Sources */,
+				8B8260151E1F307F0037EA04 /* HJMacrosSandboxPathDemo.m in Sources */,
 				8BC98E021E13AAB700E416A1 /* main.m in Sources */,
+				8B8260181E1F30B80037EA04 /* HJMacrosScreenDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +444,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -447,6 +492,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

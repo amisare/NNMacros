@@ -10,6 +10,6 @@
 #define PrefixHeader_pch
 
 #import "HJMacros.h"
-
+#import "HJMacrosShortHead.h"
 
 #endif /* PrefixHeader_pch */

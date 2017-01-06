@@ -10,12 +10,12 @@
 #define HJMacrosSandboxPath_h
 
 
-#define HJM_PathHome            NSHomeDirectory()
-#define HJM_PathDocuments       [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
-#define HJM_PathLibrary         [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]
-#define HJM_PathCaches          [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
-#define HJM_PathPreference      [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDoMainMask, YES) firstObject] stringByAppendingString:@"/Preferences"]
-#define HJM_PathTmp             NSTemporaryDirectory()
+#define HJM_PathHome            (NSHomeDirectory())
+#define HJM_PathDocuments       ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject])
+#define HJM_PathLibrary         ([NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject])
+#define HJM_PathCaches          ([NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject])
+#define HJM_PathPreference      ([[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:@"/Preferences"])
+#define HJM_PathTmp             (NSTemporaryDirectory())
 
 
 #endif /* HJMacrosSandboxPath_h */

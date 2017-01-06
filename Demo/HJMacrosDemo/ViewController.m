@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HJMacrosLazyGetterDemo.h"
+#import "HJMacrosDemo.h"
 
 @interface ViewController ()
 
@@ -17,35 +17,44 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.logTextView.text = @"";
     self.logTextView.editable = NO;
     
-    [self redirectSTD:STDOUT_FILENO];
-    [self redirectSTD:STDERR_FILENO];
+//    [self redirectSTD:STDOUT_FILENO];
+//    [self redirectSTD:STDERR_FILENO];
+    
+#define HJMacrosTest(classDemo) \
+{\
+    printf("%s\n", [HJM_Macro2String(classDemo) UTF8String]);\
+    classDemo *demo = [classDemo new];\
+    [demo macroTest];\
+    printf("\n");\
+}\
+
     
 #pragma mark - HJMacrosLazyGetter宏demo
-    HJMacrosLazyGetterDemo *lazyGetterDemo = [HJMacrosLazyGetterDemo new];
-    [lazyGetterDemo macroTest];
+    HJMacrosTest(HJMacrosLazyGetterDemo)
     
-    if(HJM_ScreenIs3Dot5inch)
-    {
-        HJM_DLog()
-    }
-//    HJM_DlogCG(CGRectZero);
-}
-
-
-- (void)log:(CGSize)CG
-{
-    if(sizeof(CG) == sizeof(CGSize)) {
-        NSLog(@"{x = %f y = %f}", ((CGSize *)(&CG))->width, ((CGSize *)(&CG))->height);
-    }
-    else if (sizeof(CG) == sizeof(CGRect)) {
-        NSLog(@"{x = %f y = %f\nw = %f h = %f}", ((CGRect *)(&CG))->origin.x, ((CGRect *)(&CG))->origin.x, ((CGRect *)(&CG))->size.width, ((CGRect *)(&CG))->size.height);
-    }
+    
+#pragma mark - HJMacrosSandboxPathDemo宏demo
+    HJMacrosTest(HJMacrosSandboxPathDemo)
+    
+#pragma mark - HJMacrosStringDemo宏demo
+    HJMacrosTest(HJMacrosStringDemo)
+    
+#pragma mark - HJMacrosAppDemo宏demo
+    HJMacrosTest(HJMacrosAppDemo)
+    
+#pragma mark - HJMacrosDeviceDemo宏demo
+    HJMacrosTest(HJMacrosDeviceDemo)
+    
+#pragma mark - HJMacrosScreenDemo宏demo
+    HJMacrosTest(HJMacrosScreenDemo)
+    
 }
 
 - (void)redirectNotificationHandle:(NSNotification *)notification{
