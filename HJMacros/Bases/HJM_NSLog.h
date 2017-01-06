@@ -10,7 +10,7 @@
 #define HJM_NSLog_h
 
 #include <stdio.h>
-#include <UIKit/UIKit.h>
+#include <Foundation/Foundation.h>
 
 
 void __HJM_NSLog (NSString* format, ...);
