@@ -5,7 +5,6 @@
 
 ### 感谢
 - 宏的可变参数分析由`metamacros.h`实现，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)，感谢他们开源了这么优秀的响应式编程框架
-- demo中屏幕log输出使用[HAMLogOutputWindow](https://github.com/DaiYue/HAMLogOutputWindow)实现😁
 
 ## 宏lazygetter
 lazygetter宏替换了懒加载getter方法中的if判断部分，精简了懒加载书写，对于属性较多的类尤为明显。
