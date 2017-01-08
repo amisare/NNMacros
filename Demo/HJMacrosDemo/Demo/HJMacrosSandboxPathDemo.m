@@ -12,12 +12,12 @@
 
 - (void)macroTest
 {
-    DLog(@"%@", HJM_PathHome);
-    DLog(@"%@", HJM_PathTmp);
-    DLog(@"%@", HJM_PathCaches);
-    DLog(@"%@", HJM_PathLibrary);
-    DLog(@"%@", HJM_PathDocuments);
-    DLog(@"%@", HJM_PathPreference);
+    DLog(@"%@:%@", HJM_Arg2String(HJM_PathHome), HJM_PathHome);
+    DLog(@"%@:%@", HJM_Arg2String(HJM_PathHome), HJM_PathTmp);
+    DLog(@"%@:%@", HJM_Arg2String(HJM_PathHome), HJM_PathCaches);
+    DLog(@"%@:%@", HJM_Arg2String(HJM_PathHome), HJM_PathLibrary);
+    DLog(@"%@:%@", HJM_Arg2String(HJM_PathHome), HJM_PathDocuments);
+    DLog(@"%@:%@", HJM_Arg2String(HJM_PathHome), HJM_PathPreference);
 }
 
 @end

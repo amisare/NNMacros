@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
 
   s.source        = { :git => "https://github.com/amisare/HJMacros.git", :tag => s.version }
   s.ios.deployment_target   = '6.0'
-  s.osx.deployment_target   = '10.8'
   s.requires_arc  = true
 
   s.source_files  = 'HJMacros/*.{h,m}'

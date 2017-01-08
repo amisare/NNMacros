@@ -51,12 +51,11 @@
     DLog(@"%@", self.str_4);
     
     DLog(@"懒加载实例化可变数组对象");
-//    [self.arr_issue_0 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-////        HJM_DLog(@"%@", obj);
-//    }];
+    for (NSString *value in self.arr_issue_0) {
+        DLog(@"value:%@", value);
+    }
     
     DLog(@"懒加载实例化可变字典对象");
-    
     for (NSString *key in [self.dic_issue_0 allKeys]) {
         DLog(@"key:%@,value:%@", key, self.dic_issue_0[key]);
     }

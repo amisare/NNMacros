@@ -22,8 +22,8 @@ typedef struct HJM_NSLogFormate HJM_NSLogFormateDef;
 struct HJM_NSLogFormate {
     BOOL hasDate;
     BOOL hasProcessName;
-    BOOL hasThreadID;
     BOOL hasPID;
+    BOOL hasThreadID;
     BOOL hasPrettyFunction;
     BOOL hasFileName;
     BOOL hasLine;

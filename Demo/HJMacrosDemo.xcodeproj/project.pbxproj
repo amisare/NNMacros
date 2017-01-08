@@ -13,7 +13,7 @@
 		8B82601B1E1F30ED0037EA04 /* HJMacrosAppDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B82601A1E1F30ED0037EA04 /* HJMacrosAppDemo.m */; };
 		8B82601E1E1F31190037EA04 /* HJMacrosStringDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B82601D1E1F31190037EA04 /* HJMacrosStringDemo.m */; };
 		8B8260221E1F73840037EA04 /* HJMacrosDeviceDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260211E1F73840037EA04 /* HJMacrosDeviceDemo.m */; };
-		8B8260251E1F9F140037EA04 /* HJM_NSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260231E1F9F140037EA04 /* HJM_NSLog.m */; };
+		8B8260281E21CD360037EA04 /* HJM_NSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260271E21CD360037EA04 /* HJM_NSLog.m */; };
 		8BC98E021E13AAB700E416A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E011E13AAB700E416A1 /* main.m */; };
 		8BC98E051E13AAB700E416A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E041E13AAB700E416A1 /* AppDelegate.m */; };
 		8BC98E081E13AAB700E416A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC98E071E13AAB700E416A1 /* ViewController.m */; };
@@ -65,8 +65,8 @@
 		8B82601F1E1F4E700037EA04 /* HJMacrosDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosDemo.h; sourceTree = "<group>"; };
 		8B8260201E1F73840037EA04 /* HJMacrosDeviceDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosDeviceDemo.h; sourceTree = "<group>"; };
 		8B8260211E1F73840037EA04 /* HJMacrosDeviceDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMacrosDeviceDemo.m; sourceTree = "<group>"; };
-		8B8260231E1F9F140037EA04 /* HJM_NSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HJM_NSLog.m; path = Bases/HJM_NSLog.m; sourceTree = "<group>"; };
-		8B8260241E1F9F140037EA04 /* HJM_NSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HJM_NSLog.h; path = Bases/HJM_NSLog.h; sourceTree = "<group>"; };
+		8B8260261E21CD360037EA04 /* HJM_NSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HJM_NSLog.h; path = Bases/HJM_NSLog.h; sourceTree = "<group>"; };
+		8B8260271E21CD360037EA04 /* HJM_NSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HJM_NSLog.m; path = Bases/HJM_NSLog.m; sourceTree = "<group>"; };
 		8BC98DFD1E13AAB700E416A1 /* HJMacrosDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJMacrosDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC98E011E13AAB700E416A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BC98E031E13AAB700E416A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -210,9 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				8B825FEF1E1CA7B70037EA04 /* Bases */,
+				8B8260261E21CD360037EA04 /* HJM_NSLog.h */,
+				8B8260271E21CD360037EA04 /* HJM_NSLog.m */,
 				8BC98E731E13AC4D00E416A1 /* HJMacros.h */,
-				8B8260241E1F9F140037EA04 /* HJM_NSLog.h */,
-				8B8260231E1F9F140037EA04 /* HJM_NSLog.m */,
 				8BC98E741E13AC4D00E416A1 /* HJMacrosLazyGetter.h */,
 				8B825FF21E1CC4AA0037EA04 /* HJMacrosRGBColor.h */,
 				8B825FF11E1CC3B60037EA04 /* HJMacrosDLog.h */,
@@ -363,12 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0663F21E153928001C9B23 /* HJMacrosLazyGetterDemo.m in Sources */,
+				8B8260281E21CD360037EA04 /* HJM_NSLog.m in Sources */,
 				8BC98E081E13AAB700E416A1 /* ViewController.m in Sources */,
 				8B82601E1E1F31190037EA04 /* HJMacrosStringDemo.m in Sources */,
 				8BC98E051E13AAB700E416A1 /* AppDelegate.m in Sources */,
 				8B82601B1E1F30ED0037EA04 /* HJMacrosAppDemo.m in Sources */,
 				8B8260221E1F73840037EA04 /* HJMacrosDeviceDemo.m in Sources */,
-				8B8260251E1F9F140037EA04 /* HJM_NSLog.m in Sources */,
 				8B8260151E1F307F0037EA04 /* HJMacrosSandboxPathDemo.m in Sources */,
 				8BC98E021E13AAB700E416A1 /* main.m in Sources */,
 				8B8260181E1F30B80037EA04 /* HJMacrosScreenDemo.m in Sources */,
