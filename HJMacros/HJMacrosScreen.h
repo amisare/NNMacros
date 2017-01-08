@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 
-#define HJM_Window                   ([[[UIApplication sharedApplication] delegate] window])
+#define HJM_KeyWindow                ([[[UIApplication sharedApplication] delegate] window])
 
 #define HJM_ScreenWidth              ([UIScreen mainScreen].bounds.size.width)
 #define HJM_ScreenHeight             ([UIScreen mainScreen].bounds.size.height)
