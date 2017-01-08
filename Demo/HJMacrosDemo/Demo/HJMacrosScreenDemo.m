@@ -17,11 +17,10 @@
     DLog(@"%@", NSStringFromCGRect(HJM_ScreenBounds));
     DLog(@"%@", NSStringFromCGSize(HJM_ScreenSize));
     
-    DLog(@"%@ = %@", HJM_Macro2String(HJM_ScreenIs3Dot5inch), HJM_ScreenIs3Dot5inch ? @"YES" : @"NO");
-    DLog(@"%@ = %@", HJM_Macro2String(HJM_ScreenIs4inch),     HJM_ScreenIs4inch ? @"YES" : @"NO");
-    DLog(@"%@ = %@", HJM_Macro2String(HJM_ScreenIs4Dot7inch), HJM_ScreenIs4Dot7inch ? @"YES" : @"NO");
-    DLog(@"%@ = %@", HJM_Macro2String(HJM_ScreenIs5Dot5inch), HJM_ScreenIs5Dot5inch ? @"YES" : @"NO");
-    
+    DLog(@"%@ = %@", HJM_Arg2String(HJM_ScreenIs3Dot5inch), HJM_ScreenIs3Dot5inch ? @"YES" : @"NO");
+    DLog(@"%@ = %@", HJM_Arg2String(HJM_ScreenIs4inch),     HJM_ScreenIs4inch ? @"YES" : @"NO");
+    DLog(@"%@ = %@", HJM_Arg2String(HJM_ScreenIs4Dot7inch), HJM_ScreenIs4Dot7inch ? @"YES" : @"NO");
+    DLog(@"%@ = %@", HJM_Arg2String(HJM_ScreenIs5Dot5inch), HJM_ScreenIs5Dot5inch ? @"YES" : @"NO");
 }
 
 

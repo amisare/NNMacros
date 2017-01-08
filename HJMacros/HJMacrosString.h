@@ -9,7 +9,7 @@
 #ifndef HJMacrosString_h
 #define HJMacrosString_h
 
-#define HJM_Macro2String(macro)             @(#macro)
+#define HJM_Arg2String(macro)             @(#macro)
 
 #define HJM_StringConst(name, value)        NSString *const name  = value;
 #define HJM_StringStatic(name, value)       static NSString *name = value;

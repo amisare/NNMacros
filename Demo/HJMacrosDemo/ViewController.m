@@ -24,12 +24,17 @@
     self.logTextView.text = @"";
     self.logTextView.editable = NO;
     
-//    [self redirectSTD:STDOUT_FILENO];
-//    [self redirectSTD:STDERR_FILENO];
+    HJM_NSLogFormate.hasDate = NO;
+    HJM_NSLogFormate.hasProcessName = NO;
+    HJM_NSLogFormate.hasPID = NO;
+    HJM_NSLogFormate.hasThreadID = NO;
+    
+    [self redirectSTD:STDOUT_FILENO];
+    [self redirectSTD:STDERR_FILENO];
     
 #define HJMacrosTest(classDemo) \
 {\
-    printf("%s\n", [HJM_Macro2String(classDemo) UTF8String]);\
+    printf("%s\n", [HJM_Arg2String(classDemo) UTF8String]);\
     classDemo *demo = [classDemo new];\
     [demo macroTest];\
     printf("\n");\
@@ -61,7 +66,7 @@
     NSData *data = [[notification userInfo] objectForKey:NSFileHandleNotificationDataItem];
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
-    self.logTextView.text = [NSString stringWithFormat:@"%@\n%@",self.logTextView.text, str];
+    self.logTextView.text = [NSString stringWithFormat:@"%@%@",self.logTextView.text, str];
     NSRange range;
     range.location = [self.logTextView.text length] - 1;
     range.length = 0;

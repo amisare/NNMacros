@@ -11,11 +11,9 @@
 
 #import "HJM_NSLog.h"
 
-#define USE_HJM_NSLog
-
 #ifdef DEBUG
 
-#ifdef USE_HJM_NSLog
+#ifdef HJM_USE_HJM_NSLOG
 #   define HJM_DLog(format, ...)   {HJM_NSLog(format, ##__VA_ARGS__);}
 #   define HJM_ELog(err)           {if(err) HJM_DLog(@"%@", err)}
 #else
