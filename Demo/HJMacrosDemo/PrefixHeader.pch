@@ -9,8 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define HJM_USE_HJM_NSLOG
-
 #import "HJMacros.h"
 #import "HJMacrosShortHead.h"
 

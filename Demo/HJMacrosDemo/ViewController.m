@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    HJM_DLOG_USE_HJM_NSLOG
+    
     self.logTextView.text = @"";
     self.logTextView.editable = NO;
     
@@ -40,10 +42,8 @@
     printf("\n");\
 }\
 
-    
 #pragma mark - HJMacrosLazyGetter宏demo
     HJMacrosTest(HJMacrosLazyGetterDemo)
-    
     
 #pragma mark - HJMacrosSandboxPathDemo宏demo
     HJMacrosTest(HJMacrosSandboxPathDemo)
