@@ -18,8 +18,8 @@
 #define HJM_StringConnect(str, ...) \
 metamacro_concat(HJM_StringConnect, metamacro_argcount(__VA_ARGS__))(str, __VA_ARGS__)
 
-//#define HJM_StringConnect1(str0, str1)      @""str0""str1""
-#define HJM_StringConnect1(str0, str1)      (str0 str1)
+//#define HJM_StringConnect1(str0, str1)      (str0 str1)
+#define HJM_StringConnect1(str0, str1)      @""str0""str1""
 #define HJM_StringConnect2(str0, str1, str2)      @""str0""str1""str2""
 #define HJM_StringConnect3(str0, str1, str2, str3)      @""str0""str1""str2""str3""
 #define HJM_StringConnect4(str0, str1, str2, str3, str4)      @""str0""str1""str2""str3""str4""
