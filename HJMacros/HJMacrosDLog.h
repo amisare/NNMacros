@@ -43,8 +43,12 @@
 
 
 #else
-#   define HJM_DLog(...)
-#   define HJM_ELog(err)
+
+#define HJM_DLOG_USE_NSLOG
+#define HJM_DLOG_USE_HJM_NSLOG
+#define HJM_DLog(format, ...)
+#define HJM_ELog(err)
+
 #endif
 
 
