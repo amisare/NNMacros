@@ -1,10 +1,13 @@
 ## HJMacros
 
 ### 目的
-- 分享自己在iOS开发中编写和收集有利于开发的OC宏
+- HJMacros通过宏的方式来简化iOS开发中OC的语法和Api的操作
 
 ### 感谢
-- 宏的可变参数分析由`metamacros.h`实现，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)，感谢他们开源了这么优秀的响应式编程框架
+- [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+宏的可变参数分析使用`metamacros.h`实现，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)。
+- [P99](http://p99.gforge.inria.fr/)
+`metamacros.h`中提到，其部分实现的灵感来自于[P99](http://p99.gforge.inria.fr/)。
 
 ## 宏lazygetter
 lazygetter宏替换了懒加载getter方法中的if判断部分，精简了懒加载书写，对于属性较多的类尤为明显。

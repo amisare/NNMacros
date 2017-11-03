@@ -13,6 +13,7 @@
 # include "metamacros.h"
 #endif
 
+
 /***************************************************
  懒加载
  ***************************************************/
@@ -28,16 +29,12 @@
 
  case1:
  lazygetter(NSString, name, {
-
     _name = @"name";
-
  })
 
  case2:
  lazygetter(NSString, name, {
-
     self->name = @"name";
-
  }, self->name)
 
  */

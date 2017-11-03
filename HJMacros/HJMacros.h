@@ -20,5 +20,7 @@
 #import "HJMacrosDevice.h"
 #import "HJMacrosScreen.h"
 
+#import "HJMacrosScrollViewAdjustment.h"
+
 
 #endif /* HJMacros_h */

@@ -1,6 +1,6 @@
 //
 //  HJMacrosScreen.h
-//  HJMacrosDemo
+//  HJMacros
 //
 //  Created by 顾海军 on 2017/1/4.
 //  Copyright © 2017年 顾海军. All rights reserved.
@@ -31,9 +31,10 @@
     isZoomed;\
 }\
 
-#define	HJM_ScreenIs3Dot5inch	CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size)
-#define	HJM_ScreenIs4inch       CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)
-#define	HJM_ScreenIs4Dot7inch	CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size)
-#define	HJM_ScreenIs5Dot5inch	CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs3Dot5inch   CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs4inch       CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs4Dot7inch   CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs5Dot5inch   CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs5Dot8inch   CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size)
 
 #endif /* HJMacrosScreen_h */
