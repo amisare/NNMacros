@@ -36,12 +36,12 @@ lazygetter(UITableView, tableView)
 
 #### 安装：
 
-#####手动安装
+##### 手动安装
 
 - 添加HJMacros目录到项目中
 - `#import "HJMacros.h"`
 
-#####CocoaPods
+##### CocoaPods
 
 - `pod 'HJMacros'`
 - `#import <HJMacros.h>`
@@ -112,7 +112,7 @@ lazygetter(UIImageView, imageView, {
 }
 ```
 
-##### 使用中会遇到的问题及处理：
+#### 使用中会遇到的问题及处理：
 
 在使用数组和字典中会遇编译错误的情况（其实是同一类问题）
 
@@ -137,7 +137,6 @@ lazygetter(NSMutableArray, arr_issue_0, {
     [self.arr_issue_0 addObjectsFromArray:(@[@"arr_objc_0", @"arr_objc_1"])];
 })
 ```
-
 
 2. 使用字典时遇到的问题及处理
     
