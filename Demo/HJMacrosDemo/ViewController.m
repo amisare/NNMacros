@@ -9,6 +9,34 @@
 #import "ViewController.h"
 #import "HJMacrosDemo.h"
 
+@interface ViewController (CategroySynthesize)
+
+@property (nonatomic, strong) NSString *string;
+@property (nonatomic, weak) id weakId;
+@property (nonatomic, assign) NSInteger iValue;
+
+@property (nonatomic, strong) NSString *string1;
+@property (nonatomic, weak) id weakId1;
+@property (nonatomic, assign) NSInteger iValue1;
+
+@end
+
+
+@implementation ViewController (CategroySynthesize)
+
+categorygetter(nonatomic, strong, NSString *, string)
+categorysetter(nonatomic, strong, NSString *, setString)
+categorygetter(nonatomic, weak, id, weakId)
+categorysetter(nonatomic, weak, id, setWeakId)
+categorygetter(nonatomic, assign, NSInteger, iValue);
+categorysetter(nonatomic, assign, NSInteger, setIValue);
+
+categorysynthesize(nonatomic, strong, NSString *, string1, setString1)
+categorysynthesize(nonatomic, weak, id, weakId1, setWeakId1)
+categorysynthesize(nonatomic, assign, NSInteger, iValue1, setIValue1)
+
+@end
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextView *logTextView;

@@ -11,6 +11,7 @@
 
 
 #import "HJMacrosLazyGetter.h"
+#import "HJMacrosCategorySynthesize.h"
 #import "HJMacrosRGBColor.h"
 #import "HJMacrosDLog.h"
 #import "HJMacrosString.h"

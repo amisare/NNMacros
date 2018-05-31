@@ -42,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6737431720BE8F7400C200B8 /* HJMacrosCategorySynthesize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosCategorySynthesize.h; sourceTree = "<group>"; };
+		6737432420BF8F6800C200B8 /* HJMacrosCategoryGetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosCategoryGetter.h; sourceTree = "<group>"; };
+		6737432520BFCCF100C200B8 /* HJMacrosCategorySetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosCategorySetter.h; sourceTree = "<group>"; };
 		67719D781FAC5112005DD126 /* HJMacrosScrollViewAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJMacrosScrollViewAdjustment.h; sourceTree = "<group>"; };
 		8B0663EB1E15233F001C9B23 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8B0663F01E153928001C9B23 /* HJMacrosLazyGetterDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMacrosLazyGetterDemo.h; sourceTree = "<group>"; };
@@ -215,6 +218,9 @@
 				8B825FEF1E1CA7B70037EA04 /* Bases */,
 				8BC98E731E13AC4D00E416A1 /* HJMacros.h */,
 				8BC98E741E13AC4D00E416A1 /* HJMacrosLazyGetter.h */,
+				6737431720BE8F7400C200B8 /* HJMacrosCategorySynthesize.h */,
+				6737432420BF8F6800C200B8 /* HJMacrosCategoryGetter.h */,
+				6737432520BFCCF100C200B8 /* HJMacrosCategorySetter.h */,
 				8B825FF21E1CC4AA0037EA04 /* HJMacrosRGBColor.h */,
 				8B825FF11E1CC3B60037EA04 /* HJMacrosDLog.h */,
 				8B825FF31E1CC6D80037EA04 /* HJMacrosString.h */,
