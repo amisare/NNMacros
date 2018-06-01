@@ -41,7 +41,7 @@ lazygetter简写懒加载getter实现
    > param1、param2中间代码段可获取的参数有：
    > - __key: objc_getAssociatedObject中用到的参数key
    > - __obj: objc_getAssociatedObject加载获取的对象
-   > - __ivar: __obj对应处理后getter方法的最终返回值
+   > - __ivar: getter方法最终返回值
 
 3. `categorysetter(atomic_type, arc_type, data_type, ...)`
 	- atomic_type: `nonatomic、atomic`
@@ -53,7 +53,7 @@ lazygetter简写懒加载getter实现
 	
    > param1、param2中间代码段可获取的参数有：
    > - __key: objc_setAssociatedObject中用到的参数key
-   > - __ivar: setter方法传输参数值
+   > - __ivar: setter方法传入参数值
    > - __obj: objc_getAssociatedObject关联保存的对象
 
 ### lazygetter
@@ -299,26 +299,26 @@ lazygetter(UITableView, tableView, {
 }
 ```
 
-### 安装：
+## 安装：
 
-##### 手动安装
+### 手动安装
 
 - 添加HJMacros目录到项目中
 - `#import "HJMacros.h"`
 
-##### CocoaPods
+### CocoaPods
 
 - `pod 'HJMacros'`
 - `#import <HJMacros.h>`
 
 
-### 使用中会遇到的问题及处理：
+## 使用中会遇到的问题及处理：
 
 在使用数组和字典中会遇编译错误的情况（其实是同一类问题）
 
-1. 使用数组时遇到的问题及处理
+##### 使用数组时遇到的问题及处理
 
-    - 在使用@[]数组时，会报编译错误
+- 在使用@[]数组时，会报编译错误
 
 编译错误情景：
 ```
@@ -338,9 +338,9 @@ lazygetter(NSMutableArray, arr_issue_0, {
 })
 ```
 
-2. 使用字典时遇到的问题及处理
+##### 使用字典时遇到的问题及处理
     
-    - 在使用@{}字典时，会报编译错误
+- 在使用@{}字典时，会报编译错误
 
 编译错误情景：
 
