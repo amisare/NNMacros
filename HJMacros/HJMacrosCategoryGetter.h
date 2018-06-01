@@ -13,16 +13,30 @@
 # include "metamacros.h"
 #endif
 
+/***************************************************
+ category getter
+ ***************************************************/
 /*
  atomic_type:   atomic, nonatomic
  arc_type:      assign, strong, copy
  data_type:     属性类型
  param0:        getter方法名
- param1:        hook0
- param2:        hook1
+ param1:        hook_after_load
+ param2:        hook_befor_ret
  */
 
-static inline char categorygetter_ret_encoding(Class cls, SEL sel) {
+#ifndef categorygetter
+
+#pragma mark - getter
+
+#define categorygetter(atomic_type, arc_type, data_type, ...) \
+        metamacro_concat(categorygetter, \
+        metamacro_concat(_, arc_type))\
+        (atomic_type, arc_type, data_type, categorygetter_args_fill(3, __VA_ARGS__)) \
+
+#pragma mark - getter tools
+
+static inline char hjm_categorygetter_ret_encoding(Class cls, SEL sel) {
     Method method = class_getInstanceMethod(cls, sel);
     if (method == nil) { return 'v'; }
     const char *encoding = method_getTypeEncoding(method);
@@ -31,7 +45,10 @@ static inline char categorygetter_ret_encoding(Class cls, SEL sel) {
     return ret;
 }
 
-#define obj_2_type(obj, type, encoding) \
+#define categorygetter_encoding(cls, sel) \
+        hjm_categorygetter_ret_encoding(cls, sel) \
+
+#define categorygetter_obj2type(obj, type, encoding) \
 ({ \
     type ivar = 0; \
     if (encoding == _C_CHR)         { ivar = (type)[obj charValue]; } \
@@ -54,13 +71,6 @@ static inline char categorygetter_ret_encoding(Class cls, SEL sel) {
         metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, , ,) \
         (metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
         (__VA_ARGS__)) \
-
-#pragma mark - getter
-
-#define categorygetter(atomic_type, arc_type, data_type, ...) \
-        metamacro_concat(categorygetter, \
-        metamacro_concat(_, arc_type))\
-        (atomic_type, arc_type, data_type, categorygetter_args_fill(3, __VA_ARGS__)) \
 
 #pragma mark - getter strong
 
@@ -100,10 +110,12 @@ static inline char categorygetter_ret_encoding(Class cls, SEL sel) {
     SEL __key = _cmd; \
     id __obj = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
-    char __encoding = categorygetter_ret_encoding([self class], _cmd); \
-    data_type __ivar = obj_2_type(__obj, data_type, __encoding); \
+    char __encoding = categorygetter_encoding([self class], _cmd); \
+    data_type __ivar = categorygetter_obj2type(__obj, data_type, __encoding); \
     metamacro_at(2, __VA_ARGS__) \
     return __ivar; \
 }\
+
+#endif /* categorygetter */
 
 #endif /* HJMacrosCategoryGetter_h */

@@ -13,32 +13,36 @@
 # include "metamacros.h"
 #endif
 
+/***************************************************
+ category setter
+ ***************************************************/
 /*
  atomic_type:   atomic, nonatomic
  arc_type:      assign, strong, copy
  data_type:     属性类型
  param0:        setter方法名
- param1:        hook0
- param2:        hook1
+ param1:        hook_after_set
+ param2:        hook_befor_store
  */
 
-static inline objc_AssociationPolicy categorysetter_store_policy(NSString *arcType, NSString *atomicType) {
+#ifndef categorysetter
+
+#pragma mark - setter
+
+#define categorysetter(atomic_type, arc_type, data_type, ...) \
+        metamacro_concat(categorysetter, \
+        metamacro_concat(_, arc_type))\
+        (atomic_type, arc_type, data_type, categorysetter_args_fill(3, __VA_ARGS__)) \
+
+#pragma mark - setter tools
+
+static inline objc_AssociationPolicy hjm_categorysetter_store_policy(NSString *arcType, NSString *atomicType) {
     objc_AssociationPolicy policy = OBJC_ASSOCIATION_ASSIGN;
     if ([arcType isEqualToString:@"strong"] || [arcType isEqualToString:@"weak"]) {
-         if ([atomicType isEqualToString:@"atomic"]) {
-             policy = OBJC_ASSOCIATION_RETAIN;
-         }
-         else {
-             policy = OBJC_ASSOCIATION_RETAIN_NONATOMIC;
-         }
+        policy = [atomicType isEqualToString:@"atomic"] ? OBJC_ASSOCIATION_RETAIN : OBJC_ASSOCIATION_RETAIN_NONATOMIC;
     }
     else if ([arcType isEqualToString:@"copy"]) {
-        if ([atomicType isEqualToString:@"atomic"]) {
-            policy = OBJC_ASSOCIATION_COPY;
-        }
-        else {
-            policy = OBJC_ASSOCIATION_COPY_NONATOMIC;
-        }
+        policy = [atomicType isEqualToString:@"atomic"] ? OBJC_ASSOCIATION_COPY : OBJC_ASSOCIATION_COPY_NONATOMIC;
     }
     else {
         policy = OBJC_ASSOCIATION_ASSIGN;
@@ -46,7 +50,7 @@ static inline objc_AssociationPolicy categorysetter_store_policy(NSString *arcTy
     return policy;
 }
 
-static inline SEL ategorysetter_store_key(Class cls, SEL sel) {
+static inline SEL hjm_categorysetter_store_key(Class cls, SEL sel) {
     SEL ret = nil;
     const char *selName = sel_getName(sel);
     const char *prefix = "set";
@@ -65,23 +69,16 @@ end:
     return ret;
 }
 
-#define categorysetter_policy(arc_type, atomic_type) \
-        categorysetter_store_policy(HJM_Arg2String(arc_type), HJM_Arg2String(atomic_type)) \
-
 #define categorysetter_key(clazz, setter) \
-        ategorysetter_store_key(clazz, setter)\
+        hjm_categorysetter_store_key(clazz, setter)\
+
+#define categorysetter_policy(arc_type, atomic_type) \
+        hjm_categorysetter_store_policy(HJM_Arg2String(arc_type), HJM_Arg2String(atomic_type)) \
 
 #define categorysetter_args_fill(expect_number, ...) \
         metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, , ,) \
         (metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
         (__VA_ARGS__)) \
-
-#pragma mark - setter
-
-#define categorysetter(atomic_type, arc_type, data_type, ...) \
-        metamacro_concat(categorysetter, \
-        metamacro_concat(_, arc_type))\
-        (atomic_type, arc_type, data_type, categorysetter_args_fill(3, __VA_ARGS__)) \
 
 #pragma mark - setter strong
 
@@ -123,5 +120,7 @@ end:
     metamacro_at(2, __VA_ARGS__) \
     objc_setAssociatedObject(self, __key, __ivar, categorysetter_policy(arc_type, atomic_type)); \
 } \
+
+#endif /* categorysetter */
 
 #endif /* HJMacrosCategorySetter_h */

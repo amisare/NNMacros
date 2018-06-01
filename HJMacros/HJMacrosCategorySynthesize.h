@@ -29,8 +29,12 @@
  setter:        setter方法名
  */
 
+#ifndef categorysynthesize
+
 #define categorysynthesize(atomic_type, arc_type, type, getter, setter) \
         categorygetter(atomic_type, arc_type, type, getter); \
         categorysetter(atomic_type, arc_type, type, setter); \
+
+#endif /* categorysynthesize */
 
 #endif /* HJMacrosCategorySynthesize_h */
