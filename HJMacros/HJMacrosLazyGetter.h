@@ -20,7 +20,7 @@
 /*
  type:      属性类型
  param0:    属性名
- param1:    插入的初始话代码，由于是if判断的一部分，所以代码必须为{}代码块
+ param1:    插入的初始化代码，由于是if判断的一部分，所以代码必须为{}代码块
  param2:    非property属性，或getter和setter均需重写时，传入操作变量
             例如：变量var，则传入self->var
 

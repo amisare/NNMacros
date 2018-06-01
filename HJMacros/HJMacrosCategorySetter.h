@@ -24,7 +24,7 @@
  arc_type:      assign, strong, copy
  data_type:     属性类型
  param0:        setter方法名
- param1:        hook_after_set
+ param1:        hook_begin_set
  param2:        hook_befor_store
  */
 
@@ -90,10 +90,11 @@ end:
 - (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
 { \
     SEL __key = categorysetter_key([self class], _cmd); \
-    metamacro_at(1, __VA_ARGS__) \
     data_type __ivar = newValue; \
+    metamacro_at(1, __VA_ARGS__) \
+    id __obj = __ivar; \
     metamacro_at(2, __VA_ARGS__) \
-    objc_setAssociatedObject(self, __key, __ivar, categorysetter_policy(arc_type, atomic_type)); \
+    objc_setAssociatedObject(self, __key, __obj, categorysetter_policy(arc_type, atomic_type)); \
 } \
 
 #pragma mark - setter weak
@@ -103,12 +104,12 @@ end:
 - (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
 { \
     SEL __key = categorysetter_key([self class], _cmd); \
-    metamacro_at(1, __VA_ARGS__) \
     data_type __ivar = newValue; \
-    NSMapTable *__table = [NSMapTable strongToWeakObjectsMapTable]; \
-    [__table setObject:__ivar forKey:NSStringFromSelector(__key)]; \
+    metamacro_at(1, __VA_ARGS__) \
+    NSMapTable *__obj = [NSMapTable strongToWeakObjectsMapTable]; \
+    [__obj setObject:__ivar forKey:NSStringFromSelector(__key)]; \
     metamacro_at(2, __VA_ARGS__) \
-    objc_setAssociatedObject(self, __key, __table, categorysetter_policy(arc_type, atomic_type)); \
+    objc_setAssociatedObject(self, __key, __obj, categorysetter_policy(arc_type, atomic_type)); \
 } \
 
 #pragma mark - setter assign
@@ -118,10 +119,11 @@ end:
 - (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
 { \
     SEL __key = categorysetter_key([self class], _cmd); \
+    data_type __ivar = newValue; \
     metamacro_at(1, __VA_ARGS__) \
-    id __ivar = @(newValue); \
+    id __obj = @(__ivar); \
     metamacro_at(2, __VA_ARGS__) \
-    objc_setAssociatedObject(self, __key, __ivar, categorysetter_policy(arc_type, atomic_type)); \
+    objc_setAssociatedObject(self, __key, __obj, categorysetter_policy(arc_type, atomic_type)); \
 } \
 
 #endif /* categorysetter */

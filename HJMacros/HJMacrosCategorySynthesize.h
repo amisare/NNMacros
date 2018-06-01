@@ -29,9 +29,9 @@
 
 #ifndef categorysynthesize
 
-#define categorysynthesize(atomic_type, arc_type, type, getter, setter) \
-        categorygetter(atomic_type, arc_type, type, getter); \
-        categorysetter(atomic_type, arc_type, type, setter); \
+#define categorysynthesize(atomic_type, arc_type, data_type, getter, setter) \
+        categorygetter(atomic_type, arc_type, data_type, getter); \
+        categorysetter(atomic_type, arc_type, data_type, setter); \
 
 #endif /* categorysynthesize */
 
