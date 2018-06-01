@@ -13,8 +13,6 @@
 # include "metamacros.h"
 #endif
 
-#import <Foundation/Foundation.h>
-#import <objc/runtime.h>
 #import "HJMacrosCategoryGetter.h"
 #import "HJMacrosCategorySetter.h"
 

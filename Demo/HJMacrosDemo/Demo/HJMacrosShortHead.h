@@ -9,7 +9,7 @@
 #ifndef HJMacrosShortHead_h
 #define HJMacrosShortHead_h
 
-#define DLog        HJM_DLog
-#define ELog        HJM_ELog
+#define DLog        NSLog
+#define ELog        NSLog
 
 #endif /* HJMacrosShortHead_h */

@@ -2,24 +2,29 @@
 //  HJMacros.h
 //  HJMacros
 //
-//  Created by 顾海军 on 2016/12/28.
-//  Copyright © 2016年 顾海军. All rights reserved.
+//  Created by GuHaijun on 2018/6/1.
+//  Copyright © 2018年 GuHaijun. All rights reserved.
 //
 
-#ifndef HJMacros_h
-#define HJMacros_h
+#import <UIKit/UIKit.h>
 
+//! Project version number for HJMacros.
+FOUNDATION_EXPORT double HJMacrosVersionNumber;
 
-#import "HJMacrosLazyGetter.h"
-#import "HJMacrosCategoryGetter.h"
-#import "HJMacrosCategorySetter.h"
-#import "HJMacrosCategorySynthesize.h"
-#import "HJMacrosRGBColor.h"
-#import "HJMacrosString.h"
-#import "HJMacrosSandboxPath.h"
-#import "HJMacrosApp.h"
-#import "HJMacrosDevice.h"
-#import "HJMacrosScreen.h"
+//! Project version string for HJMacros.
+FOUNDATION_EXPORT const unsigned char HJMacrosVersionString[];
 
+// In this header, you should import all the public headers of your framework using statements like #import <HJMacros/HJMacrosPublicHeader.h>
 
-#endif /* HJMacros_h */
+#import <HJMacros/HJMacrosLazyGetter.h>
+#import <HJMacros/HJMacrosCategoryGetter.h>
+#import <HJMacros/HJMacrosCategorySetter.h>
+#import <HJMacros/HJMacrosCategorySynthesize.h>
+#import <HJMacros/HJMacrosRGBColor.h>
+#import <HJMacros/HJMacrosString.h>
+#import <HJMacros/HJMacrosSandboxPath.h>
+#import <HJMacros/HJMacrosApp.h>
+#import <HJMacros/HJMacrosDevice.h>
+#import <HJMacros/HJMacrosScreen.h>
+#import <HJMacros/HJMacrosVersion.h>
+

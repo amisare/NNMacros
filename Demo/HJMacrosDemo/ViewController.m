@@ -49,15 +49,8 @@ categorysynthesize(nonatomic, assign, NSInteger, iValue1, setIValue1)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HJM_DLOG_USE_HJM_NSLOG
-    
     self.logTextView.text = @"";
     self.logTextView.editable = NO;
-    
-    HJM_NSLogFormate.hasDate = NO;
-    HJM_NSLogFormate.hasProcessName = NO;
-    HJM_NSLogFormate.hasPID = NO;
-    HJM_NSLogFormate.hasThreadID = NO;
     
     [self redirectSTD:STDOUT_FILENO];
     [self redirectSTD:STDERR_FILENO];
