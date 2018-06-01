@@ -1,14 +1,9 @@
 
 <h1 align = "center">HJMacros</h1>
 
-## 简介
+## 项目简介
 - HJMacros通过宏的方式来简化iOS开发中OC的语法和Api的操作
 
-## 感谢
-- [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
-宏的可变参数分析使用`metamacros.h`实现，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)。
-- [P99](http://p99.gforge.inria.fr/)
-`metamacros.h`中提到，其部分实现的灵感来自于[P99](http://p99.gforge.inria.fr/)。
 
 ## 功能介绍
 
@@ -58,8 +53,8 @@ lazygetter简写懒加载getter实现
 	
    > param1、param2中间代码段可获取的参数有：
    > - __key: objc_setAssociatedObject中用到的参数key
-   > - newValue: setter方法传输参数
-   > - __ivar: objc_getAssociatedObject关联保存的对象
+   > - __ivar: setter方法传输参数值
+   > - __obj: objc_getAssociatedObject关联保存的对象
 
 ### lazygetter
 
@@ -122,7 +117,7 @@ categorysynthesize(nonatomic, assign, NSInteger, param, setParam)
 
 #### 2.实现getter
 
-1. 方式一：无hook代码块参数于categorysynthesize中相同
+- 方式一：无hook代码块参数于categorysynthesize中相同
     
 ```
 @implementation NSObject (Awful)
@@ -140,7 +135,7 @@ categorygetter(nonatomic, assign, NSInteger, param)
 @end
 ```
 
-1. 方式二：有hook代码块参数
+- 方式二：有hook代码块参数
     
 ```
 @implementation NSObject (Awful)
@@ -179,7 +174,7 @@ categorygetter(nonatomic, assign, NSInteger, param, {
 
 #### 2.实现setter
 
-1. 方式一：无hook代码块参数于categorysynthesize中相同
+- 方式一：无hook代码块参数于categorysynthesize中相同
     
 ```
 @implementation NSObject (Awful)
@@ -197,7 +192,7 @@ categorysetter(nonatomic, assign, NSInteger, param)
 @end
 ```
 
-1. 方式二：有hook代码块参数
+- 方式二：有hook代码块参数
     
 ```
 @implementation NSObject (Awful)
@@ -241,7 +236,7 @@ lazygetter宏替换了懒加载getter方法中的if判断部分，精简了懒�
 
 #### 2.实现懒加载getter
 
-1. 方式一：实例化对象，默认调用的new方法
+- 方式一：实例化对象，默认调用的new方法
     
 ```
 lazygetter(UITableView, tableView)
@@ -259,7 +254,7 @@ lazygetter(UITableView, tableView)
 }
 ```
 
-2. 方式二：在代码块`{}`中实例化对象，并初始化
+- 方式二：在代码块`{}`中实例化对象，并初始化
 
 
 ```
@@ -284,7 +279,7 @@ lazygetter(UITableView, tableView, {
 }
 ```
 
-3. 方式三：通过第四个参数指定，指定属性(*用于处理getter方法和setter方法都需要重写的情况*)
+- 方式三：通过第四个参数指定，指定属性(*用于处理getter方法和setter方法都需要重写的情况*)
 
 ```
 lazygetter(UITableView, tableView, {
@@ -370,3 +365,8 @@ lazygetter(NSMutableDictionary, dic_issue_0, {
 })
 ```
 
+## 鸣谢
+- [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+宏的可变参数分析使用`metamacros.h`实现，源于[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)。
+- [P99](http://p99.gforge.inria.fr/)
+`metamacros.h`中提到，其部分实现的灵感来自于[P99](http://p99.gforge.inria.fr/)。
