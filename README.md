@@ -299,7 +299,7 @@ lazygetter(UITableView, tableView, {
 }
 ```
 
-## 安装：
+## 安装
 
 ### 手动安装
 
