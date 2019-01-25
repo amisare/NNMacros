@@ -58,12 +58,12 @@ static inline SEL hjm_categorysetter_store_key(Class cls, SEL sel) {
     const char *selName = sel_getName(sel);
     const char *prefix = "set";
     size_t keyNameSize = (strlen(selName) + 1) - strlen(prefix);
-    char *keyName = calloc(keyNameSize, sizeof(char));
+    unsigned char *keyName = calloc(keyNameSize, sizeof(unsigned char));
     if (0 != memcmp(selName, prefix, strlen(prefix))) { goto end; }
     memcpy(keyName, (selName + strlen(prefix)), keyNameSize);
     if (keyName[0]>'A' && keyName[0]<'Z') { keyName[0] += ('a' - 'A'); }
     if (keyName[strlen(keyName) - 1] == ':') { keyName[strlen(keyName) - 1] = '\0'; }
-    SEL keySel = NSSelectorFromString(@(keyName));
+    SEL keySel = NSSelectorFromString([NSString stringWithUTF8String:keyName]);
     Method method = class_getInstanceMethod(cls, keySel);
     if (method == nil) {  goto end; }
     ret = method_getName(method) ;
