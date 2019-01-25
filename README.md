@@ -19,7 +19,7 @@ lazygetter简写懒加载getter实现
 
 - lazygetter: 属性懒加载getter方法实现
 
-## 语法说明（详细使用见<使用示例>）
+## 语法说明（详细使用见[使用示例](#使用示例)）
 
 ### categorysynthesize
 
@@ -178,7 +178,7 @@ categorygetter(nonatomic, assign, NSInteger, param, {
     
 ```
 @implementation NSObject (Awful)
-categorysetter(nonatomic, assign, NSInteger, param)
+categorysetter(nonatomic, assign, NSInteger, setParam)
 @end
 ```
 
@@ -196,7 +196,7 @@ categorysetter(nonatomic, assign, NSInteger, param)
     
 ```
 @implementation NSObject (Awful)
-categorysetter(nonatomic, assign, NSInteger, param, {
+categorysetter(nonatomic, assign, NSInteger, setParam, {
     __ivar += 100;
 }, {
     NSLog(@"%@", __obj);
