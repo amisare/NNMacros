@@ -9,12 +9,9 @@
 #ifndef HJMacrosCategorySetter_h
 #define HJMacrosCategorySetter_h
 
-#if !__has_include(<metamacros.h>)
-# include "metamacros.h"
-#endif
-
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
+#include "metamacros.h"
 
 /***************************************************
  category setter

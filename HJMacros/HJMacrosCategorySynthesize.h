@@ -9,12 +9,9 @@
 #ifndef HJMacrosCategorySynthesize_h
 #define HJMacrosCategorySynthesize_h
 
-#if !__has_include(<metamacros.h>)
-# include "metamacros.h"
-#endif
-
 #import "HJMacrosCategoryGetter.h"
 #import "HJMacrosCategorySetter.h"
+#include "metamacros.h"
 
 /***************************************************
  category synthesize

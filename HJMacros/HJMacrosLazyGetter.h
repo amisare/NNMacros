@@ -9,10 +9,7 @@
 #ifndef HJMacrosLazyGetter_h
 #define HJMacrosLazyGetter_h
 
-#if !__has_include(<metamacros.h>)
-# include "metamacros.h"
-#endif
-
+#include "metamacros.h"
 
 /***************************************************
  懒加载
