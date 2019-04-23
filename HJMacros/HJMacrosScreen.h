@@ -36,5 +36,7 @@
 #define HJM_ScreenIs4Dot7inch   CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size)
 #define HJM_ScreenIs5Dot5inch   CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)
 #define HJM_ScreenIs5Dot8inch   CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs6Dot1inch   CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size)
+#define HJM_ScreenIs6Dot5inch   CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size)
 
 #endif /* HJMacrosScreen_h */

@@ -36,6 +36,14 @@
 
 #pragma mark - getter tools
 
+
+/**
+ 获取 getter 方法返回值类型
+
+ @param cls 类名
+ @param sel getter 方法的 sel
+ @return getter 方法返回值类型
+ */
 static inline char hjm_categorygetter_ret_encoding(Class cls, SEL sel) {
     Method method = class_getInstanceMethod(cls, sel);
     if (method == nil) { return 'v'; }

@@ -36,36 +36,65 @@
 
 #pragma mark - setter tools
 
+
+/**
+ 获取 setter 方法中 objc_setAssociatedObject 参数 policy
+
+ @param arcType arc 类型
+ @param atomicType atomic 类型
+ @return setter 方法中 objc_setAssociatedObject 参数 policy
+ */
 static inline objc_AssociationPolicy hjm_categorysetter_store_policy(NSString *arcType, NSString *atomicType) {
-    objc_AssociationPolicy policy = OBJC_ASSOCIATION_ASSIGN;
-    if ([arcType isEqualToString:@"strong"] || [arcType isEqualToString:@"weak"]) {
-        policy = [atomicType isEqualToString:@"atomic"] ? OBJC_ASSOCIATION_RETAIN : OBJC_ASSOCIATION_RETAIN_NONATOMIC;
+    if ([arcType isEqualToString:@"strong"] && [atomicType isEqualToString:@"nonatomic"]) {
+        return OBJC_ASSOCIATION_RETAIN_NONATOMIC;
     }
-    else if ([arcType isEqualToString:@"copy"]) {
-        policy = [atomicType isEqualToString:@"atomic"] ? OBJC_ASSOCIATION_COPY : OBJC_ASSOCIATION_COPY_NONATOMIC;
+    else if ([arcType isEqualToString:@"strong"] && [atomicType isEqualToString:@"atomic"]) {
+        return OBJC_ASSOCIATION_RETAIN;
+    }
+    else if  ([arcType isEqualToString:@"copy"] && [atomicType isEqualToString:@"nonatomic"]) {
+        return OBJC_ASSOCIATION_COPY_NONATOMIC;
+    }
+    else if  ([arcType isEqualToString:@"copy"] && [atomicType isEqualToString:@"atomic"]) {
+        return OBJC_ASSOCIATION_COPY;
     }
     else {
-        policy = OBJC_ASSOCIATION_ASSIGN;
+        return OBJC_ASSOCIATION_ASSIGN;
     }
-    return policy;
 }
 
+
+/**
+ 获取 setter 方法中 objc_setAssociatedObject 参数 key
+
+ @discussion 动态添加获取属性的 key 值为 getter 方法的 sel ，该函数通过截取 setter 方法的 sel ，获取 key 值
+ @param cls 类名
+ @param sel setter 方法的 sel
+ @return setter 方法中 objc_setAssociatedObject 参数 key
+ */
 static inline SEL hjm_categorysetter_store_key(Class cls, SEL sel) {
     SEL ret = nil;
     const char *selName = sel_getName(sel);
     const char *prefix = "set";
+    // 1. 判断 sel 是否是以 "set" 开头
+    if (0 != memcmp(selName, prefix, strlen(prefix))) { goto end; }
+    // 2. 判断 sel 是否是以 ":" 结尾
+    if (':' != selName[strlen(selName) - 1]) { goto end; }
+    // 3. 拷贝 "set" 之后的字符串，包括 "\0"。
     size_t keyNameSize = (strlen(selName) + 1) - strlen(prefix);
     unsigned char *keyName = calloc(keyNameSize, sizeof(unsigned char));
-    if (0 != memcmp(selName, prefix, strlen(prefix))) { goto end; }
     memcpy(keyName, (selName + strlen(prefix)), keyNameSize);
-    if (keyName[0]>'A' && keyName[0]<'Z') { keyName[0] += ('a' - 'A'); }
-    if (keyName[strlen(keyName) - 1] == ':') { keyName[strlen(keyName) - 1] = '\0'; }
-    SEL keySel = NSSelectorFromString([NSString stringWithUTF8String:keyName]);
+    // 4. 如果 "set" 是字母，那么转换为小写。如："setUserName:"，将 "UserName:" 转为 "userName:" 。
+    if (keyName[0] > 'A' && keyName[0] < 'Z') { keyName[0] += ('a' - 'A'); }
+    // 5. 去掉 sel 结尾的 ":" ，使用 "\0" 替换。
+    keyName[strlen((const char *)keyName) - 1] = '\0';
+    // 6. 实际应用中不会遇到仅有 setter 方法的情况，通过 method 获取 setter 方法 sel 。
+    SEL keySel = NSSelectorFromString([NSString stringWithUTF8String:(const char *)keyName]);
     Method method = class_getInstanceMethod(cls, keySel);
-    if (method == nil) {  goto end; }
+    if (method == nil) {  goto end_free; }
     ret = method_getName(method) ;
-end:
+end_free:
     free(keyName);
+end:
     return ret;
 }
 
