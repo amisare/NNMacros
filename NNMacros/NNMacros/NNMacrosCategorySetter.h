@@ -76,12 +76,12 @@ static inline SEL nn_categorysetter_store_key(Class cls, SEL sel) {
     const char *selName = sel_getName(sel);
     const char *prefix = "set";
     // 1. 判断 sel 是否是以 "set" 开头
-    if (0 != memcmp(selName, prefix, strlen(prefix))) { goto end; }
+    if (0 != memcmp(selName, prefix, strlen(prefix))) { return ret; }
     // 2. 判断 sel 是否是以 ":" 结尾
-    if (':' != selName[strlen(selName) - 1]) { goto end; }
+    if (':' != selName[strlen(selName) - 1]) { return ret; }
     // 3. 拷贝 "set" 之后的字符串，包括 "\0"。
     size_t keyNameSize = (strlen(selName) + 1) - strlen(prefix);
-    unsigned char *keyName = calloc(keyNameSize, sizeof(unsigned char));
+    unsigned char *keyName = (unsigned char *)calloc(keyNameSize, sizeof(unsigned char));
     memcpy(keyName, (selName + strlen(prefix)), keyNameSize);
     // 4. 如果 "set" 是字母，那么转换为小写。如："setUserName:"，将 "UserName:" 转为 "userName:" 。
     if (keyName[0] > 'A' && keyName[0] < 'Z') { keyName[0] += ('a' - 'A'); }
@@ -90,11 +90,10 @@ static inline SEL nn_categorysetter_store_key(Class cls, SEL sel) {
     // 6. 实际应用中不会遇到仅有 setter 方法的情况，通过 method 获取 setter 方法 sel 。
     SEL keySel = NSSelectorFromString([NSString stringWithUTF8String:(const char *)keyName]);
     Method method = class_getInstanceMethod(cls, keySel);
-    if (method == nil) {  goto end_free; }
+    if (method == nil) {  goto end; }
     ret = method_getName(method) ;
-end_free:
-    free(keyName);
 end:
+    free(keyName);
     return ret;
 }
 
