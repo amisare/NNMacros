@@ -1,8 +1,8 @@
 
-<h1 align = "center">HJMacros</h1>
+<h1 align = "center">NNMacros</h1>
 
 ## 项目简介
-- HJMacros通过宏的方式来简化iOS开发中OC的语法和Api的操作
+- NNMacros通过宏的方式来简化iOS开发中OC的语法和Api的操作
 
 
 ## 功能介绍
@@ -303,13 +303,13 @@ lazygetter(UITableView, tableView, {
 
 ### 手动安装
 
-- 添加HJMacros目录到项目中
-- `#import "HJMacros.h"`
+- 添加NNMacros目录到项目中
+- `#import "NNMacros.h"`
 
 ### CocoaPods
 
-- `pod 'HJMacros'`
-- `#import <HJMacros.h>`
+- `pod 'NNMacros'`
+- `#import <NNMacros.h>`
 
 
 ## 使用中会遇到的问题及处理：
