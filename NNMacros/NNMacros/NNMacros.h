@@ -20,7 +20,7 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import <NNMacros/NNMacrosCategoryGetter.h>
 #import <NNMacros/NNMacrosCategorySetter.h>
 #import <NNMacros/NNMacrosCategorySynthesize.h>
-#import <NNMacros/NNMacrosRGBColor.h>
+#import <NNMacros/NNMacrosColor.h>
 #import <NNMacros/NNMacrosString.h>
 #import <NNMacros/NNMacrosSandboxPath.h>
 #import <NNMacros/NNMacrosApp.h>

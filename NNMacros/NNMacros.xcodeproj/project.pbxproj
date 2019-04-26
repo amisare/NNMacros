@@ -17,7 +17,7 @@
 		670F8DB420C121B4004CB3E9 /* NNMacrosSandboxPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA720C121B4004CB3E9 /* NNMacrosSandboxPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB520C121B4004CB3E9 /* NNMacrosCategorySynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA820C121B4004CB3E9 /* NNMacrosCategorySynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB620C121B4004CB3E9 /* NNMacrosLazyGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		670F8DB720C121B4004CB3E9 /* NNMacrosRGBColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAA20C121B4004CB3E9 /* NNMacrosRGBColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		670F8DB720C121B4004CB3E9 /* NNMacrosColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB820C121B4004CB3E9 /* NNMacrosScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAB20C121B4004CB3E9 /* NNMacrosScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB920C121B4004CB3E9 /* NNMacrosVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAC20C121B4004CB3E9 /* NNMacrosVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DBA20C121B4004CB3E9 /* NNMacrosCategorySetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAD20C121B4004CB3E9 /* NNMacrosCategorySetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,7 +48,7 @@
 		670F8DA720C121B4004CB3E9 /* NNMacrosSandboxPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosSandboxPath.h; sourceTree = "<group>"; };
 		670F8DA820C121B4004CB3E9 /* NNMacrosCategorySynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosCategorySynthesize.h; sourceTree = "<group>"; };
 		670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosLazyGetter.h; sourceTree = "<group>"; };
-		670F8DAA20C121B4004CB3E9 /* NNMacrosRGBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosRGBColor.h; sourceTree = "<group>"; };
+		670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosColor.h; sourceTree = "<group>"; };
 		670F8DAB20C121B4004CB3E9 /* NNMacrosScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosScreen.h; sourceTree = "<group>"; };
 		670F8DAC20C121B4004CB3E9 /* NNMacrosVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosVersion.h; sourceTree = "<group>"; };
 		670F8DAD20C121B4004CB3E9 /* NNMacrosCategorySetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosCategorySetter.h; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				670F8DA820C121B4004CB3E9 /* NNMacrosCategorySynthesize.h */,
 				670F8DA420C121B3004CB3E9 /* NNMacrosDevice.h */,
 				670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */,
-				670F8DAA20C121B4004CB3E9 /* NNMacrosRGBColor.h */,
+				670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */,
 				670F8DA720C121B4004CB3E9 /* NNMacrosSandboxPath.h */,
 				670F8DAB20C121B4004CB3E9 /* NNMacrosScreen.h */,
 				670F8DA620C121B3004CB3E9 /* NNMacrosString.h */,
@@ -142,7 +142,7 @@
 				670F8DB420C121B4004CB3E9 /* NNMacrosSandboxPath.h in Headers */,
 				670F8DB120C121B4004CB3E9 /* NNMacrosDevice.h in Headers */,
 				670F8DB320C121B4004CB3E9 /* NNMacrosString.h in Headers */,
-				670F8DB720C121B4004CB3E9 /* NNMacrosRGBColor.h in Headers */,
+				670F8DB720C121B4004CB3E9 /* NNMacrosColor.h in Headers */,
 				670F8DB020C121B4004CB3E9 /* NNMacrosCategoryGetter.h in Headers */,
 				670F8DB620C121B4004CB3E9 /* NNMacrosLazyGetter.h in Headers */,
 				670F8D9A20C120FA004CB3E9 /* NNMacros.h in Headers */,
