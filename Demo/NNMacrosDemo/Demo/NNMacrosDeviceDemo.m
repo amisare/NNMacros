@@ -12,7 +12,7 @@
 
 - (void)macroTest
 {
-    DLog(@"%@", NN_DeviceModel);
+    DLog(@"%@", NN_deviceModel);
 }
 
 @end

@@ -57,7 +57,7 @@ categorysynthesize(nonatomic, assign, NSInteger, iValue1, setIValue1)
     
 #define NNMacrosTest(classDemo) \
 {\
-    printf("%s\n", [NN_Arg2String(classDemo) UTF8String]);\
+    printf("%s\n", [NN_arg2String(classDemo) UTF8String]);\
     classDemo *demo = [classDemo new];\
     [demo macroTest];\
     printf("\n");\

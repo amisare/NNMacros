@@ -102,7 +102,7 @@ end:
         nn_categorysetter_store_key(clazz, setter)\
 
 #define categorysetter_policy(arc_type, atomic_type) \
-        nn_categorysetter_store_policy(NN_Arg2String(arc_type), NN_Arg2String(atomic_type)) \
+        nn_categorysetter_store_policy(NN_arg2String(arc_type), NN_arg2String(atomic_type)) \
 
 #define categorysetter_args_fill(expect_number, ...) \
         metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, , ,) \

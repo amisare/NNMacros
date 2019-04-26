@@ -12,9 +12,9 @@
 
 - (void)macroTest
 {
-    DLog(@"%@", NN_AppName);
-    DLog(@"%@", NN_AppVersion);
-    DLog(@"%@", NN_AppVersionBuild);
+    DLog(@"%@", NN_appName);
+    DLog(@"%@", NN_appVersion);
+    DLog(@"%@", NN_appVersionBuild);
 }
 
 @end

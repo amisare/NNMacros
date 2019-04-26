@@ -12,12 +12,12 @@
 
 - (void)macroTest
 {
-    DLog(@"%@:%@", NN_Arg2String(NN_PathHome), NN_PathHome);
-    DLog(@"%@:%@", NN_Arg2String(NN_PathHome), NN_PathTmp);
-    DLog(@"%@:%@", NN_Arg2String(NN_PathHome), NN_PathCaches);
-    DLog(@"%@:%@", NN_Arg2String(NN_PathHome), NN_PathLibrary);
-    DLog(@"%@:%@", NN_Arg2String(NN_PathHome), NN_PathDocuments);
-    DLog(@"%@:%@", NN_Arg2String(NN_PathHome), NN_PathPreference);
+    DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathHome);
+    DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathTmp);
+    DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathCaches);
+    DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathLibrary);
+    DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathDocuments);
+    DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathPreference);
 }
 
 @end

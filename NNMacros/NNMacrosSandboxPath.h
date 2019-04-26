@@ -10,12 +10,12 @@
 #define NNMacrosSandboxPath_h
 
 
-#define NN_PathHome            (NSHomeDirectory())
-#define NN_PathDocuments       ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject])
-#define NN_PathLibrary         ([NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject])
-#define NN_PathCaches          ([NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject])
-#define NN_PathPreference      ([[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:@"/Preferences"])
-#define NN_PathTmp             (NSTemporaryDirectory())
+#define NN_pathHome            (NSHomeDirectory())
+#define NN_pathDocuments       ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject])
+#define NN_pathLibrary         ([NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject])
+#define NN_pathCaches          ([NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject])
+#define NN_pathPreference      ([[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:@"/Preferences"])
+#define NN_pathTmp             (NSTemporaryDirectory())
 
 
 #endif /* NNMacrosSandboxPath_h */

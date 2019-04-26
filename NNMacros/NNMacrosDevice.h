@@ -9,6 +9,6 @@
 #ifndef NNMacrosDevice_h
 #define NNMacrosDevice_h
 
-#define NN_DeviceModel         ([[UIDevice currentDevice] model])
+#define NN_deviceModel         ([[UIDevice currentDevice] model])
 
 #endif /* NNMacrosDevice_h */
