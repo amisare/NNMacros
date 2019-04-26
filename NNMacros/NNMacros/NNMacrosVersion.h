@@ -9,12 +9,12 @@
 #ifndef NNMacrosVersion_h
 #define NNMacrosVersion_h
 
-#define NN_iOSVersion                                  ([[UIDevice currentDevice] systemVersion])
+#define NN_systemVersion                                    ([[UIDevice currentDevice] systemVersion])
 
-#define NN_iOSVersionEqualTo(vString)                  ([NN_iOSVersion compare:vString options:NSNumericSearch] == NSOrderedSame)
-#define NN_iOSVersionGreaterThan(vString)              ([NN_iOSVersion compare:vString options:NSNumericSearch] == NSOrderedDescending)
-#define NN_iOSVersionGreaterThanOrEqualTo(vString)     ([NN_iOSVersion compare:vString options:NSNumericSearch] != NSOrderedAscending)
-#define NN_iOSVersionLessThan(vString)                 ([NN_iOSVersion compare:vString options:NSNumericSearch] == NSOrderedAscending)
-#define NN_iOSVersionLessThanOrEqualTo(vString)        ([NN_iOSVersion compare:vString options:NSNumericSearch] != NSOrderedDescending)
+#define NN_systemVersionIsEqualTo(vString)                  ([NN_systemVersion compare:vString options:NSNumericSearch] == NSOrderedSame)
+#define NN_systemVersionIsGreaterThan(vString)              ([NN_systemVersion compare:vString options:NSNumericSearch] == NSOrderedDescending)
+#define NN_systemVersionIsGreaterThanOrEqualTo(vString)     ([NN_systemVersion compare:vString options:NSNumericSearch] != NSOrderedAscending)
+#define NN_systemVersionIsLessThan(vString)                 ([NN_systemVersion compare:vString options:NSNumericSearch] == NSOrderedAscending)
+#define NN_systemVersionIsLessThanOrEqualTo(vString)        ([NN_systemVersion compare:vString options:NSNumericSearch] != NSOrderedDescending)
 
 #endif /* NNMacrosVersion_h */
