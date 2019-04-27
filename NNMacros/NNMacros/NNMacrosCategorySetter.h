@@ -87,7 +87,7 @@ static inline SEL nn_categorysetter_store_key(Class cls, SEL sel) {
     if (keyName[0] > 'A' && keyName[0] < 'Z') { keyName[0] += ('a' - 'A'); }
     // 5. 去掉 sel 结尾的 ":" ，使用 "\0" 替换。
     keyName[strlen((const char *)keyName) - 1] = '\0';
-    // 6. 实际应用中不会遇到仅有 setter 方法的情况，通过 method 获取 setter 方法 sel 。
+    // 6. 避免仅有 setter 方法的情况，通过 method 获取 setter 方法 sel 。（实际应用中通常不会出现）
     SEL keySel = NSSelectorFromString([NSString stringWithUTF8String:(const char *)keyName]);
     Method method = class_getInstanceMethod(cls, keySel);
     if (method == nil) {  goto end; }
