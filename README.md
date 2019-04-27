@@ -1,6 +1,11 @@
 
 <h1 align = "center">NNMacros</h1>
 
+[![GitHub release](https://img.shields.io/github/release/amisare/NNMacros.svg)](https://github.com/amisare/NNMacros/releases)
+[![CocoaPods](https://img.shields.io/cocoapods/v/NNMacros.svg)](https://cocoapods.org/pods/NNMacros)
+[![CocoaPods](https://img.shields.io/cocoapods/p/NNMacros.svg)](https://cocoapods.org/pods/NNMacros)
+[![GitHub license](https://img.shields.io/github/license/amisare/NNMacros.svg)](https://github.com/amisare/NNMacros/blob/master/LICENSE)
+
 ## 项目简介
 - NNMacros通过宏的方式来简化iOS开发中OC的语法和Api的操作
 
