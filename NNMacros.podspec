@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target   = '6.0'
   s.requires_arc  = true
 
-  s.source_files  = 'NNMacros/NNMacros/*.{h,m}'
+  s.source_files  = 'NNMacros/NNMacros/*.{h,m}', 'NNMacros/NNMacros/CocoapodsFix/*.{h,m}'
 
   s.default_subspec         = 'Bases'
   s.subspec 'Bases' do |ss|

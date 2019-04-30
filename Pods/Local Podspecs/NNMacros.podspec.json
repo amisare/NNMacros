@@ -20,7 +20,10 @@
     "ios": "6.0"
   },
   "requires_arc": true,
-  "source_files": "NNMacros/NNMacros/*.{h,m}",
+  "source_files": [
+    "NNMacros/NNMacros/*.{h,m}",
+    "NNMacros/NNMacros/CocoapodsFix/*.{h,m}"
+  ],
   "default_subspecs": "Bases",
   "subspecs": [
     {

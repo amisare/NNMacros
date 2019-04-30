@@ -99,7 +99,6 @@
 		670F8D8B20C120FA004CB3E9 /* NNMacros */ = {
 			isa = PBXGroup;
 			children = (
-				67AA43562277F98500FEE272 /* CocoapodsFix */,
 				670F8D8C20C120FA004CB3E9 /* NNMacros.h */,
 				670F8DA520C121B3004CB3E9 /* NNMacrosApp.h */,
 				670F8DA320C121B3004CB3E9 /* NNMacrosCategoryGetter.h */,
@@ -113,6 +112,7 @@
 				670F8DA620C121B3004CB3E9 /* NNMacrosString.h */,
 				670F8DAC20C121B4004CB3E9 /* NNMacrosVersion.h */,
 				670F8DAE20C121B4004CB3E9 /* Bases */,
+				67AA43562277F98500FEE272 /* CocoapodsFix */,
 				670F8D8D20C120FA004CB3E9 /* Info.plist */,
 			);
 			path = NNMacros;
