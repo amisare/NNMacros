@@ -9,7 +9,6 @@
 #ifndef NNMacrosShortHead_h
 #define NNMacrosShortHead_h
 
-#define DLog        NSLog
-#define ELog        NSLog
+#define DLog(format, ...) printf("%s\n", [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String]);
 
 #endif /* NNMacrosShortHead_h */
