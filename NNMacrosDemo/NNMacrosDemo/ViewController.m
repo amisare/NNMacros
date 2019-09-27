@@ -55,32 +55,22 @@ categorysynthesize(nonatomic, assign, NSInteger, iValue1, setIValue1)
     [self redirectSTD:STDOUT_FILENO];
     [self redirectSTD:STDERR_FILENO];
     
-#define NNMacrosTest(classDemo) \
+    DLog(@"%@", @([[UIScreen mainScreen] currentMode].size));
+    
+#define NNMacrosTest(demoClass) \
 {\
-    printf("%s\n", [NN_arg2String(classDemo) UTF8String]);\
-    classDemo *demo = [classDemo new];\
+    printf("%s\n", [NN_arg2String(demoClass) UTF8String]);\
+    demoClass *demo = [demoClass new];\
     [demo macroTest];\
     printf("\n");\
 }\
 
-#pragma mark - NNMacrosLazyGetter宏demo
     NNMacrosTest(NNMacrosLazyGetterDemo)
-    
-#pragma mark - NNMacrosSandboxPathDemo宏demo
     NNMacrosTest(NNMacrosSandboxPathDemo)
-    
-#pragma mark - NNMacrosStringDemo宏demo
     NNMacrosTest(NNMacrosStringDemo)
-    
-#pragma mark - NNMacrosAppDemo宏demo
     NNMacrosTest(NNMacrosAppDemo)
-    
-#pragma mark - NNMacrosDeviceDemo宏demo
     NNMacrosTest(NNMacrosDeviceDemo)
-    
-#pragma mark - NNMacrosScreenDemo宏demo
     NNMacrosTest(NNMacrosScreenDemo)
-    
 }
 
 - (void)redirectNotificationHandle:(NSNotification *)notification{

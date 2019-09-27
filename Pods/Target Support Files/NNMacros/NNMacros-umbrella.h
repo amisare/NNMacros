@@ -18,7 +18,7 @@
 #import "NNMacrosColor.h"
 #import "NNMacrosDevice.h"
 #import "NNMacrosLazyGetter.h"
-#import "NNMacrosSandboxPath.h"
+#import "NNMacrosSandbox.h"
 #import "NNMacrosScreen.h"
 #import "NNMacrosString.h"
 #import "NNMacrosVersion.h"

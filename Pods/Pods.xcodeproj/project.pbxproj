@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0309DD10BA6AD19A6A23131E79685976 /* NNMacrosApp.h in Headers */ = {isa = PBXBuildFile; fileRef = AC53AA233DC380F139AEA575E8B8DAF8 /* NNMacrosApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		061108483CE826141FFA8E7A0E506CC8 /* NNMacrosCocoapodsFix.h in Headers */ = {isa = PBXBuildFile; fileRef = DD11CC2B7B7EDD0FF01B426CD8CF13E5 /* NNMacrosCocoapodsFix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0647661CF17153C2634157DF21C63B81 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = FBAC048DC3A2E1C0D9EEAF8D83027526 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C5A63F1E3C78C5F0534B4A90292375A /* NNMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B957DEAC64B4DFB3C6B69C99CC1B79 /* NNMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C74B7864FDBDD5019E07808E44A4D6F /* NNMacrosCocoapodsFix.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FE2BB19E86616AB9B2DC940F77588 /* NNMacrosCocoapodsFix.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1C74B7864FDBDD5019E07808E44A4D6F /* NNMacrosCocoapodsFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 079195A277282CA3C2BF534D3702D252 /* NNMacrosCocoapodsFix.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		263B4EA0D087D7E11C0220321028DD07 /* NNMacrosScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D496D4503A887F0E6768830BC97C3A /* NNMacrosScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FE16F5E12D53CCC07110324D05EFB49 /* NNMacrosSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C706E59DB004676A293FC65E0D4F09 /* NNMacrosSandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31D91623F9AFEBFED8DEE0035424B586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		334BC2840C90CE181443EF8FE7AA2B36 /* NNMacros-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C46E23253EAE074C84CB13BBDEAB208 /* NNMacros-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35B226C1EC8A5B4928BDEDAE0D3911F3 /* NNMacrosCategorySetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0105104FD64A8E4DAC1E085F49BC4AE3 /* NNMacrosCategorySetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39D3B613B66F640ADE9855D681A1B90C /* NNMacrosDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D264660D35A20BA302E49A124C69558F /* NNMacrosDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39EA18702966E38B87BFFBAD051CFA94 /* NNMacrosColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B798CDE3935BD76AEBEE0FFD94D4CB /* NNMacrosColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F9EE500F79E64968C35C7117AC152D0 /* NNMacrosVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 94706F9BF50B6E388117007AFCE7D5D7 /* NNMacrosVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47BE76617DBA2A8AE5C0138C36573664 /* Pods-NNMacrosDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8D340185117A1DA7A172C9256D33C /* Pods-NNMacrosDemo-dummy.m */; };
-		6A2FD95F8461F8FEAB1A3569D37D7425 /* NNMacrosDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F1680D7DE64F694A28600F7F383B02 /* NNMacrosDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C8B88355EFF9495FA0D1A7F9F641068 /* NNMacrosCategoryGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F63DF299D6BDC2468DBAE129541A445 /* NNMacrosCategoryGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		792DAB1314ABECF95FC0E36FFB7E662A /* NNMacrosScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA84FEB4D065AE33EBAF0BE91B7AD01 /* NNMacrosScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5A321DDFC762F0FF9F375D08FA377B /* NNMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D773F237E657347C65D1528682061B3D /* NNMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D5C050A2030417DB958436790C3A619 /* NNMacrosCategorySynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 28A271B50BDF5998139EBBFA73004CAA /* NNMacrosCategorySynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F70993097B5E8D2F4B3E1F50F8271FA /* Pods-NNMacrosDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB5522056AFADCD02162C1D90B9990EA /* Pods-NNMacrosDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92AFE0F4EC376E44ADAE09E5F8023B71 /* NNMacrosCategorySynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 993824B0032964B76FE6661EC0055B5B /* NNMacrosCategorySynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A6CAEB2B1B786E626C4A0AD3AD30B29C /* NNMacrosSandboxPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 99496C1AF41405CE5F1407BEC087A230 /* NNMacrosSandboxPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B01A9F9233F7E1ECE7DFE8FC76CA5A84 /* NNMacros-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBAE053A711BF5F5018B9C98F97409 /* NNMacros-dummy.m */; };
-		B05F9813DF52C0D9778021FC2382EC22 /* NNMacrosColor.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9092F04CA92289506CB03C5925744D /* NNMacrosColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9882DCA29668343C77DDC83112CBF858 /* NNMacrosString.h in Headers */ = {isa = PBXBuildFile; fileRef = F478A26759EE82F9E1BEF006588F0F0A /* NNMacrosString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A36DB20569702FE1D4CAE6638FE6E2A1 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C28201DE865030314EDDDEE20A82B7EC /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B01A9F9233F7E1ECE7DFE8FC76CA5A84 /* NNMacros-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A98897356E1EA16D1A5B8157D214C /* NNMacros-dummy.m */; };
 		B3E9AFE304B323B42D29FF8324F8D32F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C4490FC4A650C6049CB1C612154BC751 /* NNMacrosString.h in Headers */ = {isa = PBXBuildFile; fileRef = 491E702607185D679518EBC3A25869C8 /* NNMacrosString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C84AAADE07BEB28DE3A3406B9FACE0B1 /* NNMacrosLazyGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 199FC9EBFE6EA98F0E551D9E64296E72 /* NNMacrosLazyGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F60510CCAC87E6505EA700F8C9DC5C27 /* NNMacrosVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D1A94850CB6A5D88C971C787B574FA /* NNMacrosVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D68B4B418277B257C89F0F92A1D91124 /* NNMacrosApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BFFA4410AEE184BE4EF60B5A2C0F00C /* NNMacrosApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D99289CF79E4C6FAE02A481A3F7BA260 /* NNMacrosCategorySetter.h in Headers */ = {isa = PBXBuildFile; fileRef = E9648D9BC58F952C1A85C95668BCA2D4 /* NNMacrosCategorySetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFBE4E76A9391F9078BB1919B8B3FEF3 /* NNMacrosCategoryGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = AD8D9E4E3865CB59B8D3CD7BCFDE2DC2 /* NNMacrosCategoryGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F38E6BD829C9BE1EFAA0036E8A6D533F /* NNMacrosLazyGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = FA54846C2AAF0A1E03FDFE1AC4C5AB8A /* NNMacrosLazyGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F469509C6EA465F51948CCAEBBFD8979 /* NNMacros-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA301A2400600E756F3CD19879FACA4A /* NNMacros-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB7C9CB05DBB8FFCBA70C46BB8479808 /* NNMacrosCocoapodsFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D2078516A3984D71E4D9D50A3FEEBB4 /* NNMacrosCocoapodsFix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,42 +41,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0105104FD64A8E4DAC1E085F49BC4AE3 /* NNMacrosCategorySetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosCategorySetter.h; path = NNMacros/NNMacros/NNMacrosCategorySetter.h; sourceTree = "<group>"; };
-		0ACBAE053A711BF5F5018B9C98F97409 /* NNMacros-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NNMacros-dummy.m"; sourceTree = "<group>"; };
-		0C46E23253EAE074C84CB13BBDEAB208 /* NNMacros-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NNMacros-umbrella.h"; sourceTree = "<group>"; };
-		0F63DF299D6BDC2468DBAE129541A445 /* NNMacrosCategoryGetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosCategoryGetter.h; path = NNMacros/NNMacros/NNMacrosCategoryGetter.h; sourceTree = "<group>"; };
-		199FC9EBFE6EA98F0E551D9E64296E72 /* NNMacrosLazyGetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosLazyGetter.h; path = NNMacros/NNMacros/NNMacrosLazyGetter.h; sourceTree = "<group>"; };
-		232871B6088A8D75EEFD90DADF9A6C62 /* NNMacros-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NNMacros-prefix.pch"; sourceTree = "<group>"; };
+		079195A277282CA3C2BF534D3702D252 /* NNMacrosCocoapodsFix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNMacrosCocoapodsFix.m; sourceTree = "<group>"; };
+		1A368845D92A4063D40B5775C1019651 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		26DC728F43071E49CDB78801D6BE7FD5 /* NNMacros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NNMacros.framework; path = NNMacros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A271B50BDF5998139EBBFA73004CAA /* NNMacrosCategorySynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosCategorySynthesize.h; path = NNMacros/NNMacros/NNMacrosCategorySynthesize.h; sourceTree = "<group>"; };
 		29D9E3B093118803A912DDAFD9CE4DA9 /* Pods-NNMacrosDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NNMacrosDemo.release.xcconfig"; sourceTree = "<group>"; };
-		31C16567B1231E84380FAFA0ED69C719 /* NNMacros.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NNMacros.xcconfig; sourceTree = "<group>"; };
+		2E8B2F0756E60582B3A29948172B235C /* NNMacros.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NNMacros.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3DA84FEB4D065AE33EBAF0BE91B7AD01 /* NNMacrosScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosScreen.h; path = NNMacros/NNMacros/NNMacrosScreen.h; sourceTree = "<group>"; };
-		43C34A1C14A0FF740A2DE5389D633311 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		48D1A94850CB6A5D88C971C787B574FA /* NNMacrosVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosVersion.h; path = NNMacros/NNMacros/NNMacrosVersion.h; sourceTree = "<group>"; };
-		491E702607185D679518EBC3A25869C8 /* NNMacrosString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosString.h; path = NNMacros/NNMacros/NNMacrosString.h; sourceTree = "<group>"; };
-		4A566A6B43A84C481B1E2DFE3726ACF5 /* NNMacros.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NNMacros.modulemap; sourceTree = "<group>"; };
-		55F1680D7DE64F694A28600F7F383B02 /* NNMacrosDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosDevice.h; path = NNMacros/NNMacros/NNMacrosDevice.h; sourceTree = "<group>"; };
+		47F3754798B8DD0C61E6E9BB3F0BDEE7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5BFFA4410AEE184BE4EF60B5A2C0F00C /* NNMacrosApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosApp.h; path = NNMacros/NNMacros/NNMacrosApp.h; sourceTree = "<group>"; };
 		60DCD709C249E24211A47670805DF300 /* Pods-NNMacrosDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NNMacrosDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		61EBAD69D068D12C64A207E3ADD3C390 /* NNMacros.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NNMacros.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71E670FBE00CA5434C41DD9FC4C3FB8F /* Pods-NNMacrosDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NNMacrosDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7B265974904EFB550B36049F69C410B7 /* NNMacros.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NNMacros.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		89C3E31DA94ECEC2C9585DAC110D9F4D /* NNMacros-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NNMacros-Info.plist"; sourceTree = "<group>"; };
+		92B798CDE3935BD76AEBEE0FFD94D4CB /* NNMacrosColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosColor.h; path = NNMacros/NNMacros/NNMacrosColor.h; sourceTree = "<group>"; };
+		94706F9BF50B6E388117007AFCE7D5D7 /* NNMacrosVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosVersion.h; path = NNMacros/NNMacros/NNMacrosVersion.h; sourceTree = "<group>"; };
 		9785E6A386F283334BAB7612BD6A5EA2 /* Pods_NNMacrosDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NNMacrosDemo.framework; path = "Pods-NNMacrosDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		993824B0032964B76FE6661EC0055B5B /* NNMacrosCategorySynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosCategorySynthesize.h; path = NNMacros/NNMacros/NNMacrosCategorySynthesize.h; sourceTree = "<group>"; };
-		99496C1AF41405CE5F1407BEC087A230 /* NNMacrosSandboxPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosSandboxPath.h; path = NNMacros/NNMacros/NNMacrosSandboxPath.h; sourceTree = "<group>"; };
+		9D2078516A3984D71E4D9D50A3FEEBB4 /* NNMacrosCocoapodsFix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NNMacrosCocoapodsFix.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FC7D7A8094F1D287D121F1732DE4942 /* Pods-NNMacrosDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NNMacrosDemo-frameworks.sh"; sourceTree = "<group>"; };
-		AC53AA233DC380F139AEA575E8B8DAF8 /* NNMacrosApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosApp.h; path = NNMacros/NNMacros/NNMacrosApp.h; sourceTree = "<group>"; };
 		ACE69F5C5E19893513E11C66D017E023 /* Pods-NNMacrosDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NNMacrosDemo-Info.plist"; sourceTree = "<group>"; };
+		AD8D9E4E3865CB59B8D3CD7BCFDE2DC2 /* NNMacrosCategoryGetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosCategoryGetter.h; path = NNMacros/NNMacros/NNMacrosCategoryGetter.h; sourceTree = "<group>"; };
+		AFD6C1B0287367F97BEC65AA59A6CF64 /* NNMacros.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NNMacros.modulemap; sourceTree = "<group>"; };
+		B2C706E59DB004676A293FC65E0D4F09 /* NNMacrosSandbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosSandbox.h; path = NNMacros/NNMacros/NNMacrosSandbox.h; sourceTree = "<group>"; };
 		B5B4268F0B9448C2095E6973A160FB11 /* Pods-NNMacrosDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NNMacrosDemo.modulemap"; sourceTree = "<group>"; };
-		C37CA9A407CE8FDC92ACA47811A6C8C9 /* NNMacros-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NNMacros-Info.plist"; sourceTree = "<group>"; };
-		C5B957DEAC64B4DFB3C6B69C99CC1B79 /* NNMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacros.h; path = NNMacros/NNMacros/NNMacros.h; sourceTree = "<group>"; };
-		D64120C99EE713D9D033159BD7320AF0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DD11CC2B7B7EDD0FF01B426CD8CF13E5 /* NNMacrosCocoapodsFix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NNMacrosCocoapodsFix.h; sourceTree = "<group>"; };
-		E90FE2BB19E86616AB9B2DC940F77588 /* NNMacrosCocoapodsFix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNMacrosCocoapodsFix.m; sourceTree = "<group>"; };
-		EA9092F04CA92289506CB03C5925744D /* NNMacrosColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosColor.h; path = NNMacros/NNMacros/NNMacrosColor.h; sourceTree = "<group>"; };
+		C0D496D4503A887F0E6768830BC97C3A /* NNMacrosScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosScreen.h; path = NNMacros/NNMacros/NNMacrosScreen.h; sourceTree = "<group>"; };
+		C28201DE865030314EDDDEE20A82B7EC /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = NNMacros/NNMacros/Bases/metamacros.h; sourceTree = "<group>"; };
+		CF6A98897356E1EA16D1A5B8157D214C /* NNMacros-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NNMacros-dummy.m"; sourceTree = "<group>"; };
+		D264660D35A20BA302E49A124C69558F /* NNMacrosDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosDevice.h; path = NNMacros/NNMacros/NNMacrosDevice.h; sourceTree = "<group>"; };
+		D773F237E657347C65D1528682061B3D /* NNMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacros.h; path = NNMacros/NNMacros/NNMacros.h; sourceTree = "<group>"; };
+		DA301A2400600E756F3CD19879FACA4A /* NNMacros-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NNMacros-umbrella.h"; sourceTree = "<group>"; };
+		DD779289B1BAA1046938F4BFFDC84C70 /* NNMacros-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NNMacros-prefix.pch"; sourceTree = "<group>"; };
+		E9648D9BC58F952C1A85C95668BCA2D4 /* NNMacrosCategorySetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosCategorySetter.h; path = NNMacros/NNMacros/NNMacrosCategorySetter.h; sourceTree = "<group>"; };
 		EB5522056AFADCD02162C1D90B9990EA /* Pods-NNMacrosDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NNMacrosDemo-umbrella.h"; sourceTree = "<group>"; };
 		F1D8D340185117A1DA7A172C9256D33C /* Pods-NNMacrosDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NNMacrosDemo-dummy.m"; sourceTree = "<group>"; };
-		FBAC048DC3A2E1C0D9EEAF8D83027526 /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = NNMacros/NNMacros/Bases/metamacros.h; sourceTree = "<group>"; };
+		F478A26759EE82F9E1BEF006588F0F0A /* NNMacrosString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosString.h; path = NNMacros/NNMacros/NNMacrosString.h; sourceTree = "<group>"; };
+		FA54846C2AAF0A1E03FDFE1AC4C5AB8A /* NNMacrosLazyGetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NNMacrosLazyGetter.h; path = NNMacros/NNMacros/NNMacrosLazyGetter.h; sourceTree = "<group>"; };
 		FBFF92A2192D644D1B25039A0B61D798 /* Pods-NNMacrosDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NNMacrosDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,44 +100,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BC3EED8E86878253A0BF13D5235A155 /* CocoapodsFix */ = {
+		19EC00122A1793B0D619325992BDC897 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD11CC2B7B7EDD0FF01B426CD8CF13E5 /* NNMacrosCocoapodsFix.h */,
-				E90FE2BB19E86616AB9B2DC940F77588 /* NNMacrosCocoapodsFix.m */,
+				AFD6C1B0287367F97BEC65AA59A6CF64 /* NNMacros.modulemap */,
+				2E8B2F0756E60582B3A29948172B235C /* NNMacros.xcconfig */,
+				CF6A98897356E1EA16D1A5B8157D214C /* NNMacros-dummy.m */,
+				89C3E31DA94ECEC2C9585DAC110D9F4D /* NNMacros-Info.plist */,
+				DD779289B1BAA1046938F4BFFDC84C70 /* NNMacros-prefix.pch */,
+				DA301A2400600E756F3CD19879FACA4A /* NNMacros-umbrella.h */,
 			);
-			name = CocoapodsFix;
-			path = NNMacros/NNMacros/CocoapodsFix;
-			sourceTree = "<group>";
-		};
-		20B8AD2A5B96AF7B96A23EC53B53BC66 /* NNMacros */ = {
-			isa = PBXGroup;
-			children = (
-				C5B957DEAC64B4DFB3C6B69C99CC1B79 /* NNMacros.h */,
-				AC53AA233DC380F139AEA575E8B8DAF8 /* NNMacrosApp.h */,
-				0F63DF299D6BDC2468DBAE129541A445 /* NNMacrosCategoryGetter.h */,
-				0105104FD64A8E4DAC1E085F49BC4AE3 /* NNMacrosCategorySetter.h */,
-				993824B0032964B76FE6661EC0055B5B /* NNMacrosCategorySynthesize.h */,
-				EA9092F04CA92289506CB03C5925744D /* NNMacrosColor.h */,
-				55F1680D7DE64F694A28600F7F383B02 /* NNMacrosDevice.h */,
-				199FC9EBFE6EA98F0E551D9E64296E72 /* NNMacrosLazyGetter.h */,
-				99496C1AF41405CE5F1407BEC087A230 /* NNMacrosSandboxPath.h */,
-				3DA84FEB4D065AE33EBAF0BE91B7AD01 /* NNMacrosScreen.h */,
-				491E702607185D679518EBC3A25869C8 /* NNMacrosString.h */,
-				48D1A94850CB6A5D88C971C787B574FA /* NNMacrosVersion.h */,
-				C67825AEF07EA9006156B2A5E1ECD530 /* Bases */,
-				1BC3EED8E86878253A0BF13D5235A155 /* CocoapodsFix */,
-				8A845135301784A2BFCD9962181287A0 /* Pod */,
-				A5C845889F906E88E293A244909E49DA /* Support Files */,
-			);
-			name = NNMacros;
-			path = ..;
+			name = "Support Files";
+			path = "Pods/Target Support Files/NNMacros";
 			sourceTree = "<group>";
 		};
 		2AD21819C2D4F6AEAEB5E688CB6508DA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				20B8AD2A5B96AF7B96A23EC53B53BC66 /* NNMacros */,
+				7D8EB3AEE50F0F5040A7DC217746F81F /* NNMacros */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -150,28 +130,46 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8A845135301784A2BFCD9962181287A0 /* Pod */ = {
+		7D8EB3AEE50F0F5040A7DC217746F81F /* NNMacros */ = {
 			isa = PBXGroup;
 			children = (
-				D64120C99EE713D9D033159BD7320AF0 /* LICENSE */,
-				61EBAD69D068D12C64A207E3ADD3C390 /* NNMacros.podspec */,
-				43C34A1C14A0FF740A2DE5389D633311 /* README.md */,
+				D773F237E657347C65D1528682061B3D /* NNMacros.h */,
+				5BFFA4410AEE184BE4EF60B5A2C0F00C /* NNMacrosApp.h */,
+				AD8D9E4E3865CB59B8D3CD7BCFDE2DC2 /* NNMacrosCategoryGetter.h */,
+				E9648D9BC58F952C1A85C95668BCA2D4 /* NNMacrosCategorySetter.h */,
+				28A271B50BDF5998139EBBFA73004CAA /* NNMacrosCategorySynthesize.h */,
+				92B798CDE3935BD76AEBEE0FFD94D4CB /* NNMacrosColor.h */,
+				D264660D35A20BA302E49A124C69558F /* NNMacrosDevice.h */,
+				FA54846C2AAF0A1E03FDFE1AC4C5AB8A /* NNMacrosLazyGetter.h */,
+				B2C706E59DB004676A293FC65E0D4F09 /* NNMacrosSandbox.h */,
+				C0D496D4503A887F0E6768830BC97C3A /* NNMacrosScreen.h */,
+				F478A26759EE82F9E1BEF006588F0F0A /* NNMacrosString.h */,
+				94706F9BF50B6E388117007AFCE7D5D7 /* NNMacrosVersion.h */,
+				96939E058D6E3052533AAD81EF562054 /* Bases */,
+				A48861FDB19619BA03E60FBE47D9BD51 /* CocoapodsFix */,
+				C4128A9E8E7A9F59A2BC51679E76DCD8 /* Pod */,
+				19EC00122A1793B0D619325992BDC897 /* Support Files */,
 			);
-			name = Pod;
+			name = NNMacros;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		A5C845889F906E88E293A244909E49DA /* Support Files */ = {
+		96939E058D6E3052533AAD81EF562054 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
-				4A566A6B43A84C481B1E2DFE3726ACF5 /* NNMacros.modulemap */,
-				31C16567B1231E84380FAFA0ED69C719 /* NNMacros.xcconfig */,
-				0ACBAE053A711BF5F5018B9C98F97409 /* NNMacros-dummy.m */,
-				C37CA9A407CE8FDC92ACA47811A6C8C9 /* NNMacros-Info.plist */,
-				232871B6088A8D75EEFD90DADF9A6C62 /* NNMacros-prefix.pch */,
-				0C46E23253EAE074C84CB13BBDEAB208 /* NNMacros-umbrella.h */,
+				C28201DE865030314EDDDEE20A82B7EC /* metamacros.h */,
 			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/NNMacros";
+			name = Bases;
+			sourceTree = "<group>";
+		};
+		A48861FDB19619BA03E60FBE47D9BD51 /* CocoapodsFix */ = {
+			isa = PBXGroup;
+			children = (
+				9D2078516A3984D71E4D9D50A3FEEBB4 /* NNMacrosCocoapodsFix.h */,
+				079195A277282CA3C2BF534D3702D252 /* NNMacrosCocoapodsFix.m */,
+			);
+			name = CocoapodsFix;
+			path = NNMacros/NNMacros/CocoapodsFix;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -182,12 +180,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C67825AEF07EA9006156B2A5E1ECD530 /* Bases */ = {
+		C4128A9E8E7A9F59A2BC51679E76DCD8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FBAC048DC3A2E1C0D9EEAF8D83027526 /* metamacros.h */,
+				1A368845D92A4063D40B5775C1019651 /* LICENSE */,
+				7B265974904EFB550B36049F69C410B7 /* NNMacros.podspec */,
+				47F3754798B8DD0C61E6E9BB3F0BDEE7 /* README.md */,
 			);
-			name = Bases;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -246,25 +246,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A20EC75B78FB6DB8E640814982AF235 /* Headers */ = {
+		6B43496BC5756EBA239633231778AF3B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0647661CF17153C2634157DF21C63B81 /* metamacros.h in Headers */,
-				334BC2840C90CE181443EF8FE7AA2B36 /* NNMacros-umbrella.h in Headers */,
-				1C5A63F1E3C78C5F0534B4A90292375A /* NNMacros.h in Headers */,
-				0309DD10BA6AD19A6A23131E79685976 /* NNMacrosApp.h in Headers */,
-				6C8B88355EFF9495FA0D1A7F9F641068 /* NNMacrosCategoryGetter.h in Headers */,
-				35B226C1EC8A5B4928BDEDAE0D3911F3 /* NNMacrosCategorySetter.h in Headers */,
-				92AFE0F4EC376E44ADAE09E5F8023B71 /* NNMacrosCategorySynthesize.h in Headers */,
-				061108483CE826141FFA8E7A0E506CC8 /* NNMacrosCocoapodsFix.h in Headers */,
-				B05F9813DF52C0D9778021FC2382EC22 /* NNMacrosColor.h in Headers */,
-				6A2FD95F8461F8FEAB1A3569D37D7425 /* NNMacrosDevice.h in Headers */,
-				C84AAADE07BEB28DE3A3406B9FACE0B1 /* NNMacrosLazyGetter.h in Headers */,
-				A6CAEB2B1B786E626C4A0AD3AD30B29C /* NNMacrosSandboxPath.h in Headers */,
-				792DAB1314ABECF95FC0E36FFB7E662A /* NNMacrosScreen.h in Headers */,
-				C4490FC4A650C6049CB1C612154BC751 /* NNMacrosString.h in Headers */,
-				F60510CCAC87E6505EA700F8C9DC5C27 /* NNMacrosVersion.h in Headers */,
+				A36DB20569702FE1D4CAE6638FE6E2A1 /* metamacros.h in Headers */,
+				F469509C6EA465F51948CCAEBBFD8979 /* NNMacros-umbrella.h in Headers */,
+				6D5A321DDFC762F0FF9F375D08FA377B /* NNMacros.h in Headers */,
+				D68B4B418277B257C89F0F92A1D91124 /* NNMacrosApp.h in Headers */,
+				DFBE4E76A9391F9078BB1919B8B3FEF3 /* NNMacrosCategoryGetter.h in Headers */,
+				D99289CF79E4C6FAE02A481A3F7BA260 /* NNMacrosCategorySetter.h in Headers */,
+				7D5C050A2030417DB958436790C3A619 /* NNMacrosCategorySynthesize.h in Headers */,
+				FB7C9CB05DBB8FFCBA70C46BB8479808 /* NNMacrosCocoapodsFix.h in Headers */,
+				39EA18702966E38B87BFFBAD051CFA94 /* NNMacrosColor.h in Headers */,
+				39D3B613B66F640ADE9855D681A1B90C /* NNMacrosDevice.h in Headers */,
+				F38E6BD829C9BE1EFAA0036E8A6D533F /* NNMacrosLazyGetter.h in Headers */,
+				2FE16F5E12D53CCC07110324D05EFB49 /* NNMacrosSandbox.h in Headers */,
+				263B4EA0D087D7E11C0220321028DD07 /* NNMacrosScreen.h in Headers */,
+				9882DCA29668343C77DDC83112CBF858 /* NNMacrosString.h in Headers */,
+				3F9EE500F79E64968C35C7117AC152D0 /* NNMacrosVersion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53C345E243B0A4C74270F93673A30310 /* Build configuration list for PBXNativeTarget "NNMacros" */;
 			buildPhases = (
-				1A20EC75B78FB6DB8E640814982AF235 /* Headers */,
+				6B43496BC5756EBA239633231778AF3B /* Headers */,
 				3822415630AA4DDCDF8A1077FECDEEEE /* Sources */,
 				8C05FEF7A44392136853434C533592B5 /* Frameworks */,
 				F2986C6FBE0D7B8185C0AEA6DFEBE2C1 /* Resources */,
@@ -418,7 +418,7 @@
 		};
 		4D7D90B82535093EE5949DC9EC884F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31C16567B1231E84380FAFA0ED69C719 /* NNMacros.xcconfig */;
+			baseConfigurationReference = 2E8B2F0756E60582B3A29948172B235C /* NNMacros.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -605,7 +605,7 @@
 		};
 		DE5C8BE703A2FC92C71950689C6016FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31C16567B1231E84380FAFA0ED69C719 /* NNMacros.xcconfig */;
+			baseConfigurationReference = 2E8B2F0756E60582B3A29948172B235C /* NNMacros.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

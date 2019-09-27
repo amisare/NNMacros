@@ -10,8 +10,7 @@
 
 @implementation NNMacrosSandboxPathDemo
 
-- (void)macroTest
-{
+- (void)macroTest {
     DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathHome);
     DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathTmp);
     DLog(@"%@:%@", NN_arg2String(NN_pathHome), NN_pathCaches);

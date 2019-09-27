@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NNMacrosDemoProtocol.h"
 
-@interface NNMacrosAppDemo : NSObject
-
-- (void)macroTest;
+@interface NNMacrosAppDemo : NSObject <NNMacrosDemoProtocol>
 
 @end

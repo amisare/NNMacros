@@ -10,8 +10,7 @@
 
 @implementation NNMacrosStringDemo
 
-- (void)macroTest
-{
+- (void)macroTest {
     DLog(@"%@", NN_stringConnect(@"_str0", @"_str1"));
     DLog(@"%@", NN_stringConnect(@"_str0", @"_str1", @"_str2"));
     DLog(@"%@", NN_stringConnect(@"_str0", @"_str1", @"_str2", @"_str3"));

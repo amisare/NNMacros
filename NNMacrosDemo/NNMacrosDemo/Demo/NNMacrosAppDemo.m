@@ -10,8 +10,7 @@
 
 @implementation NNMacrosAppDemo
 
-- (void)macroTest
-{
+- (void)macroTest {
     DLog(@"%@", NN_appName);
     DLog(@"%@", NN_appShortVersion);
     DLog(@"%@", NN_appBuildVersion);

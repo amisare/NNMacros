@@ -10,8 +10,7 @@
 
 @implementation NNMacrosDeviceDemo
 
-- (void)macroTest
-{
+- (void)macroTest {
     DLog(@"%@", NN_deviceModel);
 }
 

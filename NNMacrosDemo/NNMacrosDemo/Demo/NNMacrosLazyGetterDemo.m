@@ -33,8 +33,7 @@
 
 @implementation NNMacrosLazyGetterDemo
 
-- (void)macroTest
-{
+- (void)macroTest {
     
     DLog(@"lazygetter宏的使用");
     

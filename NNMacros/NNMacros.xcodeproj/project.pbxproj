@@ -14,7 +14,6 @@
 		670F8DB120C121B4004CB3E9 /* NNMacrosDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA420C121B3004CB3E9 /* NNMacrosDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB220C121B4004CB3E9 /* NNMacrosApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA520C121B3004CB3E9 /* NNMacrosApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB320C121B4004CB3E9 /* NNMacrosString.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA620C121B3004CB3E9 /* NNMacrosString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		670F8DB420C121B4004CB3E9 /* NNMacrosSandboxPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA720C121B4004CB3E9 /* NNMacrosSandboxPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB520C121B4004CB3E9 /* NNMacrosCategorySynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA820C121B4004CB3E9 /* NNMacrosCategorySynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB620C121B4004CB3E9 /* NNMacrosLazyGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		670F8DB720C121B4004CB3E9 /* NNMacrosColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,7 +46,6 @@
 		670F8DA420C121B3004CB3E9 /* NNMacrosDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosDevice.h; sourceTree = "<group>"; };
 		670F8DA520C121B3004CB3E9 /* NNMacrosApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosApp.h; sourceTree = "<group>"; };
 		670F8DA620C121B3004CB3E9 /* NNMacrosString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosString.h; sourceTree = "<group>"; };
-		670F8DA720C121B4004CB3E9 /* NNMacrosSandboxPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosSandboxPath.h; sourceTree = "<group>"; };
 		670F8DA820C121B4004CB3E9 /* NNMacrosCategorySynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosCategorySynthesize.h; sourceTree = "<group>"; };
 		670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosLazyGetter.h; sourceTree = "<group>"; };
 		670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosColor.h; sourceTree = "<group>"; };
@@ -57,6 +55,7 @@
 		670F8DAF20C121B4004CB3E9 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		67AA43582277F9B000FEE272 /* NNMacrosCocoapodsFix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosCocoapodsFix.h; sourceTree = "<group>"; };
 		67AA43592277F9B000FEE272 /* NNMacrosCocoapodsFix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosCocoapodsFix.m; sourceTree = "<group>"; };
+		7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosSandbox.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +103,10 @@
 				670F8DA320C121B3004CB3E9 /* NNMacrosCategoryGetter.h */,
 				670F8DAD20C121B4004CB3E9 /* NNMacrosCategorySetter.h */,
 				670F8DA820C121B4004CB3E9 /* NNMacrosCategorySynthesize.h */,
-				670F8DA420C121B3004CB3E9 /* NNMacrosDevice.h */,
 				670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */,
+				670F8DA420C121B3004CB3E9 /* NNMacrosDevice.h */,
 				670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */,
-				670F8DA720C121B4004CB3E9 /* NNMacrosSandboxPath.h */,
+				7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */,
 				670F8DAB20C121B4004CB3E9 /* NNMacrosScreen.h */,
 				670F8DA620C121B3004CB3E9 /* NNMacrosString.h */,
 				670F8DAC20C121B4004CB3E9 /* NNMacrosVersion.h */,
@@ -153,7 +152,6 @@
 			files = (
 				670F8DBB20C121B4004CB3E9 /* metamacros.h in Headers */,
 				670F8DB920C121B4004CB3E9 /* NNMacrosVersion.h in Headers */,
-				670F8DB420C121B4004CB3E9 /* NNMacrosSandboxPath.h in Headers */,
 				670F8DB120C121B4004CB3E9 /* NNMacrosDevice.h in Headers */,
 				670F8DB320C121B4004CB3E9 /* NNMacrosString.h in Headers */,
 				670F8DB720C121B4004CB3E9 /* NNMacrosColor.h in Headers */,
