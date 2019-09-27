@@ -23,7 +23,7 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import <NNMacros/NNMacrosCategorySynthesize.h>
 #import <NNMacros/NNMacrosColor.h>
 #import <NNMacros/NNMacrosString.h>
-#import <NNMacros/NNMacrosSandboxPath.h>
+#import <NNMacros/NNMacrosSandbox.h>
 #import <NNMacros/NNMacrosApp.h>
 #import <NNMacros/NNMacrosDevice.h>
 #import <NNMacros/NNMacrosScreen.h>
@@ -35,7 +35,7 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import "NNMacrosCategorySynthesize.h"
 #import "NNMacrosColor.h"
 #import "NNMacrosString.h"
-#import "NNMacrosSandboxPath.h"
+#import "NNMacrosSandbox.h"
 #import "NNMacrosApp.h"
 #import "NNMacrosDevice.h"
 #import "NNMacrosScreen.h"
