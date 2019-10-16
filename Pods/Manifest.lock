@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: 60c3a3871c8cd6faee6a2f532fec1b1474018dc9
+PODS:
+  - NNMacros (1.0.0):
+    - NNMacros/Bases (= 1.0.0)
+  - NNMacros/Bases (1.0.0)
+
+DEPENDENCIES:
+  - NNMacros (from `NNMacros.podspec`)
+
+EXTERNAL SOURCES:
+  NNMacros:
+    :path: NNMacros.podspec
+
+SPEC CHECKSUMS:
+  NNMacros: 808f21dd308414562cc8b2af5643d306ea99299b
+
+PODFILE CHECKSUM: 87a904130021b8b909537ca257e316f253d11089
 
 COCOAPODS: 1.7.5

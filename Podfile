@@ -6,7 +6,7 @@ use_frameworks!
 workspace 'NNMacros.xcworkspace'
 
 def all_pods
-#    pod 'NNMacros', :path => 'NNMacros.podspec'
+    pod 'NNMacros', :path => 'NNMacros.podspec'
 end
 
 target :NNMacrosDemo do

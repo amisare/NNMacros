@@ -9,30 +9,6 @@
 #import "ViewController.h"
 #import "NNMacrosDemo.h"
 
-@interface ViewController (CategroySynthesize)
-
-@property (nonatomic, strong) NSString *string;
-@property (nonatomic, weak) id weakId;
-@property (nonatomic, assign) NSInteger iValue;
-
-@property (nonatomic, strong) NSString *string1;
-@property (nonatomic, weak) id weakId1;
-@property (nonatomic, assign) NSInteger iValue1;
-
-@end
-
-
-@implementation ViewController (CategroySynthesize)
-
-nn_associated_synthesize(nonatomic, strong, NSString *, string)
-nn_associated_synthesize(nonatomic, weak, id, weakId)
-nn_associated_synthesize(nonatomic, assign, NSInteger, iValue);
-
-nn_associated_synthesize(nonatomic, strong, NSString *, string1)
-nn_associated_synthesize(nonatomic, weak, id, weakId1)
-nn_associated_synthesize(nonatomic, assign, NSInteger, iValue1);
-
-@end
 
 @interface ViewController ()
 
@@ -63,6 +39,7 @@ nn_associated_synthesize(nonatomic, assign, NSInteger, iValue1);
 }\
 
     NNMacrosTest(NNMacrosLazyGetterDemo)
+    NNMacrosTest(NNMacrosSynthesizeDemo)
     NNMacrosTest(NNMacrosSandboxPathDemo)
     NNMacrosTest(NNMacrosStringDemo)
     NNMacrosTest(NNMacrosAppDemo)

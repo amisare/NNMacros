@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		508D476DFC3B83CCAFF79A26 /* Pods_NNMacrosDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297894B13D80AA92C40BE0F6 /* Pods_NNMacrosDemo.framework */; };
+		7A4833652356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4833642356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m */; };
 		8B0663F21E153928001C9B23 /* NNMacrosLazyGetterDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0663F11E153928001C9B23 /* NNMacrosLazyGetterDemo.m */; };
 		8B8260151E1F307F0037EA04 /* NNMacrosSandboxPathDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260141E1F307F0037EA04 /* NNMacrosSandboxPathDemo.m */; };
 		8B8260181E1F30B80037EA04 /* NNMacrosScreenDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260171E1F30B80037EA04 /* NNMacrosScreenDemo.m */; };
@@ -45,6 +46,8 @@
 		297894B13D80AA92C40BE0F6 /* Pods_NNMacrosDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMacrosDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F11B7893DF6F6A86B418396 /* Pods-NNMacrosDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNMacrosDemo.debug.xcconfig"; path = "Target Support Files/Pods-NNMacrosDemo/Pods-NNMacrosDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7A48335B2356DC7100ACE8E1 /* NNMacros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NNMacros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4833632356F30400ACE8E1 /* NNMacrosSynthesizeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosSynthesizeDemo.h; sourceTree = "<group>"; };
+		7A4833642356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosSynthesizeDemo.m; sourceTree = "<group>"; };
 		7AD9042A233DCCA100A4ABF8 /* NNMacrosDemoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosDemoProtocol.h; sourceTree = "<group>"; };
 		8B0663EB1E15233F001C9B23 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8B0663F01E153928001C9B23 /* NNMacrosLazyGetterDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosLazyGetterDemo.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				8B8260211E1F73840037EA04 /* NNMacrosDeviceDemo.m */,
 				8B0663F01E153928001C9B23 /* NNMacrosLazyGetterDemo.h */,
 				8B0663F11E153928001C9B23 /* NNMacrosLazyGetterDemo.m */,
+				7A4833632356F30400ACE8E1 /* NNMacrosSynthesizeDemo.h */,
+				7A4833642356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m */,
 				8B8260131E1F307F0037EA04 /* NNMacrosSandboxPathDemo.h */,
 				8B8260141E1F307F0037EA04 /* NNMacrosSandboxPathDemo.m */,
 				8B8260161E1F30B80037EA04 /* NNMacrosScreenDemo.h */,
@@ -224,6 +229,7 @@
 				8BC98DF91E13AAB700E416A1 /* Sources */,
 				8BC98DFA1E13AAB700E416A1 /* Frameworks */,
 				8BC98DFB1E13AAB700E416A1 /* Resources */,
+				0128E2A3ACA930449B9B0626 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,6 +352,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0128E2A3ACA930449B9B0626 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NNMacrosDemo/Pods-NNMacrosDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NNMacros/NNMacros.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNMacros.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NNMacrosDemo/Pods-NNMacrosDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		32F4FF98028C2233314C2BE0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +406,7 @@
 				8B82601B1E1F30ED0037EA04 /* NNMacrosAppDemo.m in Sources */,
 				8B8260221E1F73840037EA04 /* NNMacrosDeviceDemo.m in Sources */,
 				8B8260151E1F307F0037EA04 /* NNMacrosSandboxPathDemo.m in Sources */,
+				7A4833652356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m in Sources */,
 				8BC98E021E13AAB700E416A1 /* main.m in Sources */,
 				8B8260181E1F30B80037EA04 /* NNMacrosScreenDemo.m in Sources */,
 			);
