@@ -51,6 +51,12 @@ static inline objc_AssociationPolicy nn_categorysetter_store_policy(NSString *ar
     else if ([arcType isEqualToString:@"strong"] && [atomicType isEqualToString:@"atomic"]) {
         return OBJC_ASSOCIATION_RETAIN;
     }
+    else if ([arcType isEqualToString:@"weak"] && [atomicType isEqualToString:@"nonatomic"]) {
+        return OBJC_ASSOCIATION_RETAIN_NONATOMIC;
+    }
+    else if ([arcType isEqualToString:@"weak"] && [atomicType isEqualToString:@"atomic"]) {
+        return OBJC_ASSOCIATION_RETAIN;
+    }
     else if  ([arcType isEqualToString:@"copy"] && [atomicType isEqualToString:@"nonatomic"]) {
         return OBJC_ASSOCIATION_COPY_NONATOMIC;
     }
