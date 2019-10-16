@@ -312,8 +312,35 @@ nn_lazygetter(UITableView, tableView, {
 
 ### CocoaPods
 
-- `pod 'NNMacros'`
-- `#import <NNMacros.h>`
+安装最新版的 CocoaPods：
+
+```bash
+$ gem install cocoapods
+```
+
+在 `podfile` 中添加：
+
+```ruby
+pod 'NNMacros', '~> 2.0.0'
+```
+
+然后在终端执行：
+
+```bash
+$ pod install
+```
+
+如安装失败，提示：
+
+```bash
+[!] Unable to find a specification for `NNMacros`
+```
+
+尝试使用命令：
+
+```bash
+pod install --repo-update
+```
 
 
 ## 使用中会遇到的问题及处理：
