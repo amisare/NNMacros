@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 #include "metamacros.h"
-#include "NNMacrosAssociatedKey.h"
 
 /***************************************************
  associated getter
@@ -21,7 +20,7 @@
  atomic_type:   atomic, nonatomic
  arc_type:      assign, strong, copy
  data_type:     属性类型
- param0:        属性名称
+ param0:        getter方法名
  param1:        hook_after_load
  param2:        hook_befor_ret
  */
@@ -87,7 +86,7 @@ static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
 \
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
-    const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
+    SEL __key = _cmd; \
     id __obj = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
     data_type __ivar = __obj; \
@@ -101,10 +100,10 @@ static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
 \
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
-    const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
+    SEL __key = _cmd; \
     NSMapTable *__table = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
-    id __obj = [__table objectForKey:@(__key)]; \
+    id __obj = [__table objectForKey:NSStringFromSelector(__key)]; \
     data_type __ivar = __obj; \
     metamacro_at(2, __VA_ARGS__) \
     return __ivar; \
@@ -116,7 +115,7 @@ static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
 \
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
-    const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
+    SEL __key = _cmd; \
     id __obj = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
     char __encoding = nn_associated_getter_encoding([self class], _cmd); \

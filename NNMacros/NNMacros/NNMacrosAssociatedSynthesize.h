@@ -20,14 +20,15 @@
  atomic_type:   atomic, nonatomic
  arc_type:      assign, strong, copy
  data_type:     属性类型
- property_name: 属性名称
+ getter:        getter方法名
+ setter:        setter方法名
  */
 
 #ifndef nn_associated_synthesize
 
-#define nn_associated_synthesize(atomic_type, arc_type, data_type, property_name) \
-        nn_associated_getter(atomic_type, arc_type, data_type, property_name); \
-        nn_associated_setter(atomic_type, arc_type, data_type, property_name); \
+#define nn_associated_synthesize(atomic_type, arc_type, data_type, getter, setter) \
+        nn_associated_getter(atomic_type, arc_type, data_type, getter); \
+        nn_associated_setter(atomic_type, arc_type, data_type, setter); \
 
 #endif /* nn_associated_synthesize */
 

@@ -18,7 +18,6 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 
 #if __has_include(<NNMacros/NNMacros.h>)
 #import <NNMacros/NNMacrosLazyGetter.h>
-#import <NNMacros/NNMacrosAssociatedKey.h>
 #import <NNMacros/NNMacrosAssociatedGetter.h>
 #import <NNMacros/NNMacrosAssociatedSetter.h>
 #import <NNMacros/NNMacrosAssociatedSynthesize.h>
@@ -31,7 +30,6 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import <NNMacros/NNMacrosVersion.h>
 #else
 #import "NNMacrosLazyGetter.h"
-#import "NNMacrosAssociatedKey.h"
 #import "NNMacrosAssociatedGetter.h"
 #import "NNMacrosAssociatedSetter.h"
 #import "NNMacrosAssociatedSynthesize.h"

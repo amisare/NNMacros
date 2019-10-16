@@ -30,8 +30,11 @@
 
 @implementation NNMacrosSynthesizeDemo (Synthesize)
 
-nn_associated_synthesize(nonatomic, strong, NSString *, string)
-nn_associated_synthesize(nonatomic, weak, id, weakId)
-nn_associated_synthesize(nonatomic, assign, NSInteger, iValue);
+//nn_associated_synthesize(nonatomic, strong, NSString *, string, setString)
+
+nn_associated_getter(nonatomic, strong, NSString *, string)
+nn_associated_setter(nonatomic, strong, NSString *, setString)
+nn_associated_synthesize(nonatomic, weak, id, weakId, setWeakId)
+nn_associated_synthesize(nonatomic, assign, NSInteger, iValue, setIValue);
 
 @end
