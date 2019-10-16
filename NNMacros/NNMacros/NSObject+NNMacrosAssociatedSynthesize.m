@@ -113,16 +113,16 @@ nn_macro_forwardInvocation(NSInvocation *anInvocation) {
 
 - (NSMethodSignature *)nn_macro_methodSignatureForSelector:(SEL)aSelector {
     
-    NSMethodSignature *sign = nil;
-    sign = [self nn_macro_methodSignatureForSelector:aSelector];
-    if (sign != nil) {
-        return sign;
+    NSMethodSignature *methodSignature = nil;
+    methodSignature = [self nn_macro_methodSignatureForSelector:aSelector];
+    if (methodSignature != nil) {
+        return methodSignature;
     }
     
     SEL selector = nn_macro_realSetterSelector([self class], aSelector);
-    sign = [self nn_macro_methodSignatureForSelector:selector];
+    methodSignature = [self nn_macro_methodSignatureForSelector:selector];
     
-    return sign;
+    return methodSignature;
 }
 
 @end
