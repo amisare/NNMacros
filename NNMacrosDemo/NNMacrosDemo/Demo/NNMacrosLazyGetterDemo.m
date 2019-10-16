@@ -35,7 +35,7 @@
 
 - (void)macroTest {
     
-    DLog(@"lazygetter宏的使用");
+    DLog(@"nn_lazygetter宏的使用");
     
     DLog(@"懒加载实例化可变字符串对象");
     [self.str_0 appendString:@"str_0"];
@@ -63,15 +63,15 @@
 
 #pragma mark - 方式一
 //方式一：实例化对象，默认调用的new方法
-lazygetter(NSMutableString, str_0)
-lazygetter(NSMutableString, str_1)
-lazygetter(NSMutableString, str_2)
-lazygetter(NSMutableString, str_3)
-lazygetter(NSMutableString, str_4)
+nn_lazygetter(NSMutableString, str_0)
+nn_lazygetter(NSMutableString, str_1)
+nn_lazygetter(NSMutableString, str_2)
+nn_lazygetter(NSMutableString, str_3)
+nn_lazygetter(NSMutableString, str_4)
 
 #pragma mark - 方式二
 //方式二：在{}中实例化对象，并初始化
-lazygetter(NSMutableString, str_5, {
+nn_lazygetter(NSMutableString, str_5, {
     self.str_5 = [NSMutableString new];
     [self.str_5 appendString:@"str_5"];
 })
@@ -82,7 +82,7 @@ lazygetter(NSMutableString, str_5, {
 {
     self->str_n = str;
 }
-lazygetter(NSMutableString, str_n, {
+nn_lazygetter(NSMutableString, str_n, {
     self->str_n = [NSMutableString new];
     [self->str_n appendString:@"str_5"];
 }, self->str_n)
@@ -90,7 +90,7 @@ lazygetter(NSMutableString, str_n, {
 
 #pragma mark - 问题一：array会遇到的问题
 //问题一：
-lazygetter(NSMutableArray, arr_issue_0, {
+nn_lazygetter(NSMutableArray, arr_issue_0, {
     self.arr_issue_0 = [NSMutableArray new];
     //编译错误代码：
     /*
@@ -103,7 +103,7 @@ lazygetter(NSMutableArray, arr_issue_0, {
 
 #pragma mark - 问题二：dic会遇到的问题
 //问题二：
-lazygetter(NSMutableDictionary, dic_issue_0, {
+nn_lazygetter(NSMutableDictionary, dic_issue_0, {
     self.dic_issue_0 = [NSMutableDictionary new];
     //编译错误代码：
     /*

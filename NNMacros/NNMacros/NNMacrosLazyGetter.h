@@ -22,34 +22,34 @@
             例如：变量var，则传入self->var
 
  case0:
- lazygetter(NSString, name)
+ nn_lazygetter(NSString, name)
 
  case1:
- lazygetter(NSString, name, {
+ nn_lazygetter(NSString, name, {
     _name = @"name";
  })
 
  case2:
- lazygetter(NSString, name, {
+ nn_lazygetter(NSString, name, {
     self->name = @"name";
  }, self->name)
 
  */
 
-#ifndef lazygetter
+#ifndef nn_lazygetter
 
-#define lazygetter(type, ...)\
+#define nn_lazygetter(type, ...)\
 \
-metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(lazygetterparams2(type, __VA_ARGS__))\
-(metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(lazygetterparams3(type, __VA_ARGS__))\
-(metamacro_if_eq(3, metamacro_argcount(__VA_ARGS__))(lazygetterparams4(type, __VA_ARGS__))\
-(lazygetterparamsother(type, __VA_ARGS__))))\
+metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, __VA_ARGS__))\
+(metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams3(type, __VA_ARGS__))\
+(metamacro_if_eq(3, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams4(type, __VA_ARGS__))\
+(nn_lazygetterparamsother(type, __VA_ARGS__))))\
 \
 
 
-#define lazygetterparamsother(type, __VA_ARGS__)
+#define nn_lazygetterparamsother(type, __VA_ARGS__)
 
-#define lazygetterparams2(type, ...)\
+#define nn_lazygetterparams2(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
@@ -59,7 +59,7 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(lazygetterparams2(type, __VA
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
 
-#define lazygetterparams3(type, ...)\
+#define nn_lazygetterparams3(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
@@ -69,7 +69,7 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(lazygetterparams2(type, __VA
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
 
-#define lazygetterparams4(type, ...)\
+#define nn_lazygetterparams4(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
@@ -79,6 +79,6 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(lazygetterparams2(type, __VA
     return metamacro_at(2, __VA_ARGS__);\
 }\
 
-#endif /* lazygetter */
+#endif /* nn_lazygetter */
 
 #endif /* NNMacrosLazyGetter_h */
