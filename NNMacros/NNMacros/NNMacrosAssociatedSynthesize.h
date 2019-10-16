@@ -20,7 +20,7 @@
  atomic_type:   atomic, nonatomic
  arc_type:      assign, strong, copy
  data_type:     属性类型
- getter:        getter方法名
+ property_name: 属性名称
  */
 
 #ifndef nn_associated_synthesize

@@ -21,7 +21,7 @@
  atomic_type:   atomic, nonatomic
  arc_type:      assign, strong, copy
  data_type:     属性类型
- param0:        setter方法名
+ param0:        属性名称
  param1:        hook_begin_set
  param2:        hook_befor_store
  */
