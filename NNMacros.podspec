@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
   s.social_media_url        = "http://www.jianshu.com/users/9df9f28ff266/latest_articles"
 
   s.source        = { :git => "https://github.com/amisare/NNMacros.git", :tag => s.version }
+  
+  s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  
   s.ios.deployment_target   = '6.0'
   s.requires_arc  = true
 

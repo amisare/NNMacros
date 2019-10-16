@@ -24,16 +24,13 @@
 
 @implementation ViewController (CategroySynthesize)
 
-categorygetter(nonatomic, strong, NSString *, string)
-categorysetter(nonatomic, strong, NSString *, setString)
-categorygetter(nonatomic, weak, id, weakId)
-categorysetter(nonatomic, weak, id, setWeakId)
-categorygetter(nonatomic, assign, NSInteger, iValue);
-categorysetter(nonatomic, assign, NSInteger, setIValue);
+nn_associated_synthesize(nonatomic, strong, NSString *, string)
+nn_associated_synthesize(nonatomic, weak, id, weakId)
+nn_associated_synthesize(nonatomic, assign, NSInteger, iValue);
 
-categorysynthesize(nonatomic, strong, NSString *, string1, setString1)
-categorysynthesize(nonatomic, weak, id, weakId1, setWeakId1)
-categorysynthesize(nonatomic, assign, NSInteger, iValue1, setIValue1)
+nn_associated_synthesize(nonatomic, strong, NSString *, string1)
+nn_associated_synthesize(nonatomic, weak, id, weakId1)
+nn_associated_synthesize(nonatomic, assign, NSInteger, iValue1);
 
 @end
 

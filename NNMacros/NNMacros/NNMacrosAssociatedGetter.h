@@ -1,20 +1,21 @@
 //
-//  NNMacrosCategoryGetter.h
+//  NNMacrosAssociatedGetter.h
 //  NNMacros
 //
-//  Created by GuHaijun on 2018/5/31.
-//  Copyright © 2018年 顾海军. All rights reserved.
+//  Created by 顾海军 on 2019/10/16.
+//  Copyright © 2019 GuHaijun. All rights reserved.
 //
 
-#ifndef NNMacrosCategoryGetter_h
-#define NNMacrosCategoryGetter_h
+#ifndef NNMacrosAssociatedGetter_h
+#define NNMacrosAssociatedGetter_h
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 #include "metamacros.h"
+#include "NNMacrosAssociatedKey.h"
 
 /***************************************************
- category getter
+ associated getter
  ***************************************************/
 /*
  atomic_type:   atomic, nonatomic
@@ -25,14 +26,14 @@
  param2:        hook_befor_ret
  */
 
-#ifndef categorygetter
+#ifndef nn_associated_getter
 
 #pragma mark - getter
 
-#define categorygetter(atomic_type, arc_type, data_type, ...) \
-        metamacro_concat(categorygetter, \
+#define nn_associated_getter(atomic_type, arc_type, data_type, ...) \
+        metamacro_concat(nn_associated_getter, \
         metamacro_concat(_, arc_type))\
-        (atomic_type, arc_type, data_type, categorygetter_args_fill(3, __VA_ARGS__)) \
+        (atomic_type, arc_type, data_type, nn_associated_getter_args_fill(3, __VA_ARGS__)) \
 
 #pragma mark - getter tools
 
@@ -44,7 +45,7 @@
  @param sel getter 方法的 sel
  @return getter 方法返回值类型
  */
-static inline char nn_categorygetter_ret_encoding(Class cls, SEL sel) {
+static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
     Method method = class_getInstanceMethod(cls, sel);
     if (method == nil) { return 'v'; }
     const char *encoding = method_getTypeEncoding(method);
@@ -53,10 +54,10 @@ static inline char nn_categorygetter_ret_encoding(Class cls, SEL sel) {
     return ret;
 }
 
-#define categorygetter_encoding(cls, sel) \
-        nn_categorygetter_ret_encoding(cls, sel) \
+#define nn_associated_getter_encoding(cls, sel) \
+        nn_associated_getter_ret_encoding(cls, sel) \
 
-#define categorygetter_obj2type(obj, type, encoding) \
+#define nn_associated_getter_obj2type(obj, type, encoding) \
 ({ \
     type ivar = 0; \
     if (encoding == _C_CHR)         { ivar = (type)[obj charValue]; } \
@@ -75,18 +76,18 @@ static inline char nn_categorygetter_ret_encoding(Class cls, SEL sel) {
     ivar; \
 }) \
 
-#define categorygetter_args_fill(expect_number, ...) \
+#define nn_associated_getter_args_fill(expect_number, ...) \
         metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, , ,) \
         (metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
         (__VA_ARGS__)) \
 
 #pragma mark - getter strong
 
-#define categorygetter_strong(atomic_type, arc_type, data_type, ...) \
+#define nn_associated_getter_strong(atomic_type, arc_type, data_type, ...) \
 \
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
-    SEL __key = _cmd; \
+    const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
     id __obj = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
     data_type __ivar = __obj; \
@@ -96,14 +97,14 @@ static inline char nn_categorygetter_ret_encoding(Class cls, SEL sel) {
 
 #pragma mark - getter weak
 
-#define categorygetter_weak(atomic_type, arc_type, data_type, ...) \
+#define nn_associated_getter_weak(atomic_type, arc_type, data_type, ...) \
 \
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
-    SEL __key = _cmd; \
+    const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
     NSMapTable *__table = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
-    id __obj = [__table objectForKey:NSStringFromSelector(__key)]; \
+    id __obj = [__table objectForKey:@(__key)]; \
     data_type __ivar = __obj; \
     metamacro_at(2, __VA_ARGS__) \
     return __ivar; \
@@ -111,19 +112,19 @@ static inline char nn_categorygetter_ret_encoding(Class cls, SEL sel) {
 
 #pragma mark - getter assign
 
-#define categorygetter_assign(atomic_type, arc_type, data_type, ...) \
+#define nn_associated_getter_assign(atomic_type, arc_type, data_type, ...) \
 \
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
-    SEL __key = _cmd; \
+    const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
     id __obj = objc_getAssociatedObject(self, __key); \
     metamacro_at(1, __VA_ARGS__) \
-    char __encoding = categorygetter_encoding([self class], _cmd); \
-    data_type __ivar = categorygetter_obj2type(__obj, data_type, __encoding); \
+    char __encoding = nn_associated_getter_encoding([self class], _cmd); \
+    data_type __ivar = nn_associated_getter_obj2type(__obj, data_type, __encoding); \
     metamacro_at(2, __VA_ARGS__) \
     return __ivar; \
 }\
 
-#endif /* categorygetter */
+#endif /* nn_associated_getter */
 
-#endif /* NNMacrosCategoryGetter_h */
+#endif /* NNMacrosAssociatedGetter_h */
