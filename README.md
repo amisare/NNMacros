@@ -28,18 +28,17 @@ nn_lazygetter简写懒加载getter实现
 
 ### nn_associated_synthesize
 
-1. `nn_associated_synthesize(atomic_type, arc_type, type, getter, setter)`
+1. `nn_associated_synthesize(atomic_type, arc_type, data_type, property_name)`
 	- atomic_type: `nonatomic、atomic`
 	- arc_type: `strong、weak、assign、copy`
 	- data_type: 属性类型 `类：NSObject *、NSString * ... 基本数据类：NSInteger、BOOL ...`
-	- getter: getter方法名（*需要严格按照苹果命名规则书写*）
-	- setter: setter方法名（*需要严格按照苹果命名规则书写*）
+	- property_name: 属性名称
 
 2. `nn_associated_getter(atomic_type, arc_type, data_type, ...)`
 	- atomic_type: `nonatomic、atomic`
 	- arc_type: `strong、weak、assign、copy`
 	- data_type: 属性类型 `类：NSObject *、NSString * ... 基本数据类：NSInteger、BOOL ...`
-	- param0:（必传）getter方法名（*需要严格按照苹果命名规则书写*）
+	- param0:（必传）属性名称（*需要严格按照苹果命名规则书写*）
 	- param1:（选传）hook_after_load，传参为代码块`{}`，代码块插入到objc_getAssociatedObject之后
 	- param2:（选传）hook_befor_ret，传参为代码块`{}`，代码块插入到return之前
 	
@@ -52,7 +51,7 @@ nn_lazygetter简写懒加载getter实现
 	- atomic_type: `nonatomic、atomic`
 	- arc_type: `strong、weak、assign、copy`
 	- data_type: 属性类型 `类：NSObject *、NSString * ... 基本数据类：NSInteger、BOOL ...`
-	- param0:（必传）setter方法名（*需要严格按照苹果命名规则书写*）
+	- param0:（必传）属性名称（*需要严格按照苹果命名规则书写*）
 	- param1:（选传）hook_begin_set，传参为代码块`{}`，代码块插入到setter方法最开始执行位置
 	- param2:（选传）hook_befor_store，传参为代码块`{}`，代码块插入到objc_setAssociatedObject之前
 	
@@ -91,7 +90,7 @@ nn_associated_synthesize用于简化在categroy中为类动态添加属性时的
     
 ```
 @implementation NSObject (Awful)
-nn_associated_synthesize(nonatomic, assign, NSInteger, param, setParam)
+nn_associated_synthesize(nonatomic, assign, NSInteger, param)
 @end
 ```
 
@@ -183,7 +182,7 @@ nn_associated_getter(nonatomic, assign, NSInteger, param, {
     
 ```
 @implementation NSObject (Awful)
-nn_associated_setter(nonatomic, assign, NSInteger, setParam)
+nn_associated_setter(nonatomic, assign, NSInteger, param)
 @end
 ```
 
@@ -201,7 +200,7 @@ nn_associated_setter(nonatomic, assign, NSInteger, setParam)
     
 ```
 @implementation NSObject (Awful)
-nn_associated_setter(nonatomic, assign, NSInteger, setParam, {
+nn_associated_setter(nonatomic, assign, NSInteger, param, {
     __ivar += 100;
 }, {
     NSLog(@"%@", __obj);
