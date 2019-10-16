@@ -52,6 +52,12 @@ static inline objc_AssociationPolicy nn_associated_setter_store_policy(NSString 
     else if ([arcType isEqualToString:@"strong"] && [atomicType isEqualToString:@"atomic"]) {
         return OBJC_ASSOCIATION_RETAIN;
     }
+    else if ([arcType isEqualToString:@"weak"] && [atomicType isEqualToString:@"nonatomic"]) {
+        return OBJC_ASSOCIATION_RETAIN_NONATOMIC;
+    }
+    else if ([arcType isEqualToString:@"weak"] && [atomicType isEqualToString:@"atomic"]) {
+        return OBJC_ASSOCIATION_RETAIN;
+    }
     else if  ([arcType isEqualToString:@"copy"] && [atomicType isEqualToString:@"nonatomic"]) {
         return OBJC_ASSOCIATION_COPY_NONATOMIC;
     }
@@ -89,7 +95,7 @@ static inline objc_AssociationPolicy nn_associated_setter_store_policy(NSString 
 
 #define nn_associated_setter_weak(atomic_type, arc_type, data_type, ...) \
 @dynamic metamacro_at(0, __VA_ARGS__);\
-- (void)metamacro_concat(__nn_macro_set_, metamacro_at(0, __VA_ARGS__)):(data_type)newValue\
+- (void)metamacro_concat(nn_associated_setter_prefix, metamacro_at(0, __VA_ARGS__)):(data_type)newValue\
 { \
     const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
     data_type __ivar = newValue; \
@@ -104,7 +110,7 @@ static inline objc_AssociationPolicy nn_associated_setter_store_policy(NSString 
 
 #define nn_associated_setter_assign(atomic_type, arc_type, data_type, ...) \
 @dynamic metamacro_at(0, __VA_ARGS__);\
-- (void)metamacro_concat(__nn_macro_set_, metamacro_at(0, __VA_ARGS__)):(data_type)newValue\
+- (void)metamacro_concat(nn_associated_setter_prefix, metamacro_at(0, __VA_ARGS__)):(data_type)newValue\
 { \
     const char *__key = metamacro_stringify(metamacro_concat(nn_associated_store_key, metamacro_at(0, __VA_ARGS__))); \
     data_type __ivar = newValue; \
