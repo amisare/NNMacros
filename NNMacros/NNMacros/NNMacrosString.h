@@ -9,7 +9,8 @@
 #ifndef NNMacrosString_h
 #define NNMacrosString_h
 
-#define NN_arg2String(macro)             @(#macro)
+#define NN_arg2CString(macro)              metamacro_stringify(macro)
+#define NN_arg2String(macro)               @(NN_arg2CString(macro))
 
 #define NN_stringConst(name, value)        NSString *const name  = value;
 #define NN_stringStatic(name, value)       static NSString *name = value;
