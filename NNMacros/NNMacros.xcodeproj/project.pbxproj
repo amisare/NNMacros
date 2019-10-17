@@ -23,6 +23,7 @@
 		670F8DBB20C121B4004CB3E9 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAF20C121B4004CB3E9 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67AA435A2277F9B000FEE272 /* NNMacrosCocoapodsFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AA43582277F9B000FEE272 /* NNMacrosCocoapodsFix.h */; };
 		67AA435B2277F9B000FEE272 /* NNMacrosCocoapodsFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AA43592277F9B000FEE272 /* NNMacrosCocoapodsFix.m */; };
+		7A10AAD923583FBE0061AE9C /* NNMacrosSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,7 @@
 				670F8DB520C121B4004CB3E9 /* NNMacrosCategorySynthesize.h in Headers */,
 				670F8DB220C121B4004CB3E9 /* NNMacrosApp.h in Headers */,
 				670F8DBA20C121B4004CB3E9 /* NNMacrosCategorySetter.h in Headers */,
+				7A10AAD923583FBE0061AE9C /* NNMacrosSandbox.h in Headers */,
 				670F8DB820C121B4004CB3E9 /* NNMacrosScreen.h in Headers */,
 				67AA435A2277F9B000FEE272 /* NNMacrosCocoapodsFix.h in Headers */,
 			);
