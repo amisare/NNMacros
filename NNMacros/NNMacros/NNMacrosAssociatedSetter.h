@@ -116,7 +116,11 @@ end:
 
 #pragma mark - setter strong
 
+#define nn_close_hint       __nn_close_hint_
+
 #define nn_associated_setter_strong(atomic_type, arc_type, data_type, ...) \
+\
+- (void)metamacro_concat(nn_close_hint, metamacro_at(0, __VA_ARGS__)):(data_type)newValue{}\
 \
 - (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
 { \
@@ -132,6 +136,8 @@ end:
 
 #define nn_associated_setter_weak(atomic_type, arc_type, data_type, ...) \
 \
+- (void)metamacro_concat(nn_close_hint, metamacro_at(0, __VA_ARGS__)):(data_type)newValue{}\
+\
 - (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
 { \
     SEL __key = nn_associated_setter_key([self class], _cmd); \
@@ -146,6 +152,8 @@ end:
 #pragma mark - setter assign
 
 #define nn_associated_setter_assign(atomic_type, arc_type, data_type, ...) \
+\
+- (void)metamacro_concat(nn_close_hint, metamacro_at(0, __VA_ARGS__)):(data_type)newValue{}\
 \
 - (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
 { \
