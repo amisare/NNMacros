@@ -353,20 +353,20 @@ pod install --repo-update
 
 编译错误情景：
 ```
-nn_lazygetter(NSMutableArray, arr_issue_0, {
+nn_lazygetter(NSMutableArray, arr_issue_0, ({
     self.arr_issue_0 = [NSMutableArray new];
     //编译器会报错，无法编译通过：
     [self.arr_issue_0 addObjectsFromArray:@[@"str_x_0", @"str_x_1"]];
-})
+}))
 ```
 处理方法：在@[]外面加上小括号(@[])
 
 ```
-nn_lazygetter(NSMutableArray, arr_issue_0, {
+nn_lazygetter(NSMutableArray, arr_issue_0, ({
     self.arr_issue_0 = [NSMutableArray new];
     //解决方法，在数组外面加上小括号
     [self.arr_issue_0 addObjectsFromArray:(@[@"arr_objc_0", @"arr_objc_1"])];
-})
+}))
 ```
 
 ##### 使用字典时遇到的问题及处理
@@ -376,24 +376,24 @@ nn_lazygetter(NSMutableArray, arr_issue_0, {
 编译错误情景：
 
 ```
-nn_lazygetter(NSMutableDictionary, dic_issue_0, {
+nn_lazygetter(NSMutableDictionary, dic_issue_0, ({
     self.dic_issue_0 = [NSMutableDictionary new];
     //编译器会报错，无法编译通过
     [self.dic_issue_0 setValuesForKeysWithDictionary:@{@"key0":@"value0",
                                                         @"key1":@"value1"}];
-})
+}))
 
 ```
 
 处理方法：在@{}外面加上小括号(@{})
 
 ```
-nn_lazygetter(NSMutableDictionary, dic_issue_0, {
+nn_lazygetter(NSMutableDictionary, dic_issue_0, ({
     self.dic_issue_0 = [NSMutableDictionary new];
     //解决方法，在数组外面加上小括号
     [self.dic_issue_0 setValuesForKeysWithDictionary:(@{@"key0":@"value0",
                                                         @"key1":@"value1"})];
-})
+}))
 ```
 
 ## 鸣谢
