@@ -54,7 +54,7 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, _
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
     if (!metamacro_concat(_, metamacro_at(0, __VA_ARGS__))) {\
-        metamacro_concat(_, metamacro_at(0, __VA_ARGS__)) = [type new];\
+        (metamacro_concat(_, metamacro_at(0, __VA_ARGS__)) = [type new]);\
     }\
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
@@ -63,9 +63,9 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, _
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
-    if (!metamacro_concat(_, metamacro_at(0, __VA_ARGS__)))\
-        metamacro_at(1, __VA_ARGS__)\
-    \
+    if (!metamacro_concat(_, metamacro_at(0, __VA_ARGS__))) {\
+        (metamacro_at(1, __VA_ARGS__));\
+    }\
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
 
@@ -73,10 +73,10 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, _
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
-    if (!metamacro_at(2, __VA_ARGS__)) \
-        metamacro_at(1, __VA_ARGS__)\
-    \
-    return metamacro_at(2, __VA_ARGS__);\
+    if (!metamacro_at(1, __VA_ARGS__)) {\
+        (metamacro_at(2, __VA_ARGS__));\
+    }\
+    return metamacro_at(1, __VA_ARGS__);\
 }\
 
 #endif /* nn_lazygetter */
