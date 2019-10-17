@@ -13,7 +13,7 @@
 ## 功能介绍
 
 ### nn_associated_synthesize
-nn_associated_synthesize用于简化在categroy中为类动态添加属性时的getter和setter实现。
+nn_associated_synthesize用于简化通过associated为类动态添加属性时的getter和setter实现。
 
 - nn_associated_synthesize: 属性getter/setter方法实现，类似于@implementation中的@synthesize
 - nn_associated_getter: 属性getter方法实现
@@ -28,11 +28,12 @@ nn_lazygetter简写懒加载getter实现
 
 ### nn_associated_synthesize
 
-1. `nn_associated_synthesize(atomic_type, arc_type, data_type, property_name)`
+1. `nn_associated_synthesize(atomic_type, arc_type, type, getter, setter)`
 	- atomic_type: `nonatomic、atomic`
 	- arc_type: `strong、weak、assign、copy`
 	- data_type: 属性类型 `类：NSObject *、NSString * ... 基本数据类：NSInteger、BOOL ...`
-	- property_name: 属性名称
+	- getter: getter方法名（*需要严格按照苹果命名规则书写*）
+	- setter: setter方法名（*需要严格按照苹果命名规则书写*）
 
 2. `nn_associated_getter(atomic_type, arc_type, data_type, ...)`
 	- atomic_type: `nonatomic、atomic`
@@ -72,7 +73,7 @@ nn_lazygetter简写懒加载getter实现
 ## 使用示例
 
 ### nn_associated_synthesize
-nn_associated_synthesize用于简化在categroy中为类动态添加属性时的getter和setter实现。
+nn_associated_synthesize用于简化通过associated为类动态添加属性时的getter和setter实现。
 
 在开发中常常会通过runtime在categroy中为已有的类动态添加属性，来丰富类的实现。此过程中，开发者需要为categroy的property手动实现getter和setter方法，并在getter和setter方法中通过runtime的objc_getAssociatedObject和objc_setAssociatedObject实现属性的加载和存储。这些代码通常是枯燥的并且雷同！
 
@@ -87,10 +88,9 @@ nn_associated_synthesize用于简化在categroy中为类动态添加属性时的
 
 #### 2.实现getter/setter
 
-    
 ```
 @implementation NSObject (Awful)
-nn_associated_synthesize(nonatomic, assign, NSInteger, param)
+nn_associated_synthesize(nonatomic, assign, NSInteger, param, setParam)
 @end
 ```
 
@@ -321,7 +321,7 @@ $ gem install cocoapods
 在 `podfile` 中添加：
 
 ```ruby
-pod 'NNMacros', '~> 2.0.0'
+pod 'NNMacros', '~> 2.0.1'
 ```
 
 然后在终端执行：
