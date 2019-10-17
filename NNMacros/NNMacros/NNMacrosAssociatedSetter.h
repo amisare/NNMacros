@@ -70,14 +70,14 @@ static inline objc_AssociationPolicy nn_associated_setter_store_policy(NSString 
 
 
 /**
- 获取 setter 方法中 objc_setAssociatedObject 参数 key
+ 获取 getter 方法的 sel
 
- @discussion 动态添加获取属性的 key 值为 getter 方法的 sel ，该函数通过截取 setter 方法的 sel ，获取 key 值
+ @discussion 函数通过截取 setter 方法的 sel ，获取 getter 方法的 sel
  @param cls 类名
  @param sel setter 方法的 sel
- @return setter 方法中 objc_setAssociatedObject 参数 key
+ @return getter 方法的 sel
  */
-static inline SEL nn_associated_setter_store_key(Class cls, SEL sel) {
+static inline SEL nn_associated_getter_sel(Class cls, SEL sel) {
     SEL ret = nil;
     const char *selName = sel_getName(sel);
     const char *prefix = "set";
@@ -86,25 +86,24 @@ static inline SEL nn_associated_setter_store_key(Class cls, SEL sel) {
     // 2. 判断 sel 是否是以 ":" 结尾
     if (':' != selName[strlen(selName) - 1]) { return ret; }
     // 3. 拷贝 "set" 之后的字符串，包括 "\0"。
-    size_t keyNameSize = (strlen(selName) + 1) - strlen(prefix);
-    unsigned char *keyName = (unsigned char *)calloc(keyNameSize, sizeof(unsigned char));
-    memcpy(keyName, (selName + strlen(prefix)), keyNameSize);
+    size_t keySize = (strlen(selName) + 1) - strlen(prefix);
+    unsigned char *key = (unsigned char *)calloc(keySize, sizeof(unsigned char));
+    memcpy(key, (selName + strlen(prefix)), keySize);
     // 4. 如果 "set" 是字母，那么转换为小写。如："setUserName:"，将 "UserName:" 转为 "userName:" 。
-    if (keyName[0] > 'A' && keyName[0] < 'Z') { keyName[0] += ('a' - 'A'); }
+    if (key[0] > 'A' && key[0] < 'Z') { key[0] += ('a' - 'A'); }
     // 5. 去掉 sel 结尾的 ":" ，使用 "\0" 替换。
-    keyName[strlen((const char *)keyName) - 1] = '\0';
-    // 6. 避免仅有 setter 方法的情况，通过 method 获取 setter 方法 sel 。（实际应用中通常不会出现）
-    SEL keySel = NSSelectorFromString([NSString stringWithUTF8String:(const char *)keyName]);
-    Method method = class_getInstanceMethod(cls, keySel);
-    if (method == nil) {  goto end; }
-    ret = method_getName(method) ;
+    key[strlen((const char *)key) - 1] = '\0';
+    // 6. 获取 getter 方法的 sel
+    if (strlen((const char *)key)) {
+        ret = sel_getUid(key);
+    }
 end:
-    free(keyName);
+    free(key);
     return ret;
 }
 
 #define nn_associated_setter_key(clazz, setter) \
-        nn_associated_setter_store_key(clazz, setter)\
+        nn_associated_getter_sel(clazz, setter)\
 
 #define nn_associated_setter_policy(arc_type, atomic_type) \
         nn_associated_setter_store_policy(NN_arg2String(arc_type), NN_arg2String(atomic_type)) \
