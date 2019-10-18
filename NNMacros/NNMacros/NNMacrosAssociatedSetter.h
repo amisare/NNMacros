@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 #include "metamacros.h"
+#include "NNMacrosAssociatedCommon.h"
 
 /***************************************************
  associated setter
@@ -26,13 +27,6 @@
  */
 
 #ifndef nn_associated_setter
-
-#pragma mark - setter
-
-#define nn_associated_setter(atomic_type, arc_type, data_type, ...) \
-        metamacro_concat(nn_associated_setter, \
-        metamacro_concat(_, arc_type))\
-        (atomic_type, arc_type, data_type, nn_associated_setter_args_fill(3, __VA_ARGS__)) \
 
 #pragma mark - setter tools
 
@@ -55,6 +49,12 @@ static inline objc_AssociationPolicy nn_associated_setter_store_policy(NSString 
         return OBJC_ASSOCIATION_RETAIN_NONATOMIC;
     }
     else if ([arcType isEqualToString:@"weak"] && [atomicType isEqualToString:@"atomic"]) {
+        return OBJC_ASSOCIATION_RETAIN;
+    }
+    else if ([arcType isEqualToString:@"assign"] && [atomicType isEqualToString:@"nonatomic"]) {
+        return OBJC_ASSOCIATION_RETAIN_NONATOMIC;
+    }
+    else if ([arcType isEqualToString:@"assign"] && [atomicType isEqualToString:@"atomic"]) {
         return OBJC_ASSOCIATION_RETAIN;
     }
     else if  ([arcType isEqualToString:@"copy"] && [atomicType isEqualToString:@"nonatomic"]) {
@@ -102,6 +102,14 @@ end:
     return ret;
 }
 
+
+#pragma mark - setter
+
+#define nn_associated_setter(atomic_type, arc_type, data_type, ...) \
+        metamacro_concat(nn_associated_setter, \
+        metamacro_concat(_, arc_type))\
+        (atomic_type, arc_type, data_type, nn_associated_setter_args_fill(3, __VA_ARGS__)) \
+
 #define nn_associated_setter_key(clazz, setter) \
         nn_associated_getter_sel(clazz, setter)\
 
@@ -113,6 +121,7 @@ end:
         (metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
         (__VA_ARGS__)) \
 
+
 #pragma mark - setter strong
 
 #define nn_close_hint       __nn_close_hint_
@@ -121,15 +130,20 @@ end:
 \
 - (void)metamacro_concat(nn_close_hint, metamacro_at(0, __VA_ARGS__)):(data_type)newValue{}\
 \
-- (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
+- (void)metamacro_at(0, __VA_ARGS__):(data_type)value\
 { \
     SEL __key = nn_associated_setter_key([self class], _cmd); \
-    data_type __ivar = newValue; \
-    metamacro_at(1, __VA_ARGS__) \
-    id __obj = __ivar; \
-    metamacro_at(2, __VA_ARGS__) \
-    objc_setAssociatedObject(self, __key, __obj, nn_associated_setter_policy(arc_type, atomic_type)); \
+    /** will set */ \
+    __unused id oldValue = objc_getAssociatedObject(self, __key); \
+    id setValue = value; \
+    metamacro_at(1, __VA_ARGS__); \
+    /** set  */ \
+    objc_setAssociatedObject(self, __key, setValue, nn_associated_setter_policy(arc_type, atomic_type)); \
+    /** did set  */ \
+    __unused id newValue = objc_getAssociatedObject(self, __key); \
+    metamacro_at(2, __VA_ARGS__); \
 } \
+
 
 #pragma mark - setter weak
 
@@ -137,16 +151,24 @@ end:
 \
 - (void)metamacro_concat(nn_close_hint, metamacro_at(0, __VA_ARGS__)):(data_type)newValue{}\
 \
-- (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
+- (void)metamacro_at(0, __VA_ARGS__):(data_type)value\
 { \
     SEL __key = nn_associated_setter_key([self class], _cmd); \
-    data_type __ivar = newValue; \
-    metamacro_at(1, __VA_ARGS__) \
-    NSMapTable *__obj = [NSMapTable strongToWeakObjectsMapTable]; \
-    [__obj setObject:__ivar forKey:NSStringFromSelector(__key)]; \
-    metamacro_at(2, __VA_ARGS__) \
-    objc_setAssociatedObject(self, __key, __obj, nn_associated_setter_policy(arc_type, atomic_type)); \
+    /** will set */ \
+    NSMapTable *__get_old_table = objc_getAssociatedObject(self, __key); \
+    __unused id oldValue = [__get_old_table objectForKey:NSStringFromSelector(__key)]; \
+    id setValue = value; \
+    metamacro_at(1, __VA_ARGS__); \
+    /** set  */ \
+    NSMapTable *__set_table = [NSMapTable strongToWeakObjectsMapTable]; \
+    [__set_table setObject:setValue forKey:NSStringFromSelector(__key)]; \
+    objc_setAssociatedObject(self, __key, __set_table, nn_associated_setter_policy(arc_type, atomic_type)); \
+    /** did set  */ \
+    NSMapTable *__get_new_table = objc_getAssociatedObject(self, __key); \
+    __unused id newValue = [__get_new_table objectForKey:NSStringFromSelector(__key)]; \
+    metamacro_at(2, __VA_ARGS__); \
 } \
+
 
 #pragma mark - setter assign
 
@@ -154,14 +176,25 @@ end:
 \
 - (void)metamacro_concat(nn_close_hint, metamacro_at(0, __VA_ARGS__)):(data_type)newValue{}\
 \
-- (void)metamacro_at(0, __VA_ARGS__):(data_type)newValue\
+- (void)metamacro_at(0, __VA_ARGS__):(data_type)value\
 { \
     SEL __key = nn_associated_setter_key([self class], _cmd); \
-    data_type __ivar = newValue; \
-    metamacro_at(1, __VA_ARGS__) \
-    id __obj = @(__ivar); \
-    metamacro_at(2, __VA_ARGS__) \
-    objc_setAssociatedObject(self, __key, __obj, nn_associated_setter_policy(arc_type, atomic_type)); \
+    /** will set */ \
+    id __get_old_obj = objc_getAssociatedObject(self, __key); \
+    data_type *__old_value_p = nn_associated_copy_obj_2_type_value(__get_old_obj, data_type); \
+    __unused data_type oldValue = *__old_value_p; \
+    free(__old_value_p); \
+    data_type setValue = value; \
+    metamacro_at(1, __VA_ARGS__); \
+    /** set  */ \
+    id __set_obj = @(setValue); \
+    objc_setAssociatedObject(self, __key, __set_obj, nn_associated_setter_policy(arc_type, atomic_type)); \
+    /** did set  */ \
+    id __get_new_obj = objc_getAssociatedObject(self, __key); \
+    data_type *__new_value_p = nn_associated_copy_obj_2_type_value(__get_new_obj, data_type); \
+    __unused data_type newValue = *__new_value_p; \
+    free(__new_value_p); \
+    metamacro_at(2, __VA_ARGS__); \
 } \
 
 #endif /* nn_associated_setter */

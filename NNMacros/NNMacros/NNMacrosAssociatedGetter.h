@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 #include "metamacros.h"
+#include "NNMacrosAssociatedCommon.h"
 
 /***************************************************
  associated getter
@@ -27,6 +28,7 @@
 
 #ifndef nn_associated_getter
 
+
 #pragma mark - getter
 
 #define nn_associated_getter(atomic_type, arc_type, data_type, ...) \
@@ -34,51 +36,13 @@
         metamacro_concat(_, arc_type))\
         (atomic_type, arc_type, data_type, nn_associated_getter_args_fill(3, __VA_ARGS__)) \
 
+
 #pragma mark - getter tools
 
-
-/**
- 获取 getter 方法返回值类型
-
- @param cls 类名
- @param sel getter 方法的 sel
- @return getter 方法返回值类型
- */
-static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
-    Method method = class_getInstanceMethod(cls, sel);
-    if (method == nil) { return 'v'; }
-    const char *encoding = method_getTypeEncoding(method);
-    if (encoding == nil || strlen(encoding) == 0) { return 'v'; }
-    char ret = encoding[0];
-    return ret;
-}
-
-#define nn_associated_getter_encoding(cls, sel) \
-        nn_associated_getter_ret_encoding(cls, sel) \
-
-#define nn_associated_getter_obj2type(obj, type, encoding) \
-({ \
-    type ivar = 0; \
-    if (encoding == _C_CHR)         { ivar = (type)[obj charValue]; } \
-    if (encoding == _C_UCHR)        { ivar = (type)[obj unsignedCharValue]; } \
-    if (encoding == _C_SHT)         { ivar = (type)[obj shortValue]; } \
-    if (encoding == _C_USHT)        { ivar = (type)[obj unsignedShortValue]; } \
-    if (encoding == _C_INT)         { ivar = (type)[obj intValue]; } \
-    if (encoding == _C_UINT)        { ivar = (type)[obj unsignedIntValue]; } \
-    if (encoding == _C_LNG)         { ivar = (type)[obj longValue]; } \
-    if (encoding == _C_ULNG)        { ivar = (type)[obj unsignedLongValue]; } \
-    if (encoding == _C_LNG_LNG)     { ivar = (type)[obj longLongValue]; } \
-    if (encoding == _C_ULNG_LNG)    { ivar = (type)[obj unsignedLongLongValue]; } \
-    if (encoding == _C_FLT)         { ivar = (type)[obj floatValue]; } \
-    if (encoding == _C_DBL)         { ivar = (type)[obj doubleValue]; } \
-    if (encoding == _C_BOOL)        { ivar = (type)[obj boolValue]; } \
-    ivar; \
-}) \
-
 #define nn_associated_getter_args_fill(expect_number, ...) \
-        metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, , ,) \
-        (metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
-        (__VA_ARGS__)) \
+        metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
+        (__VA_ARGS__) \
+
 
 #pragma mark - getter strong
 
@@ -87,12 +51,11 @@ static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
     SEL __key = _cmd; \
-    id __obj = objc_getAssociatedObject(self, __key); \
-    metamacro_at(1, __VA_ARGS__) \
-    data_type __ivar = __obj; \
-    metamacro_at(2, __VA_ARGS__) \
-    return __ivar; \
+    id getValue = objc_getAssociatedObject(self, __key); \
+    metamacro_at(1, __VA_ARGS__); \
+    return getValue; \
 }\
+
 
 #pragma mark - getter weak
 
@@ -101,13 +64,12 @@ static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
     SEL __key = _cmd; \
-    NSMapTable *__table = objc_getAssociatedObject(self, __key); \
-    metamacro_at(1, __VA_ARGS__) \
-    id __obj = [__table objectForKey:NSStringFromSelector(__key)]; \
-    data_type __ivar = __obj; \
-    metamacro_at(2, __VA_ARGS__) \
-    return __ivar; \
+    NSMapTable *__get_table = objc_getAssociatedObject(self, __key); \
+    data_type getValue = [__get_table objectForKey:NSStringFromSelector(__key)]; \
+    metamacro_at(1, __VA_ARGS__); \
+    return getValue; \
 }\
+
 
 #pragma mark - getter assign
 
@@ -116,12 +78,12 @@ static inline char nn_associated_getter_ret_encoding(Class cls, SEL sel) {
 - (data_type)metamacro_at(0, __VA_ARGS__) \
 {\
     SEL __key = _cmd; \
-    id __obj = objc_getAssociatedObject(self, __key); \
-    metamacro_at(1, __VA_ARGS__) \
-    char __encoding = nn_associated_getter_encoding([self class], _cmd); \
-    data_type __ivar = nn_associated_getter_obj2type(__obj, data_type, __encoding); \
-    metamacro_at(2, __VA_ARGS__) \
-    return __ivar; \
+    id __get_obj = objc_getAssociatedObject(self, __key); \
+    data_type *__value_p = nn_associated_copy_obj_2_type_value(__get_obj, data_type); \
+    data_type getValue = *__value_p; \
+    free(__value_p); \
+    metamacro_at(1, __VA_ARGS__); \
+    return getValue; \
 }\
 
 #endif /* nn_associated_getter */
