@@ -20,5 +20,11 @@
 @property (nonatomic, strong) NSString *string;
 @property (nonatomic, strong) id weakId;
 @property (nonatomic, assign) NSInteger iValue;
+@property (nonatomic, assign) CGRect rValue;
+
+@property (nonatomic, strong) NSString *string2;
+@property (nonatomic, strong) id weakId2;
+@property (nonatomic, assign) NSInteger iValue2;
+@property (nonatomic, assign) CGRect rValue2;
 
 @end

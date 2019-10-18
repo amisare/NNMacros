@@ -12,6 +12,7 @@
 
 #import "NNMacros.h"
 #import "NNMacrosApp.h"
+#import "NNMacrosAssociatedCommon.h"
 #import "NNMacrosAssociatedGetter.h"
 #import "NNMacrosAssociatedSetter.h"
 #import "NNMacrosAssociatedSynthesize.h"

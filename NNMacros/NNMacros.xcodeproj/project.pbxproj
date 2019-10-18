@@ -24,6 +24,7 @@
 		7A4833602356DCE500ACE8E1 /* NNMacrosAssociatedSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4833612356DCE500ACE8E1 /* NNMacrosAssociatedSynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4833622356DD0E00ACE8E1 /* NNMacrosSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AFCA34723594CA900646856 /* NNMacrosAssociatedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AFCA34623594CA900646856 /* NNMacrosAssociatedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7A48332C2356B06D00ACE8E1 /* NNMacrosAssociatedGetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedGetter.h; sourceTree = "<group>"; };
 		7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedSetter.h; sourceTree = "<group>"; };
 		7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosSandbox.h; sourceTree = "<group>"; };
+		7AFCA34623594CA900646856 /* NNMacrosAssociatedCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedCommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				670F8D8C20C120FA004CB3E9 /* NNMacros.h */,
 				670F8DA520C121B3004CB3E9 /* NNMacrosApp.h */,
+				7AFCA34623594CA900646856 /* NNMacrosAssociatedCommon.h */,
 				7A48332C2356B06D00ACE8E1 /* NNMacrosAssociatedGetter.h */,
 				7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */,
 				7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */,
@@ -158,6 +161,7 @@
 				670F8DB720C121B4004CB3E9 /* NNMacrosColor.h in Headers */,
 				670F8DB620C121B4004CB3E9 /* NNMacrosLazyGetter.h in Headers */,
 				670F8D9A20C120FA004CB3E9 /* NNMacros.h in Headers */,
+				7AFCA34723594CA900646856 /* NNMacrosAssociatedCommon.h in Headers */,
 				7A48335F2356DCE500ACE8E1 /* NNMacrosAssociatedGetter.h in Headers */,
 				7A4833602356DCE500ACE8E1 /* NNMacrosAssociatedSetter.h in Headers */,
 				7A4833612356DCE500ACE8E1 /* NNMacrosAssociatedSynthesize.h in Headers */,

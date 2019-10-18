@@ -11,7 +11,7 @@
 
 @interface NNMacrosLazyGetterDemo()
 {
-    NSMutableString *str_n;
+    NSMutableString *__str_n;
 }
 
 @property (nonatomic, strong) NSMutableString *str_x;
@@ -80,12 +80,12 @@ nn_lazygetter(NSMutableString, str_5, {
 //方式三：通过第四个参数指定，指定属性
 - (void)setStr_n:(NSMutableString *)str
 {
-    self->str_n = str;
+    __str_n = str;
 }
-nn_lazygetter(NSMutableString, str_n, {
-    self->str_n = [NSMutableString new];
-    [self->str_n appendString:@"str_5"];
-}, self->str_n)
+nn_lazygetter(NSMutableString, str_n, __str_n, {
+    __str_n = [NSMutableString new];
+    [__str_n appendString:@"str_5"];
+})
 
 
 #pragma mark - 问题一：array会遇到的问题

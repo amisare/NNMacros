@@ -14,12 +14,33 @@
     
     DLog(@"nn_associated_synthesize宏的使用");
     
-    self.string = @"string";
-    DLog(@"%@", self.string);
+    DLog(@"");
+    self.string = @"fristString";
+    {__unused NSString *temp = self.string;};
+    self.string = @"secondString";
+    {__unused NSString *temp = self.string;};
+    DLog(@"");
     self.weakId = self;
-    DLog(@"%@", self.weakId);
+    {__unused id temp = self.weakId;};
+    DLog(@"");
     self.iValue = 1;
-    DLog(@"%ld", self.iValue);
+    {__unused NSInteger temp = self.iValue;};
+    DLog(@"");
+    self.rValue = CGRectMake(100, 101, 102, 103);
+    {__unused CGRect temp = self.rValue;};
+    
+    DLog(@"");
+    self.string2 = @"fristString";
+    DLog(@"%@", self.string2);
+    self.string2 = @"secondString";
+    DLog(@"%@", self.string2);
+    self.weakId2 = self;
+    DLog(@"%@", self.weakId2);
+    self.iValue2 = 1;
+    DLog(@"%ld", self.iValue2);
+    self.rValue2 = CGRectMake(100, 101, 102, 103);
+    DLog(@"%@", NSStringFromCGRect(self.rValue2));
+    
 }
 
 - (void)dealloc {
@@ -30,9 +51,58 @@
 
 @implementation NNMacrosSynthesizeDemo (Synthesize)
 
-nn_associated_getter(nonatomic, strong, NSString *, string)
-nn_associated_setter(nonatomic, strong, NSString *, setString)
-nn_associated_synthesize(nonatomic, weak, id, weakId, setWeakId)
-nn_associated_synthesize(nonatomic, assign, NSInteger, iValue, setIValue);
+//nn_associated_synthesize(nonatomic, strong, id, string, setString)
+//nn_associated_synthesize(nonatomic, weak, id, weakId, setWeakId)
+//nn_associated_synthesize(nonatomic, assign, NSInteger, iValue, setIValue);
+//nn_associated_synthesize(nonatomic, assign, CGRect, rValue, setRValue);
+
+//nn_associated_getter(nonatomic, strong, NSString *, string)
+//nn_associated_setter(nonatomic, strong, NSString *, setString)
+
+nn_associated_setter(nonatomic, strong, NSString *, setString, ({
+    DLog(@"setter oldValue:%@", oldValue);
+    DLog(@"setter setValue:%@", setValue);
+}), ({
+    DLog(@"setter newValue:%@", newValue);
+}));
+nn_associated_getter(nonatomic, strong, NSString *, string, ({
+    DLog(@"getter getValue:%@", getValue);
+}));
+
+nn_associated_setter(nonatomic, weak, id, setWeakId, ({
+    DLog(@"setter oldValue:%@", oldValue);
+    DLog(@"setter setValue:%@", setValue);
+}), ({
+    DLog(@"setter newValue:%@", newValue);
+}));
+nn_associated_getter(nonatomic, weak, id, weakId, ({
+    DLog(@"getter getValue:%@", getValue);
+}));
+
+nn_associated_setter(nonatomic, assign, NSInteger, setIValue, ({
+    DLog(@"setter oldValue:%ld", oldValue);
+    DLog(@"setter setValue:%ld", setValue);
+}), ({
+    DLog(@"setter newValue:%ld", newValue);
+}));
+nn_associated_getter(nonatomic, assign, NSInteger, iValue, ({
+    DLog(@"getter getValue:%ld", getValue);
+}));
+
+nn_associated_setter(nonatomic, assign, CGRect, setRValue, ({
+    DLog(@"setter oldValue:%@", NSStringFromCGRect(oldValue));
+    DLog(@"setter setValue:%@", NSStringFromCGRect(setValue));
+}), ({
+    DLog(@"setter newValue:%@", NSStringFromCGRect(newValue));
+}));
+nn_associated_getter(nonatomic, assign, CGRect, rValue, ({
+    DLog(@"getter getValue:%@", NSStringFromCGRect(getValue));
+}));
+
+
+nn_associated_synthesize(nonatomic, strong, id, string2, setString2)
+nn_associated_synthesize(nonatomic, weak, id, weakId2, setWeakId2)
+nn_associated_synthesize(nonatomic, assign, NSInteger, iValue2, setIValue2);
+nn_associated_synthesize(nonatomic, assign, CGRect, rValue2, setRValue2);
 
 @end
