@@ -64,10 +64,15 @@ nn_lazygetter简写懒加载getter实现
 ### nn_lazygetter
 
 1. `nn_lazygetter(type, ...)`
-	- type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
-	- param0:（必传）属性名称
-	- param1:（选传）插入的初始话代码块，传参为代码块`{}`
-	- param2:（选传）非property属性，或getter和setter均需重写时，传入操作变量 如：变量var，则传入self->var
+	- 3 个入参：
+        - type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
+        - param0:（必传）属性名称
+        - param1:（选传）插入的初始话代码块，传参为代码块`{}`
+    - 4 个入参：
+        - type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
+        - param0:（必传）属性名称
+        - param1:（选传）非property属性，或getter和setter均需重写时，传入操作变量 如：变量var，则传入var
+        - param2:（选传）插入的初始话代码块，传参为代码块`{}`
 
 
 ## 使用示例
