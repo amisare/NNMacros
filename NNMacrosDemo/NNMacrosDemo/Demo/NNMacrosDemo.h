@@ -17,5 +17,6 @@
 #import "NNMacrosStringDemo.h"
 #import "NNMacrosDeviceDemo.h"
 #import "NNMacrosSynthesizeDemo.h"
+#import "NNMacrosScopeDemo.h"
 
 #endif /* NNMacrosDemo_h */

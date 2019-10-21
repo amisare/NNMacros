@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		508D476DFC3B83CCAFF79A26 /* Pods_NNMacrosDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297894B13D80AA92C40BE0F6 /* Pods_NNMacrosDemo.framework */; };
 		7A4833652356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4833642356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m */; };
+		7ADD1053235D5A3A00696013 /* NNMacrosScopeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD1052235D5A3A00696013 /* NNMacrosScopeDemo.m */; };
 		8B0663F21E153928001C9B23 /* NNMacrosLazyGetterDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0663F11E153928001C9B23 /* NNMacrosLazyGetterDemo.m */; };
 		8B8260151E1F307F0037EA04 /* NNMacrosSandboxPathDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260141E1F307F0037EA04 /* NNMacrosSandboxPathDemo.m */; };
 		8B8260181E1F30B80037EA04 /* NNMacrosScreenDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8260171E1F30B80037EA04 /* NNMacrosScreenDemo.m */; };
@@ -49,6 +50,8 @@
 		7A4833632356F30400ACE8E1 /* NNMacrosSynthesizeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosSynthesizeDemo.h; sourceTree = "<group>"; };
 		7A4833642356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosSynthesizeDemo.m; sourceTree = "<group>"; };
 		7AD9042A233DCCA100A4ABF8 /* NNMacrosDemoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosDemoProtocol.h; sourceTree = "<group>"; };
+		7ADD1051235D5A3A00696013 /* NNMacrosScopeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosScopeDemo.h; sourceTree = "<group>"; };
+		7ADD1052235D5A3A00696013 /* NNMacrosScopeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosScopeDemo.m; sourceTree = "<group>"; };
 		8B0663EB1E15233F001C9B23 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8B0663F01E153928001C9B23 /* NNMacrosLazyGetterDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosLazyGetterDemo.h; sourceTree = "<group>"; };
 		8B0663F11E153928001C9B23 /* NNMacrosLazyGetterDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosLazyGetterDemo.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				7AD9042A233DCCA100A4ABF8 /* NNMacrosDemoProtocol.h */,
 				8B8260191E1F30ED0037EA04 /* NNMacrosAppDemo.h */,
 				8B82601A1E1F30ED0037EA04 /* NNMacrosAppDemo.m */,
+				7ADD1051235D5A3A00696013 /* NNMacrosScopeDemo.h */,
+				7ADD1052235D5A3A00696013 /* NNMacrosScopeDemo.m */,
 				8B8260201E1F73840037EA04 /* NNMacrosDeviceDemo.h */,
 				8B8260211E1F73840037EA04 /* NNMacrosDeviceDemo.m */,
 				8B0663F01E153928001C9B23 /* NNMacrosLazyGetterDemo.h */,
@@ -409,6 +414,7 @@
 				7A4833652356F30400ACE8E1 /* NNMacrosSynthesizeDemo.m in Sources */,
 				8BC98E021E13AAB700E416A1 /* main.m in Sources */,
 				8B8260181E1F30B80037EA04 /* NNMacrosScreenDemo.m in Sources */,
+				7ADD1053235D5A3A00696013 /* NNMacrosScopeDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

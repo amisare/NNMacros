@@ -45,6 +45,7 @@
     NNMacrosTest(NNMacrosAppDemo)
     NNMacrosTest(NNMacrosDeviceDemo)
     NNMacrosTest(NNMacrosScreenDemo)
+    NNMacrosTest(NNMacrosScopeDemo)
 }
 
 - (void)redirectNotificationHandle:(NSNotification *)notification{
