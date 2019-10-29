@@ -14,27 +14,36 @@
 /***************************************************
  懒加载
  ***************************************************/
-/*
- type:      属性类型
- param0:    属性名
- param1:    插入的初始化代码，由于是if判断的一部分，所以代码必须为{}代码块
- param2:    非property属性，或getter和setter均需重写时，传入操作变量
-            例如：变量var，则传入self->var
 
- case0:
- nn_lazygetter(NSString, name)
+/**
+ * 3 个参数:
+ * type:        属性类型
+ * param0:      属性名
+ * param1:      插入的初始化代码，由于是if判断的一部分，所以代码必须为{}代码块
+ *
+ * 4 个参数:
+ * type:        属性类型
+ * param0:      属性名
+ * param1:      非property属性，或getter和setter均需重写时，传入操作变量
+ *              例如：变量var，则传入self->var
+ * param2:      插入的初始化代码，由于是if判断的一部分，所以代码必须为{}代码块
+ *
+ * @code
+     case0:
+     nn_lazygetter(NSString, name)
 
- case1:
- nn_lazygetter(NSString, name, {
-    _name = @"name";
- })
+     case1:
+     nn_lazygetter(NSString, name, {
+        _name = @"name";
+     })
 
- case2:
- nn_lazygetter(NSString, name, {
-    self->name = @"name";
- }, self->name)
-
+     case2:
+     nn_lazygetter(NSString, name, _name, {
+        _name = @"name";
+     })
+ * @endcode
  */
+ 
 
 #ifndef nn_lazygetter
 
