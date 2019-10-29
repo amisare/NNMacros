@@ -27,4 +27,6 @@
 @property (nonatomic, assign) NSInteger iValue2;
 @property (nonatomic, assign) CGRect rValue2;
 
+@property (nonatomic, strong) NSString *string3;
+
 @end

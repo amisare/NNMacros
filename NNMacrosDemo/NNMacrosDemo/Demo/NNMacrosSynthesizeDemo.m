@@ -30,9 +30,9 @@
     {__unused CGRect temp = self.rValue;};
     
     DLog(@"");
-    self.string2 = @"fristString";
+    self.string2 = @"string2 fristString";
     DLog(@"%@", self.string2);
-    self.string2 = @"secondString";
+    self.string2 = @"string2 secondString";
     DLog(@"%@", self.string2);
     self.weakId2 = self;
     DLog(@"%@", self.weakId2);
@@ -40,6 +40,13 @@
     DLog(@"%ld", self.iValue2);
     self.rValue2 = CGRectMake(100, 101, 102, 103);
     DLog(@"%@", NSStringFromCGRect(self.rValue2));
+    
+    
+    DLog(@"");
+    self.string3 = @"string3 fristString";
+    DLog(@"%@", self.string3);
+    self.string3 = @"string3 secondString";
+    DLog(@"%@", self.string3);
     
 }
 
@@ -51,13 +58,12 @@
 
 @implementation NNMacrosSynthesizeDemo (Synthesize)
 
-//nn_associated_synthesize(nonatomic, strong, id, string, setString)
-//nn_associated_synthesize(nonatomic, weak, id, weakId, setWeakId)
-//nn_associated_synthesize(nonatomic, assign, NSInteger, iValue, setIValue);
-//nn_associated_synthesize(nonatomic, assign, CGRect, rValue, setRValue);
+@nn_associated_synthesize(NNMacrosSynthesizeDemo, string3);
 
-//nn_associated_getter(nonatomic, strong, NSString *, string)
-//nn_associated_setter(nonatomic, strong, NSString *, setString)
+@nn_associated_synthesize(nonatomic, strong, id, string2, setString2)
+@nn_associated_synthesize(nonatomic, weak, id, weakId2, setWeakId2)
+@nn_associated_synthesize(nonatomic, assign, NSInteger, iValue2, setIValue2);
+@nn_associated_synthesize(nonatomic, assign, CGRect, rValue2, setRValue2);
 
 nn_associated_setter(nonatomic, strong, NSString *, setString, ({
     DLog(@"setter oldValue:%@", oldValue);
@@ -99,10 +105,5 @@ nn_associated_getter(nonatomic, assign, CGRect, rValue, ({
     DLog(@"getter getValue:%@", NSStringFromCGRect(getValue));
 }));
 
-
-nn_associated_synthesize(nonatomic, strong, id, string2, setString2)
-nn_associated_synthesize(nonatomic, weak, id, weakId2, setWeakId2)
-nn_associated_synthesize(nonatomic, assign, NSInteger, iValue2, setIValue2);
-nn_associated_synthesize(nonatomic, assign, CGRect, rValue2, setRValue2);
 
 @end

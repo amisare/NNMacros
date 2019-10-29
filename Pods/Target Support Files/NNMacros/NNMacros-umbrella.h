@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "EXTSynthesize.h"
 #import "NNMacros.h"
 #import "NNMacrosApp.h"
 #import "NNMacrosAssociatedCommon.h"
@@ -20,6 +21,7 @@
 #import "NNMacrosDevice.h"
 #import "NNMacrosLazyGetter.h"
 #import "NNMacrosSandbox.h"
+#import "NNMacrosScope.h"
 #import "NNMacrosScreen.h"
 #import "NNMacrosString.h"
 #import "NNMacrosVersion.h"
