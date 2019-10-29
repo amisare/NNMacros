@@ -24,7 +24,7 @@
 		7A4833602356DCE500ACE8E1 /* NNMacrosAssociatedSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4833612356DCE500ACE8E1 /* NNMacrosAssociatedSynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4833622356DD0E00ACE8E1 /* NNMacrosSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A8EFB6223682F4A0061EFD3 /* NNMacrosAssociatedSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EFB6123682F4A0061EFD3 /* NNMacrosAssociatedSynthesize.m */; };
+		7A8EFB6623684AAF0061EFD3 /* EXTSynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A8EFB6523684AAF0061EFD3 /* EXTSynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ADD1050235D56BF00696013 /* NNMacrosScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADD104F235D56B100696013 /* NNMacrosScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AFCA34723594CA900646856 /* NNMacrosAssociatedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AFCA34623594CA900646856 /* NNMacrosAssociatedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -59,7 +59,7 @@
 		7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedSynthesize.h; sourceTree = "<group>"; };
 		7A48332C2356B06D00ACE8E1 /* NNMacrosAssociatedGetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedGetter.h; sourceTree = "<group>"; };
 		7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedSetter.h; sourceTree = "<group>"; };
-		7A8EFB6123682F4A0061EFD3 /* NNMacrosAssociatedSynthesize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosAssociatedSynthesize.m; sourceTree = "<group>"; };
+		7A8EFB6523684AAF0061EFD3 /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSynthesize.h; sourceTree = "<group>"; };
 		7AD9042B233DCCF100A4ABF8 /* NNMacrosSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosSandbox.h; sourceTree = "<group>"; };
 		7ADD104F235D56B100696013 /* NNMacrosScope.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosScope.h; sourceTree = "<group>"; };
 		7AFCA34623594CA900646856 /* NNMacrosAssociatedCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedCommon.h; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 				7A48332C2356B06D00ACE8E1 /* NNMacrosAssociatedGetter.h */,
 				7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */,
 				7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */,
-				7A8EFB6123682F4A0061EFD3 /* NNMacrosAssociatedSynthesize.m */,
 				670F8DA920C121B4004CB3E9 /* NNMacrosLazyGetter.h */,
 				670F8DA420C121B3004CB3E9 /* NNMacrosDevice.h */,
 				670F8DAA20C121B4004CB3E9 /* NNMacrosColor.h */,
@@ -120,6 +119,7 @@
 				670F8DAB20C121B4004CB3E9 /* NNMacrosScreen.h */,
 				670F8DA620C121B3004CB3E9 /* NNMacrosString.h */,
 				670F8DAC20C121B4004CB3E9 /* NNMacrosVersion.h */,
+				7A8EFB6523684AAF0061EFD3 /* EXTSynthesize.h */,
 				670F8DAE20C121B4004CB3E9 /* Bases */,
 				67AA43562277F98500FEE272 /* CocoapodsFix */,
 				670F8D8D20C120FA004CB3E9 /* Info.plist */,
@@ -174,6 +174,7 @@
 				670F8DB720C121B4004CB3E9 /* NNMacrosColor.h in Headers */,
 				670F8D9A20C120FA004CB3E9 /* NNMacros.h in Headers */,
 				670F8DB620C121B4004CB3E9 /* NNMacrosLazyGetter.h in Headers */,
+				7A8EFB6623684AAF0061EFD3 /* EXTSynthesize.h in Headers */,
 				670F8DBB20C121B4004CB3E9 /* metamacros.h in Headers */,
 				67AA435A2277F9B000FEE272 /* NNMacrosCocoapodsFix.h in Headers */,
 			);
@@ -275,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A8EFB6223682F4A0061EFD3 /* NNMacrosAssociatedSynthesize.m in Sources */,
 				67AA435B2277F9B000FEE272 /* NNMacrosCocoapodsFix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

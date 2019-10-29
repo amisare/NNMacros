@@ -22,6 +22,7 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import <NNMacros/NNMacrosAssociatedGetter.h>
 #import <NNMacros/NNMacrosAssociatedSetter.h>
 #import <NNMacros/NNMacrosAssociatedSynthesize.h>
+#import <NNMacros/EXTSynthesize.h>
 #import <NNMacros/NNMacrosScope.h>
 #import <NNMacros/NNMacrosColor.h>
 #import <NNMacros/NNMacrosString.h>
@@ -36,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import "NNMacrosAssociatedGetter.h"
 #import "NNMacrosAssociatedSetter.h"
 #import "NNMacrosAssociatedSynthesize.h"
+#import "EXTSynthesize.h"
 #import "NNMacrosScope.h"
 #import "NNMacrosColor.h"
 #import "NNMacrosString.h"
