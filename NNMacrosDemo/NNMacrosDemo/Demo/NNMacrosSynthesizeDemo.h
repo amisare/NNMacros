@@ -28,5 +28,6 @@
 @property (nonatomic, assign) CGRect rValue2;
 
 @property (nonatomic, strong) NSString *string3;
+@property (nonatomic, strong) NSString *string4;
 
 @end

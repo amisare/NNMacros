@@ -48,6 +48,13 @@
     self.string3 = @"string3 secondString";
     DLog(@"%@", self.string3);
     
+    
+    DLog(@"");
+    self.string4 = @"string4 fristString";
+    DLog(@"%@", self.string4);
+    self.string4 = @"string4 secondString";
+    DLog(@"%@", self.string4);
+    
 }
 
 - (void)dealloc {
@@ -57,6 +64,8 @@
 @end
 
 @implementation NNMacrosSynthesizeDemo (Synthesize)
+
+@nn_synthesize(NNMacrosSynthesizeDemo, string4);
 
 @nn_associated_synthesize(NNMacrosSynthesizeDemo, string3);
 

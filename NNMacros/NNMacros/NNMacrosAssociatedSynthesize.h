@@ -53,6 +53,12 @@
         nn_associated_setter(frist_type, metamacro_at(0, __VA_ARGS__), metamacro_at(1, __VA_ARGS__), metamacro_at(3, __VA_ARGS__)); \
         \
 
+#ifndef
+
+#define nn_synthesize   nn_associated_synthesize
+
+#endif /* nn_synthesize */
+
 #endif /* nn_associated_synthesize */
 
 #endif /* NNMacrosAssociatedSynthesize_h */
