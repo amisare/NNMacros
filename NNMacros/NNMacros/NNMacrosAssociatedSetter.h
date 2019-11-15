@@ -95,7 +95,7 @@ static inline SEL nn_associated_getter_sel(Class cls, SEL sel) {
     key[strlen((const char *)key) - 1] = '\0';
     // 6. 获取 getter 方法的 sel
     if (strlen((const char *)key)) {
-        ret = sel_getUid(key);
+        ret = sel_getUid((const char *)key);
     }
 end:
     free(key);

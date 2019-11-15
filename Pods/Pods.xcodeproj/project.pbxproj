@@ -12,7 +12,7 @@
 		05674FB9A3247021550A21176E002E99 /* NNMacrosDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0478B68E19B9ABDC9D12A76A22FE0807 /* NNMacrosDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13E087F2C8C343C4E2ABA3BF84F639B8 /* NNMacrosApp.h in Headers */ = {isa = PBXBuildFile; fileRef = C167F7C58A2F492EE4576262D9959322 /* NNMacrosApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47BE76617DBA2A8AE5C0138C36573664 /* Pods-NNMacrosDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8D340185117A1DA7A172C9256D33C /* Pods-NNMacrosDemo-dummy.m */; };
-		573D56632AD90D9D36526C24CD004B4A /* NNMacros-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D32F66208094C8019594740A73A0CA /* NNMacros-dummy.m */; };
+		6B39C0922B7F444A0D82717ED54A2179 /* NNMacros-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D32F66208094C8019594740A73A0CA /* NNMacros-dummy.m */; };
 		6F29D524FF98BA869C5928D7B71C047B /* NNMacrosAssociatedSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2991B5BB8E6BCC68365C296746977041 /* NNMacrosAssociatedSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E71FD6ACF045EEA548D3B1C54FD1B99 /* NNMacrosColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D5CC6F0B51F09271793E9F354F968E /* NNMacrosColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F38298253457751CDB2563CF2BBFC97 /* NNMacrosAssociatedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = C6802CF7537E0FED7F97362CDDD82236 /* NNMacrosAssociatedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,7 +26,7 @@
 		AC6DA4B8537D63E4B87933FA2892AFE2 /* NNMacrosAssociatedGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73B436D5085A22D9872B7B93C46818 /* NNMacrosAssociatedGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2ACB26D8FD22A95E0DE2846629D3AA6 /* NNMacrosLazyGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = F54B41AEB13DB65DB1BE4FF03385EE40 /* NNMacrosLazyGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3E9AFE304B323B42D29FF8324F8D32F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		BA4AE6CA0CA63180ACF3C76658D6B024 /* NNMacrosCocoapodsFix.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC48C89ADE76210C0E8B39A67174801 /* NNMacrosCocoapodsFix.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B7A71C4810995B3EC860B0070F93A07F /* NNMacrosCocoapodsFix.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC48C89ADE76210C0E8B39A67174801 /* NNMacrosCocoapodsFix.m */; };
 		CB9415855DBD8F6B0050824D07B79A48 /* NNMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F62AACA7D49001805F83745A581B185B /* NNMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8CFF21F073083E9A75C50842C95ABBA /* NNMacrosCocoapodsFix.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0FFD6972FF5B9DE4332EFB8D53F2B1 /* NNMacrosCocoapodsFix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D99F47A3BD354347A95F06F1278C82BE /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C12378EBD8B134D60A9D5479CD4587D5 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -288,7 +288,7 @@
 			buildConfigurationList = 8A18438C1C1FCFE7AA80758CFB481C27 /* Build configuration list for PBXNativeTarget "NNMacros" */;
 			buildPhases = (
 				D0C804312BEB683CE3D1FD5CF97C43A6 /* Headers */,
-				4AA76827F310EF596CFF2E7E50592DE5 /* Sources */,
+				2BE123A031CE40B98246C7116F0E0F09 /* Sources */,
 				60DE54161CD661FB91DA72F6725F92A1 /* Frameworks */,
 				70F72892F90843518C78F8E7356B1A7E /* Resources */,
 			);
@@ -365,12 +365,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4AA76827F310EF596CFF2E7E50592DE5 /* Sources */ = {
+		2BE123A031CE40B98246C7116F0E0F09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				573D56632AD90D9D36526C24CD004B4A /* NNMacros-dummy.m in Sources */,
-				BA4AE6CA0CA63180ACF3C76658D6B024 /* NNMacrosCocoapodsFix.m in Sources */,
+				6B39C0922B7F444A0D82717ED54A2179 /* NNMacros-dummy.m in Sources */,
+				B7A71C4810995B3EC860B0070F93A07F /* NNMacrosCocoapodsFix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
