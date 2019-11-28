@@ -90,7 +90,7 @@ static inline SEL nn_associated_getter_sel(Class cls, SEL sel) {
     unsigned char *key = (unsigned char *)calloc(keySize, sizeof(unsigned char));
     memcpy(key, (selName + strlen(prefix)), keySize);
     // 4. 如果 "set" 是字母，那么转换为小写。如："setUserName:"，将 "UserName:" 转为 "userName:" 。
-    if (key[0] > 'A' && key[0] < 'Z') { key[0] += ('a' - 'A'); }
+    if (key[0] >= 'A' && key[0] <= 'Z') { key[0] += ('a' - 'A'); }
     // 5. 去掉 sel 结尾的 ":" ，使用 "\0" 替换。
     key[strlen((const char *)key) - 1] = '\0';
     // 6. 获取 getter 方法的 sel

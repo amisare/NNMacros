@@ -17,6 +17,9 @@
 
 @interface NNMacrosSynthesizeDemo (Synthesize)
 
+@property (nonatomic, strong) NSString *astring;
+@property (nonatomic, strong) NSString *zstring;
+
 @property (nonatomic, strong) NSString *string;
 @property (nonatomic, strong) id weakId;
 @property (nonatomic, assign) NSInteger iValue;

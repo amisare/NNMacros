@@ -13,6 +13,18 @@
 - (void)macroTest {
     
     DLog(@"nn_associated_synthesize宏的使用");
+	
+    DLog(@"");
+    self.astring = @"fristString astring";
+    DLog(@"%@", self.astring);
+    self.astring = @"secondString astring";
+    DLog(@"%@", self.astring);
+	
+    DLog(@"");
+    self.zstring = @"fristString zstring";
+    DLog(@"%@", self.zstring);
+    self.zstring = @"secondString zstring";
+    DLog(@"%@", self.zstring);
     
     DLog(@"");
     self.string = @"fristString";
@@ -64,6 +76,9 @@
 @end
 
 @implementation NNMacrosSynthesizeDemo (Synthesize)
+
+@nn_associated_synthesize(nonatomic, strong, id, astring, setAstring);
+@nn_associated_synthesize(nonatomic, strong, id, zstring, setZstring);
 
 @nn_synthesize(NNMacrosSynthesizeDemo, string4);
 
