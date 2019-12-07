@@ -7,7 +7,7 @@
 [![GitHub license](https://img.shields.io/github/license/amisare/NNMacros.svg)](https://github.com/amisare/NNMacros/blob/master/LICENSE)
 
 ## 项目简介
-- NNMacros 通过宏的方式来简化 iOS 开发中 OC 的语法和 Api 的操作
+- NNMacros 通过宏的方式来简化 iOS 开发中 OC 的语法和 API 的操作
 
 
 ## 功能介绍
