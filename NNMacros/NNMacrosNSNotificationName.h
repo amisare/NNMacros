@@ -32,12 +32,14 @@
 		NN_NSNotificationName_Define_Function(GROUP)()
 
 #define NN_NSNotificationName_Define_Function(GROUP) \
+		metamacro_concat(_, \
 		metamacro_concat(Find, \
-		metamacro_concat(_, NN_NSNotificationName_Define_Group(GROUP)))
+		metamacro_concat(_, NN_NSNotificationName_Define_Group(GROUP))))
 
 #define NN_NSNotificationName_Define_Group(GROUP) \
+		metamacro_concat(_, \
 		metamacro_concat(NN_NSNotificationName, \
-		metamacro_concat(_, GROUP))
+		metamacro_concat(_, GROUP)))
 
 #define NN_NSNotificationName_Define_Type(INDEX, CONTEXT, VAR) \
 		NSNotificationName VAR;
