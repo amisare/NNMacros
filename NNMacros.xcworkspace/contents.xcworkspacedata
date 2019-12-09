@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:NNMacrosDemo/NNMacrosDemo.xcodeproj">
+      location = "group:Example/NNMacrosExample/NNMacrosExample.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:NNMacros.xcodeproj">
    </FileRef>
 </Workspace>

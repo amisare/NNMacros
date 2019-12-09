@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AD2E217239E486A0028EAD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E216239E486A0028EAD9 /* AppDelegate.m */; };
+		7AD2E21D239E486A0028EAD9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E21C239E486A0028EAD9 /* ViewController.m */; };
+		7AD2E220239E486A0028EAD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2E21E239E486A0028EAD9 /* Main.storyboard */; };
+		7AD2E222239E486C0028EAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2E221239E486C0028EAD9 /* Assets.xcassets */; };
+		7AD2E225239E486C0028EAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2E223239E486C0028EAD9 /* LaunchScreen.storyboard */; };
+		7AD2E228239E486C0028EAD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E227239E486C0028EAD9 /* main.m */; };
+		7AD2E232239E486C0028EAD9 /* NNMacrosExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E231239E486C0028EAD9 /* NNMacrosExampleTests.m */; };
+		7AD2E23D239E486C0028EAD9 /* NNMacrosExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E23C239E486C0028EAD9 /* NNMacrosExampleUITests.m */; };
+		7AD2E260239E48D20028EAD9 /* NNMacrosAppExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E251239E48D20028EAD9 /* NNMacrosAppExample.m */; };
+		7AD2E261239E48D20028EAD9 /* NNMacrosLazyGetterExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E254239E48D20028EAD9 /* NNMacrosLazyGetterExample.m */; };
+		7AD2E262239E48D20028EAD9 /* NNMacrosScreenExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E255239E48D20028EAD9 /* NNMacrosScreenExample.m */; };
+		7AD2E263239E48D20028EAD9 /* NNMacrosSandboxPathExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E256239E48D20028EAD9 /* NNMacrosSandboxPathExample.m */; };
+		7AD2E264239E48D20028EAD9 /* NNMacrosSynthesizeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E258239E48D20028EAD9 /* NNMacrosSynthesizeExample.m */; };
+		7AD2E265239E48D20028EAD9 /* NNMacrosVersionExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E25B239E48D20028EAD9 /* NNMacrosVersionExample.m */; };
+		7AD2E266239E48D20028EAD9 /* NNMacrosStringExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E25C239E48D20028EAD9 /* NNMacrosStringExample.m */; };
+		7AD2E267239E48D20028EAD9 /* NNMacrosDeviceExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E25D239E48D20028EAD9 /* NNMacrosDeviceExample.m */; };
+		7AD2E268239E48D20028EAD9 /* NNMacrosScopeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E25F239E48D20028EAD9 /* NNMacrosScopeExample.m */; };
+		7AD2E26B239E49530028EAD9 /* NNMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2E26A239E49530028EAD9 /* NNMacros.framework */; };
+		7AD2E26C239E49530028EAD9 /* NNMacros.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2E26A239E49530028EAD9 /* NNMacros.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7AD2E271239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7AD2E22E239E486C0028EAD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AD2E20A239E486A0028EAD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AD2E211239E486A0028EAD9;
+			remoteInfo = NNMacrosExample;
+		};
+		7AD2E239239E486C0028EAD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AD2E20A239E486A0028EAD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AD2E211239E486A0028EAD9;
+			remoteInfo = NNMacrosExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7AD2E26D239E49530028EAD9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7AD2E26C239E49530028EAD9 /* NNMacros.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7AD2E212239E486A0028EAD9 /* NNMacrosExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNMacrosExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD2E215239E486A0028EAD9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7AD2E216239E486A0028EAD9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7AD2E21B239E486A0028EAD9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7AD2E21C239E486A0028EAD9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7AD2E21F239E486A0028EAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AD2E221239E486C0028EAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AD2E224239E486C0028EAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AD2E226239E486C0028EAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD2E227239E486C0028EAD9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7AD2E22D239E486C0028EAD9 /* NNMacrosExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNMacrosExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD2E231239E486C0028EAD9 /* NNMacrosExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosExampleTests.m; sourceTree = "<group>"; };
+		7AD2E233239E486C0028EAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD2E238239E486C0028EAD9 /* NNMacrosExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNMacrosExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD2E23C239E486C0028EAD9 /* NNMacrosExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosExampleUITests.m; sourceTree = "<group>"; };
+		7AD2E23E239E486C0028EAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD2E24B239E48D20028EAD9 /* NNMacrosSynthesizeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosSynthesizeExample.h; sourceTree = "<group>"; };
+		7AD2E24C239E48D20028EAD9 /* NNMacrosSandboxPathExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosSandboxPathExample.h; sourceTree = "<group>"; };
+		7AD2E24D239E48D20028EAD9 /* NNMacrosScreenExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosScreenExample.h; sourceTree = "<group>"; };
+		7AD2E24E239E48D20028EAD9 /* NNMacrosLazyGetterExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosLazyGetterExample.h; sourceTree = "<group>"; };
+		7AD2E24F239E48D20028EAD9 /* NNMacrosStringExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosStringExample.h; sourceTree = "<group>"; };
+		7AD2E250239E48D20028EAD9 /* NNMacrosVersionExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosVersionExample.h; sourceTree = "<group>"; };
+		7AD2E251239E48D20028EAD9 /* NNMacrosAppExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosAppExample.m; sourceTree = "<group>"; };
+		7AD2E252239E48D20028EAD9 /* NNMacrosDeviceExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosDeviceExample.h; sourceTree = "<group>"; };
+		7AD2E253239E48D20028EAD9 /* NNMacrosScopeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosScopeExample.h; sourceTree = "<group>"; };
+		7AD2E254239E48D20028EAD9 /* NNMacrosLazyGetterExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosLazyGetterExample.m; sourceTree = "<group>"; };
+		7AD2E255239E48D20028EAD9 /* NNMacrosScreenExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosScreenExample.m; sourceTree = "<group>"; };
+		7AD2E256239E48D20028EAD9 /* NNMacrosSandboxPathExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosSandboxPathExample.m; sourceTree = "<group>"; };
+		7AD2E257239E48D20028EAD9 /* NNMacrosExampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosExampleProtocol.h; sourceTree = "<group>"; };
+		7AD2E258239E48D20028EAD9 /* NNMacrosSynthesizeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosSynthesizeExample.m; sourceTree = "<group>"; };
+		7AD2E259239E48D20028EAD9 /* NNMacrosExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosExample.h; sourceTree = "<group>"; };
+		7AD2E25A239E48D20028EAD9 /* NNMacrosAppExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosAppExample.h; sourceTree = "<group>"; };
+		7AD2E25B239E48D20028EAD9 /* NNMacrosVersionExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosVersionExample.m; sourceTree = "<group>"; };
+		7AD2E25C239E48D20028EAD9 /* NNMacrosStringExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosStringExample.m; sourceTree = "<group>"; };
+		7AD2E25D239E48D20028EAD9 /* NNMacrosDeviceExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosDeviceExample.m; sourceTree = "<group>"; };
+		7AD2E25E239E48D20028EAD9 /* NNMacrosShortHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMacrosShortHead.h; sourceTree = "<group>"; };
+		7AD2E25F239E48D20028EAD9 /* NNMacrosScopeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMacrosScopeExample.m; sourceTree = "<group>"; };
+		7AD2E26A239E49530028EAD9 /* NNMacros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NNMacros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD2E26E239E49860028EAD9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7AD2E26F239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosNSNotificationNameExample.h; sourceTree = "<group>"; };
+		7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosNSNotificationNameExample.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AD2E20F239E486A0028EAD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD2E26B239E49530028EAD9 /* NNMacros.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD2E22A239E486C0028EAD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD2E235239E486C0028EAD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AD2E209239E486A0028EAD9 = {
+			isa = PBXGroup;
+			children = (
+				7AD2E214239E486A0028EAD9 /* NNMacrosExample */,
+				7AD2E230239E486C0028EAD9 /* NNMacrosExampleTests */,
+				7AD2E23B239E486C0028EAD9 /* NNMacrosExampleUITests */,
+				7AD2E213239E486A0028EAD9 /* Products */,
+				7AD2E269239E49530028EAD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7AD2E213239E486A0028EAD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E212239E486A0028EAD9 /* NNMacrosExample.app */,
+				7AD2E22D239E486C0028EAD9 /* NNMacrosExampleTests.xctest */,
+				7AD2E238239E486C0028EAD9 /* NNMacrosExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AD2E214239E486A0028EAD9 /* NNMacrosExample */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E24A239E48D20028EAD9 /* Example */,
+				7AD2E215239E486A0028EAD9 /* AppDelegate.h */,
+				7AD2E216239E486A0028EAD9 /* AppDelegate.m */,
+				7AD2E21B239E486A0028EAD9 /* ViewController.h */,
+				7AD2E21C239E486A0028EAD9 /* ViewController.m */,
+				7AD2E21E239E486A0028EAD9 /* Main.storyboard */,
+				7AD2E221239E486C0028EAD9 /* Assets.xcassets */,
+				7AD2E223239E486C0028EAD9 /* LaunchScreen.storyboard */,
+				7AD2E226239E486C0028EAD9 /* Info.plist */,
+				7AD2E227239E486C0028EAD9 /* main.m */,
+				7AD2E26E239E49860028EAD9 /* PrefixHeader.pch */,
+			);
+			path = NNMacrosExample;
+			sourceTree = "<group>";
+		};
+		7AD2E230239E486C0028EAD9 /* NNMacrosExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E231239E486C0028EAD9 /* NNMacrosExampleTests.m */,
+				7AD2E233239E486C0028EAD9 /* Info.plist */,
+			);
+			path = NNMacrosExampleTests;
+			sourceTree = "<group>";
+		};
+		7AD2E23B239E486C0028EAD9 /* NNMacrosExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E23C239E486C0028EAD9 /* NNMacrosExampleUITests.m */,
+				7AD2E23E239E486C0028EAD9 /* Info.plist */,
+			);
+			path = NNMacrosExampleUITests;
+			sourceTree = "<group>";
+		};
+		7AD2E24A239E48D20028EAD9 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E25A239E48D20028EAD9 /* NNMacrosAppExample.h */,
+				7AD2E251239E48D20028EAD9 /* NNMacrosAppExample.m */,
+				7AD2E252239E48D20028EAD9 /* NNMacrosDeviceExample.h */,
+				7AD2E25D239E48D20028EAD9 /* NNMacrosDeviceExample.m */,
+				7AD2E259239E48D20028EAD9 /* NNMacrosExample.h */,
+				7AD2E257239E48D20028EAD9 /* NNMacrosExampleProtocol.h */,
+				7AD2E24E239E48D20028EAD9 /* NNMacrosLazyGetterExample.h */,
+				7AD2E254239E48D20028EAD9 /* NNMacrosLazyGetterExample.m */,
+				7AD2E24C239E48D20028EAD9 /* NNMacrosSandboxPathExample.h */,
+				7AD2E256239E48D20028EAD9 /* NNMacrosSandboxPathExample.m */,
+				7AD2E253239E48D20028EAD9 /* NNMacrosScopeExample.h */,
+				7AD2E25F239E48D20028EAD9 /* NNMacrosScopeExample.m */,
+				7AD2E24D239E48D20028EAD9 /* NNMacrosScreenExample.h */,
+				7AD2E255239E48D20028EAD9 /* NNMacrosScreenExample.m */,
+				7AD2E25E239E48D20028EAD9 /* NNMacrosShortHead.h */,
+				7AD2E24F239E48D20028EAD9 /* NNMacrosStringExample.h */,
+				7AD2E25C239E48D20028EAD9 /* NNMacrosStringExample.m */,
+				7AD2E24B239E48D20028EAD9 /* NNMacrosSynthesizeExample.h */,
+				7AD2E258239E48D20028EAD9 /* NNMacrosSynthesizeExample.m */,
+				7AD2E250239E48D20028EAD9 /* NNMacrosVersionExample.h */,
+				7AD2E25B239E48D20028EAD9 /* NNMacrosVersionExample.m */,
+				7AD2E26F239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.h */,
+				7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		7AD2E269239E49530028EAD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E26A239E49530028EAD9 /* NNMacros.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AD2E211239E486A0028EAD9 /* NNMacrosExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AD2E241239E486C0028EAD9 /* Build configuration list for PBXNativeTarget "NNMacrosExample" */;
+			buildPhases = (
+				7AD2E20E239E486A0028EAD9 /* Sources */,
+				7AD2E20F239E486A0028EAD9 /* Frameworks */,
+				7AD2E210239E486A0028EAD9 /* Resources */,
+				7AD2E26D239E49530028EAD9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NNMacrosExample;
+			productName = NNMacrosExample;
+			productReference = 7AD2E212239E486A0028EAD9 /* NNMacrosExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7AD2E22C239E486C0028EAD9 /* NNMacrosExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AD2E244239E486C0028EAD9 /* Build configuration list for PBXNativeTarget "NNMacrosExampleTests" */;
+			buildPhases = (
+				7AD2E229239E486C0028EAD9 /* Sources */,
+				7AD2E22A239E486C0028EAD9 /* Frameworks */,
+				7AD2E22B239E486C0028EAD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AD2E22F239E486C0028EAD9 /* PBXTargetDependency */,
+			);
+			name = NNMacrosExampleTests;
+			productName = NNMacrosExampleTests;
+			productReference = 7AD2E22D239E486C0028EAD9 /* NNMacrosExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7AD2E237239E486C0028EAD9 /* NNMacrosExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AD2E247239E486C0028EAD9 /* Build configuration list for PBXNativeTarget "NNMacrosExampleUITests" */;
+			buildPhases = (
+				7AD2E234239E486C0028EAD9 /* Sources */,
+				7AD2E235239E486C0028EAD9 /* Frameworks */,
+				7AD2E236239E486C0028EAD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AD2E23A239E486C0028EAD9 /* PBXTargetDependency */,
+			);
+			name = NNMacrosExampleUITests;
+			productName = NNMacrosExampleUITests;
+			productReference = 7AD2E238239E486C0028EAD9 /* NNMacrosExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AD2E20A239E486A0028EAD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "顾海军";
+				TargetAttributes = {
+					7AD2E211239E486A0028EAD9 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					7AD2E22C239E486C0028EAD9 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 7AD2E211239E486A0028EAD9;
+					};
+					7AD2E237239E486C0028EAD9 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 7AD2E211239E486A0028EAD9;
+					};
+				};
+			};
+			buildConfigurationList = 7AD2E20D239E486A0028EAD9 /* Build configuration list for PBXProject "NNMacrosExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AD2E209239E486A0028EAD9;
+			productRefGroup = 7AD2E213239E486A0028EAD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AD2E211239E486A0028EAD9 /* NNMacrosExample */,
+				7AD2E22C239E486C0028EAD9 /* NNMacrosExampleTests */,
+				7AD2E237239E486C0028EAD9 /* NNMacrosExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AD2E210239E486A0028EAD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD2E225239E486C0028EAD9 /* LaunchScreen.storyboard in Resources */,
+				7AD2E222239E486C0028EAD9 /* Assets.xcassets in Resources */,
+				7AD2E220239E486A0028EAD9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD2E22B239E486C0028EAD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD2E236239E486C0028EAD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AD2E20E239E486A0028EAD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD2E266239E48D20028EAD9 /* NNMacrosStringExample.m in Sources */,
+				7AD2E265239E48D20028EAD9 /* NNMacrosVersionExample.m in Sources */,
+				7AD2E21D239E486A0028EAD9 /* ViewController.m in Sources */,
+				7AD2E217239E486A0028EAD9 /* AppDelegate.m in Sources */,
+				7AD2E271239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m in Sources */,
+				7AD2E261239E48D20028EAD9 /* NNMacrosLazyGetterExample.m in Sources */,
+				7AD2E228239E486C0028EAD9 /* main.m in Sources */,
+				7AD2E268239E48D20028EAD9 /* NNMacrosScopeExample.m in Sources */,
+				7AD2E267239E48D20028EAD9 /* NNMacrosDeviceExample.m in Sources */,
+				7AD2E263239E48D20028EAD9 /* NNMacrosSandboxPathExample.m in Sources */,
+				7AD2E260239E48D20028EAD9 /* NNMacrosAppExample.m in Sources */,
+				7AD2E262239E48D20028EAD9 /* NNMacrosScreenExample.m in Sources */,
+				7AD2E264239E48D20028EAD9 /* NNMacrosSynthesizeExample.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD2E229239E486C0028EAD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD2E232239E486C0028EAD9 /* NNMacrosExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD2E234239E486C0028EAD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD2E23D239E486C0028EAD9 /* NNMacrosExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AD2E22F239E486C0028EAD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AD2E211239E486A0028EAD9 /* NNMacrosExample */;
+			targetProxy = 7AD2E22E239E486C0028EAD9 /* PBXContainerItemProxy */;
+		};
+		7AD2E23A239E486C0028EAD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AD2E211239E486A0028EAD9 /* NNMacrosExample */;
+			targetProxy = 7AD2E239239E486C0028EAD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7AD2E21E239E486A0028EAD9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AD2E21F239E486A0028EAD9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7AD2E223239E486C0028EAD9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AD2E224239E486C0028EAD9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7AD2E23F239E486C0028EAD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7AD2E240239E486C0028EAD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AD2E242239E486C0028EAD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NNMacrosExample/PrefixHeader.pch";
+				INFOPLIST_FILE = NNMacrosExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AD2E243239E486C0028EAD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NNMacrosExample/PrefixHeader.pch";
+				INFOPLIST_FILE = NNMacrosExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7AD2E245239E486C0028EAD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NNMacrosExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NNMacrosExample.app/NNMacrosExample";
+			};
+			name = Debug;
+		};
+		7AD2E246239E486C0028EAD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NNMacrosExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NNMacrosExample.app/NNMacrosExample";
+			};
+			name = Release;
+		};
+		7AD2E248239E486C0028EAD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NNMacrosExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NNMacrosExample;
+			};
+			name = Debug;
+		};
+		7AD2E249239E486C0028EAD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NNMacrosExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NNMacrosExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AD2E20D239E486A0028EAD9 /* Build configuration list for PBXProject "NNMacrosExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AD2E23F239E486C0028EAD9 /* Debug */,
+				7AD2E240239E486C0028EAD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AD2E241239E486C0028EAD9 /* Build configuration list for PBXNativeTarget "NNMacrosExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AD2E242239E486C0028EAD9 /* Debug */,
+				7AD2E243239E486C0028EAD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AD2E244239E486C0028EAD9 /* Build configuration list for PBXNativeTarget "NNMacrosExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AD2E245239E486C0028EAD9 /* Debug */,
+				7AD2E246239E486C0028EAD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AD2E247239E486C0028EAD9 /* Build configuration list for PBXNativeTarget "NNMacrosExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AD2E248239E486C0028EAD9 /* Debug */,
+				7AD2E249239E486C0028EAD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AD2E20A239E486A0028EAD9 /* Project object */;
+}

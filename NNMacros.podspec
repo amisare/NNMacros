@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "NNMacros"
-  s.version       = "2.3.2"
+  s.version       = "2.3.3"
   s.summary       = "NNMacros: Macros used in Objective-C development"
 
   s.description   = <<-DESC
@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
   s.static_framework = true
 
-  s.source_files  = 'NNMacros/NNMacros/*.{h,m}', 'NNMacros/NNMacros/CocoapodsFix/*.{h,m}'
+  s.source_files  = 'NNMacros/*.{h,m}', 'NNMacros/CocoapodsFix/*.{h,m}'
 
   s.default_subspec         = 'Bases'
   s.subspec 'Bases' do |ss|
-    ss.source_files         = 'NNMacros/NNMacros/Bases/*.{h,m}'
+    ss.source_files         = 'NNMacros/Bases/*.{h,m}'
   end
 
 end

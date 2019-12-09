@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  NNMacrosExample
+//
+//  Created by 顾海军 on 2016/10/14.
+//  Copyright © 2016年 顾海军. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <NNMacros/NNMacros.h>
+#import "NNMacrosShortHead.h"
+
+#endif /* PrefixHeader_pch */
