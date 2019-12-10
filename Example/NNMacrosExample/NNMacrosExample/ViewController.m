@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NNMacrosExample.h"
+#import "NNMacrosExample-Swift.h"
 
 
 @interface ViewController ()
@@ -47,6 +48,7 @@
     NNMacrosTest(NNMacrosScreenExample)
     NNMacrosTest(NNMacrosScopeExample)
     NNMacrosTest(NNMacrosNSNotificationNameExample)
+	NNMacrosTest(NNMacrosNSNotificationNameExampleSwift)
 }
 
 - (void)redirectNotificationHandle:(NSNotification *)notification{

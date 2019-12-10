@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "NNMacros"
-  s.version       = "2.3.3"
+  s.version       = "2.4.0"
   s.summary       = "NNMacros: Macros used in Objective-C development"
 
   s.description   = <<-DESC

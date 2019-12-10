@@ -8,8 +8,6 @@
 
 #import "NNMacrosNSNotificationNameExample.h"
 
-NN_NSNotificationName(Example, @"com.nn.macros", name0, name1);
-
 @implementation NNMacrosNSNotificationNameExample {
 	id _observer;
 }
@@ -17,7 +15,7 @@ NN_NSNotificationName(Example, @"com.nn.macros", name0, name1);
 - (instancetype)init {
 	self = [super init];
 	_observer =
-	[[NSNotificationCenter defaultCenter] addObserverForName:NN_NSNotificationName(Example).name0
+	[[NSNotificationCenter defaultCenter] addObserverForName:Example.Name0
 													  object:nil
 													   queue:[NSOperationQueue mainQueue]
 												  usingBlock:^(NSNotification * _Nonnull note) {
@@ -25,14 +23,14 @@ NN_NSNotificationName(Example, @"com.nn.macros", name0, name1);
 	}];
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(observerHandler:)
-												 name:NN_NSNotificationName(Example).name1
+												 name:Example.Name1
 											   object:nil];
 	return self;
 }
 
 - (void)macroTest {
-	[[NSNotificationCenter defaultCenter] postNotificationName:NN_NSNotificationName(Example).name0 object:@"post_name0"];
-	[[NSNotificationCenter defaultCenter] postNotificationName:NN_NSNotificationName(Example).name1 object:@"post_name1"];
+	[[NSNotificationCenter defaultCenter] postNotificationName:Example.Name0 object:@"post_name0"];
+	[[NSNotificationCenter defaultCenter] postNotificationName:Example.Name1 object:@"post_name1"];
 }
 
 - (void)observerHandler:(NSNotification *)note {

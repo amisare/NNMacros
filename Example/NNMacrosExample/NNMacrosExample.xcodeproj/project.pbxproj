@@ -27,6 +27,7 @@
 		7AD2E26B239E49530028EAD9 /* NNMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2E26A239E49530028EAD9 /* NNMacros.framework */; };
 		7AD2E26C239E49530028EAD9 /* NNMacros.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2E26A239E49530028EAD9 /* NNMacros.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AD2E271239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */; };
+		7AD2E281239F2F5D0028EAD9 /* NNMacrosNSNotificationNameExampleSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E280239F2F5D0028EAD9 /* NNMacrosNSNotificationNameExampleSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		7AD2E26E239E49860028EAD9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7AD2E26F239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosNSNotificationNameExample.h; sourceTree = "<group>"; };
 		7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosNSNotificationNameExample.m; sourceTree = "<group>"; };
+		7AD2E27D239F2EEF0028EAD9 /* NNMacrosExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NNMacrosExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		7AD2E280239F2F5D0028EAD9 /* NNMacrosNSNotificationNameExampleSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNMacrosNSNotificationNameExampleSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,7 @@
 				7AD2E226239E486C0028EAD9 /* Info.plist */,
 				7AD2E227239E486C0028EAD9 /* main.m */,
 				7AD2E26E239E49860028EAD9 /* PrefixHeader.pch */,
+				7AD2E27D239F2EEF0028EAD9 /* NNMacrosExample-Bridging-Header.h */,
 			);
 			path = NNMacrosExample;
 			sourceTree = "<group>";
@@ -211,6 +215,7 @@
 				7AD2E258239E48D20028EAD9 /* NNMacrosSynthesizeExample.m */,
 				7AD2E250239E48D20028EAD9 /* NNMacrosVersionExample.h */,
 				7AD2E25B239E48D20028EAD9 /* NNMacrosVersionExample.m */,
+				7AD2E280239F2F5D0028EAD9 /* NNMacrosNSNotificationNameExampleSwift.swift */,
 				7AD2E26F239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.h */,
 				7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */,
 			);
@@ -293,6 +298,7 @@
 				TargetAttributes = {
 					7AD2E211239E486A0028EAD9 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					7AD2E22C239E486C0028EAD9 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -368,6 +374,7 @@
 				7AD2E263239E48D20028EAD9 /* NNMacrosSandboxPathExample.m in Sources */,
 				7AD2E260239E48D20028EAD9 /* NNMacrosAppExample.m in Sources */,
 				7AD2E262239E48D20028EAD9 /* NNMacrosScreenExample.m in Sources */,
+				7AD2E281239F2F5D0028EAD9 /* NNMacrosNSNotificationNameExampleSwift.swift in Sources */,
 				7AD2E264239E48D20028EAD9 /* NNMacrosSynthesizeExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NNMacrosExample/PrefixHeader.pch";
 				INFOPLIST_FILE = NNMacrosExample/Info.plist;
@@ -546,6 +554,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NNMacrosExample/NNMacrosExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -554,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NNMacrosExample/PrefixHeader.pch";
 				INFOPLIST_FILE = NNMacrosExample/Info.plist;
@@ -563,6 +575,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nn.NNMacrosExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NNMacrosExample/NNMacrosExample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -570,6 +584,7 @@
 		7AD2E245239E486C0028EAD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NNMacrosExampleTests/Info.plist;
@@ -589,6 +604,7 @@
 		7AD2E246239E486C0028EAD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NNMacrosExampleTests/Info.plist;
@@ -608,6 +624,7 @@
 		7AD2E248239E486C0028EAD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NNMacrosExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -625,6 +642,7 @@
 		7AD2E249239E486C0028EAD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NNMacrosExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

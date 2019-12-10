@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "NNMacrosExampleProtocol.h"
+#import <NNMacros/NNMacros.h>
+
+NN_NSNotificationName(Example, @"com.nn.macros", Name0, Name1);
 
 NS_ASSUME_NONNULL_BEGIN
 
