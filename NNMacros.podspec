@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "NNMacros"
-  s.version       = "2.4.0"
+  s.version       = "2.4.1"
   s.summary       = "NNMacros: Macros used in Objective-C development"
 
   s.description   = <<-DESC
@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/amisare/NNMacros.git", :tag => s.version.to_s }
   s.ios.deployment_target   = '6.0'
   s.requires_arc  = true
-  s.static_framework = true
 
   s.source_files  = 'NNMacros/*.{h,m}', 'NNMacros/CocoapodsFix/*.{h,m}'
 
