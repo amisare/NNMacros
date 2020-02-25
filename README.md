@@ -7,10 +7,13 @@
 [![GitHub license](https://img.shields.io/github/license/amisare/NNMacros.svg)](https://github.com/amisare/NNMacros/blob/master/LICENSE)
 
 ## 项目简介
+
 - NNMacros 通过宏的方式来简化 Objective-C 在 iOS 开发中的语法和 API
 
-
 ## 功能介绍
+
+### nn_lazygetter
+nn_lazygetter简写懒加载getter实现
 
 ### nn_associated_synthesize
 nn_associated_synthesize用于简化通过associated为类动态添加属性时的getter和setter实现。
@@ -19,12 +22,22 @@ nn_associated_synthesize用于简化通过associated为类动态添加属性时�
 - nn_associated_getter: 属性getter方法实现
 - nn_associated_setter: 属性setter方法实现
 
-### nn_lazygetter
-nn_lazygetter简写懒加载getter实现
-
 - nn_lazygetter: 属性懒加载getter方法实现
 
 ## 语法说明（详细使用见[使用示例](#使用示例)）
+
+### nn_lazygetter
+
+1. `nn_lazygetter(type, ...)`
+	- 3 个入参：
+        - type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
+        - param0:（必传）属性名称
+        - param1:（选传）插入的初始话代码块，传参为代码块`{}`
+    - 4 个入参：
+        - type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
+        - param0:（必传）属性名称
+        - param1:（选传）非property属性，或getter和setter均需重写时，传入操作变量 如：变量var，则传入var
+        - param2:（选传）插入的初始话代码块，传参为代码块`{}`
 
 ### nn_associated_synthesize
 
@@ -61,21 +74,89 @@ nn_lazygetter简写懒加载getter实现
    > - __ivar: setter方法传入参数值
    > - __obj: objc_getAssociatedObject关联保存的对象
 
-### nn_lazygetter
-
-1. `nn_lazygetter(type, ...)`
-	- 3 个入参：
-        - type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
-        - param0:（必传）属性名称
-        - param1:（选传）插入的初始话代码块，传参为代码块`{}`
-    - 4 个入参：
-        - type: 属性类型 `类：NSObject *、NSString * ...`（因为懒加载是对象属性，所以此处省略*号）
-        - param0:（必传）属性名称
-        - param1:（选传）非property属性，或getter和setter均需重写时，传入操作变量 如：变量var，则传入var
-        - param2:（选传）插入的初始话代码块，传参为代码块`{}`
-
 
 ## 使用示例
+
+### nn_lazygetter
+nn_lazygetter宏替换了懒加载getter方法中的if判断部分，精简了懒加载书写，对于属性较多的类尤为明显。
+
+#### 1. 定义一个成员属性
+
+```
+@interface AwfulNSObject
+{
+	UITableView *table;
+}
+@property (nonatomic, strong) UITableView *tableView;
+@end
+
+```
+
+
+#### 2.实现懒加载getter
+
+##### 示例一：实例化对象，默认调用的new方法
+
+```
+nn_lazygetter(UITableView, tableView)
+```
+
+等价
+
+```
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        _tableView = [UITableView new];
+    }
+    return _tableView;
+}
+```
+
+##### 示例二：在代码块`{}`中实例化对象，并初始化
+
+
+```
+nn_lazygetter(UITableView, tableView, {
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+})
+```
+
+等价
+
+```
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+    }
+    return _tableView;
+}
+```
+
+##### 示例三：通过第四个参数指定，指定属性(*用于处理getter方法和setter方法都需要重写的情况*)
+
+```
+nn_lazygetter(UITableView, tableView, {
+    self->table = [UITableView new];
+}, self->table)
+```
+
+等价
+
+```
+- (UITableView *)tableView
+{
+    if (!self->table) {
+        self->table = [UIImageView new];
+    }
+    return self->table;
+}
+```
 
 ### nn_associated_synthesize
 nn_associated_synthesize用于简化通过associated为类动态添加属性时的getter和setter实现。
@@ -126,8 +207,8 @@ nn_associated_synthesize(nonatomic, assign, NSInteger, param, setParam)
 
 #### 2.实现getter
 
-- 方式一：无hook代码块参数于nn_associated_synthesize中相同
-    
+##### 示例一：无hook代码块参数于nn_associated_synthesize中相同
+
 ```
 @implementation NSObject (Awful)
 nn_associated_getter(nonatomic, assign, NSInteger, param)
@@ -144,8 +225,8 @@ nn_associated_getter(nonatomic, assign, NSInteger, param)
 @end
 ```
 
-- 方式二：有hook代码块参数
-    
+##### 示例二：有hook代码块参数
+
 ```
 @implementation NSObject (Awful)
 nn_associated_getter(nonatomic, assign, NSInteger, param, {
@@ -181,9 +262,9 @@ nn_associated_getter(nonatomic, assign, NSInteger, param, {
 
 ```
 
-#### 2.实现setter
+#### 2. 实现setter
 
-- 方式一：无hook代码块参数于nn_associated_synthesize中相同
+##### 示例一：无hook代码块参数于nn_associated_synthesize中相同
     
 ```
 @implementation NSObject (Awful)
@@ -201,7 +282,7 @@ nn_associated_setter(nonatomic, assign, NSInteger, param)
 @end
 ```
 
-- 方式二：有hook代码块参数
+##### 示例二：有hook代码块参数
     
 ```
 @implementation NSObject (Awful)
@@ -227,86 +308,6 @@ nn_associated_setter(nonatomic, assign, NSInteger, param, {
 @end
 ```
 
-### nn_lazygetter
-nn_lazygetter宏替换了懒加载getter方法中的if判断部分，精简了懒加载书写，对于属性较多的类尤为明显。
-
-#### 1. 定义一个成员属性
-
-```
-@interface AwfulNSObject
-{
-	UITableView *table;
-}
-@property (nonatomic, strong) UITableView *tableView;
-@end
-
-```
-
-
-#### 2.实现懒加载getter
-
-- 方式一：实例化对象，默认调用的new方法
-    
-```
-nn_lazygetter(UITableView, tableView)
-```
-
-等价
-
-```
-- (UITableView *)tableView
-{
-    if (!_tableView) {
-        _tableView = [UITableView new];
-    }
-    return _tableView;
-}
-```
-
-- 方式二：在代码块`{}`中实例化对象，并初始化
-
-
-```
-nn_lazygetter(UITableView, tableView, {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-})
-```
-
-等价
-
-```
-- (UITableView *)tableView
-{
-    if (!_tableView) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-    }
-    return _tableView;
-}
-```
-
-- 方式三：通过第四个参数指定，指定属性(*用于处理getter方法和setter方法都需要重写的情况*)
-
-```
-nn_lazygetter(UITableView, tableView, {
-    self->table = [UITableView new];
-}, self->table)
-```
-
-等价
-
-```
-- (UITableView *)tableView
-{
-    if (!self->table) {
-        self->table = [UIImageView new];
-    }
-    return self->table;
-}
-```
 
 ## 集成
 
