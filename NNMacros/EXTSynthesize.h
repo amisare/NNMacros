@@ -227,7 +227,7 @@ NS_INLINE nn_macros_propertyAttributes *nn_macros_copyPropertyAttributes (objc_p
     }
 
     // allocate enough space for the structure and the type string (plus a NUL)
-    nn_macros_propertyAttributes *attributes = calloc(1, sizeof(nn_macros_propertyAttributes) + typeLength + 1);
+    nn_macros_propertyAttributes *attributes = (nn_macros_propertyAttributes *)calloc(1, sizeof(nn_macros_propertyAttributes) + typeLength + 1);
     if (!attributes) {
         fprintf(stderr, "ERROR: Could not allocate nn_macros_propertyAttributes structure for attribute string \"%s\" for property %s\n", attrString, property_getName(property));
         return NULL;
