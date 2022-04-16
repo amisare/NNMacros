@@ -19,5 +19,6 @@
 #import "NNMacrosSynthesizeExample.h"
 #import "NNMacrosScopeExample.h"
 #import "NNMacrosNSNotificationNameExample.h"
+#import "NNMacrosCheckExample.h"
 
 #endif /* NNMacrosExample_h */

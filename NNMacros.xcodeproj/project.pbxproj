@@ -20,6 +20,7 @@
 		670F8DBB20C121B4004CB3E9 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F8DAF20C121B4004CB3E9 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67AA435A2277F9B000FEE272 /* NNMacrosCocoapodsFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AA43582277F9B000FEE272 /* NNMacrosCocoapodsFix.h */; };
 		67AA435B2277F9B000FEE272 /* NNMacrosCocoapodsFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AA43592277F9B000FEE272 /* NNMacrosCocoapodsFix.m */; };
+		67CE835B280A5E620037E3F5 /* NNMacrosCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CE8357280A5B680037E3F5 /* NNMacrosCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A48335F2356DCE500ACE8E1 /* NNMacrosAssociatedGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332C2356B06D00ACE8E1 /* NNMacrosAssociatedGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4833602356DCE500ACE8E1 /* NNMacrosAssociatedSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4833612356DCE500ACE8E1 /* NNMacrosAssociatedSynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +58,7 @@
 		670F8DAF20C121B4004CB3E9 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		67AA43582277F9B000FEE272 /* NNMacrosCocoapodsFix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosCocoapodsFix.h; sourceTree = "<group>"; };
 		67AA43592277F9B000FEE272 /* NNMacrosCocoapodsFix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosCocoapodsFix.m; sourceTree = "<group>"; };
+		67CE8357280A5B680037E3F5 /* NNMacrosCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosCheck.h; sourceTree = "<group>"; };
 		7A48332B2356B04500ACE8E1 /* NNMacrosAssociatedSynthesize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedSynthesize.h; sourceTree = "<group>"; };
 		7A48332C2356B06D00ACE8E1 /* NNMacrosAssociatedGetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedGetter.h; sourceTree = "<group>"; };
 		7A48332D2356B07900ACE8E1 /* NNMacrosAssociatedSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosAssociatedSetter.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				670F8DAC20C121B4004CB3E9 /* NNMacrosVersion.h */,
 				7AD2E207239E471A0028EAD9 /* NNMacrosNSNotificationName.h */,
 				7A8EFB6523684AAF0061EFD3 /* EXTSynthesize.h */,
+				67CE8357280A5B680037E3F5 /* NNMacrosCheck.h */,
 				670F8DAE20C121B4004CB3E9 /* Bases */,
 				67AA43562277F98500FEE272 /* CocoapodsFix */,
 				670F8D8D20C120FA004CB3E9 /* Info.plist */,
@@ -179,6 +182,7 @@
 				670F8DB620C121B4004CB3E9 /* NNMacrosLazyGetter.h in Headers */,
 				7AD2E208239E47A30028EAD9 /* NNMacrosNSNotificationName.h in Headers */,
 				7A8EFB6623684AAF0061EFD3 /* EXTSynthesize.h in Headers */,
+				67CE835B280A5E620037E3F5 /* NNMacrosCheck.h in Headers */,
 				670F8DBB20C121B4004CB3E9 /* metamacros.h in Headers */,
 				67AA435A2277F9B000FEE272 /* NNMacrosCocoapodsFix.h in Headers */,
 			);

@@ -71,10 +71,10 @@ nn_lazygetter(NSMutableString, str_4)
 
 #pragma mark - 方式二
 //方式二：在{}中实例化对象，并初始化
-nn_lazygetter(NSMutableString, str_5, {
+nn_lazygetter(NSMutableString, str_5, ({
     self.str_5 = [NSMutableString new];
     [self.str_5 appendString:@"str_5"];
-})
+}))
 
 #pragma mark - 方式三
 //方式三：通过第四个参数指定，指定属性
@@ -82,15 +82,15 @@ nn_lazygetter(NSMutableString, str_5, {
 {
     __str_n = str;
 }
-nn_lazygetter(NSMutableString, str_n, __str_n, {
+nn_lazygetter(NSMutableString, str_n, __str_n, ({
     __str_n = [NSMutableString new];
     [__str_n appendString:@"str_5"];
-})
+}))
 
 
 #pragma mark - 问题一：array会遇到的问题
 //问题一：
-nn_lazygetter(NSMutableArray, arr_issue_0, {
+nn_lazygetter(NSMutableArray, arr_issue_0, ({
     self.arr_issue_0 = [NSMutableArray new];
     //编译错误代码：
     /*
@@ -98,12 +98,12 @@ nn_lazygetter(NSMutableArray, arr_issue_0, {
      */
     //解决方法，在数组外面加上小括号
     [self.arr_issue_0 addObjectsFromArray:(@[@"arr_objc_0", @"arr_objc_1"])];
-})
+}))
 
 
 #pragma mark - 问题二：dic会遇到的问题
 //问题二：
-nn_lazygetter(NSMutableDictionary, dic_issue_0, {
+nn_lazygetter(NSMutableDictionary, dic_issue_0, ({
     self.dic_issue_0 = [NSMutableDictionary new];
     //编译错误代码：
     /*
@@ -113,7 +113,7 @@ nn_lazygetter(NSMutableDictionary, dic_issue_0, {
     //解决方法，在数组外面加上小括号
     [self.dic_issue_0 setValuesForKeysWithDictionary:(@{@"key0":@"value0",
                                                         @"key1":@"value1"})];
-})
+}))
 
 
 @end

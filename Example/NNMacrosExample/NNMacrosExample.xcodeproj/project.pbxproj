@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67CE835A280A5D3E0037E3F5 /* NNMacrosCheckExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CE8359280A5D3E0037E3F5 /* NNMacrosCheckExample.m */; };
 		7AD2E217239E486A0028EAD9 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E216239E486A0028EAD9 /* AppDelegate.mm */; };
 		7AD2E21D239E486A0028EAD9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E21C239E486A0028EAD9 /* ViewController.m */; };
 		7AD2E220239E486A0028EAD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2E21E239E486A0028EAD9 /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		67CE8358280A5D3E0037E3F5 /* NNMacrosCheckExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosCheckExample.h; sourceTree = "<group>"; };
+		67CE8359280A5D3E0037E3F5 /* NNMacrosCheckExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosCheckExample.m; sourceTree = "<group>"; };
 		7AD2E212239E486A0028EAD9 /* NNMacrosExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNMacrosExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD2E215239E486A0028EAD9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7AD2E216239E486A0028EAD9 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				7AD2E258239E48D20028EAD9 /* NNMacrosSynthesizeExample.m */,
 				7AD2E250239E48D20028EAD9 /* NNMacrosVersionExample.h */,
 				7AD2E25B239E48D20028EAD9 /* NNMacrosVersionExample.m */,
+				67CE8358280A5D3E0037E3F5 /* NNMacrosCheckExample.h */,
+				67CE8359280A5D3E0037E3F5 /* NNMacrosCheckExample.m */,
 				7AD2E280239F2F5D0028EAD9 /* NNMacrosNSNotificationNameExampleSwift.swift */,
 				7AD2E26F239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.h */,
 				7AD2E270239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m */,
@@ -369,6 +374,7 @@
 				7AD2E271239E4B030028EAD9 /* NNMacrosNSNotificationNameExample.m in Sources */,
 				7AD2E261239E48D20028EAD9 /* NNMacrosLazyGetterExample.m in Sources */,
 				7AD2E228239E486C0028EAD9 /* main.m in Sources */,
+				67CE835A280A5D3E0037E3F5 /* NNMacrosCheckExample.m in Sources */,
 				7AD2E268239E48D20028EAD9 /* NNMacrosScopeExample.m in Sources */,
 				7AD2E267239E48D20028EAD9 /* NNMacrosDeviceExample.m in Sources */,
 				7AD2E263239E48D20028EAD9 /* NNMacrosSandboxPathExample.m in Sources */,

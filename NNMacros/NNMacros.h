@@ -32,6 +32,7 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import <NNMacros/NNMacrosScreen.h>
 #import <NNMacros/NNMacrosVersion.h>
 #import <NNMacros/NNMacrosNSNotificationName.h>
+#import <NNMacros/NNMacrosCheck.h>
 #else
 #import "NNMacrosLazyGetter.h"
 #import "NNMacrosAssociatedCommon.h"
@@ -48,4 +49,5 @@ FOUNDATION_EXPORT const unsigned char NNMacrosVersionString[];
 #import "NNMacrosScreen.h"
 #import "NNMacrosVersion.h"
 #import "NNMacrosNSNotificationName.h"
+#import "NNMacrosCheck.h"
 #endif

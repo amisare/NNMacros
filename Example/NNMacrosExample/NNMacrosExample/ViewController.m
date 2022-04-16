@@ -49,6 +49,7 @@
     NNMacrosTest(NNMacrosScopeExample)
     NNMacrosTest(NNMacrosNSNotificationNameExample)
 	NNMacrosTest(NNMacrosNSNotificationNameExampleSwift)
+    NNMacrosTest(NNMacrosCheckExample)
 }
 
 - (void)redirectNotificationHandle:(NSNotification *)notification{
