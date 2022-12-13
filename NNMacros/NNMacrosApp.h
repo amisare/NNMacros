@@ -10,7 +10,7 @@
 #define NNMacrosApp_h
 
 #define NN_appName             ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"])
-#define NN_appShortVersion          ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define NN_appShortVersion     ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
 #define NN_appBuildVersion     ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
 
 #endif /* NNMacrosApp_h */
