@@ -327,7 +327,7 @@ $ gem install cocoapods
 在 `podfile` 中添加：
 
 ```ruby
-pod 'NNMacros', '~> 2.0.1'
+pod 'NNMacros', '~> 2.5.1'
 ```
 
 然后在终端执行：
@@ -362,7 +362,7 @@ $ brew install carthage
 通过 Carthage 将 NNMacros 集成到 Xcode 项目中，需要在 `Cartfile` 中添加：
 
 ```ogdl
-github "amisare/NNMacros" ~> 1.0.4
+github "amisare/NNMacros" ~> 2.5.1
 ```
 
 执行 `carthage` 构建 Framework ，并将 `NNMacros.framework` 添加到 Xcode 项目中。
