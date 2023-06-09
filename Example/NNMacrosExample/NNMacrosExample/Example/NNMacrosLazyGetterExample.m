@@ -82,10 +82,10 @@ nn_lazygetter(NSMutableString, str_5, ({
 {
     __str_n = str;
 }
-nn_lazygetter(NSMutableString, str_n, __str_n, ({
+nn_lazygetter(NSMutableString, str_n, __str_n, {
     __str_n = [NSMutableString new];
     [__str_n appendString:@"str_5"];
-}))
+})
 
 
 #pragma mark - 问题一：array会遇到的问题

@@ -35,23 +35,23 @@
 #ifndef nn_associated_synthesize
 
 #define nn_associated_synthesize(frist_type, ...) \
-        \
-        metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_associated_synthesize2(frist_type, __VA_ARGS__))\
-        (metamacro_if_eq(4, metamacro_argcount(__VA_ARGS__))(nn_associated_synthesize5(frist_type, __VA_ARGS__))\
-        (nn_lazygetterparamsother(type, __VA_ARGS__)))\
-        \
+\
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wcompound-token-split-by-macro\"") \
+metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_associated_synthesize2(frist_type, __VA_ARGS__))\
+(metamacro_if_eq(4, metamacro_argcount(__VA_ARGS__))(nn_associated_synthesize5(frist_type, __VA_ARGS__))\
+(nn_lazygetterparamsother(type, __VA_ARGS__)))\
+_Pragma("clang diagnostic pop")\
 
 #define nn_associated_synthesize2(frist_type, ...) \
-        \
-        synthesizeAssociation(frist_type, metamacro_at(0, __VA_ARGS__)) \
-        \
+\
+synthesizeAssociation(frist_type, metamacro_at(0, __VA_ARGS__)) \
 
 #define nn_associated_synthesize5(frist_type, ...) \
-        \
-        dynamic metamacro_at(2, __VA_ARGS__); \
-        nn_associated_getter(frist_type, metamacro_at(0, __VA_ARGS__), metamacro_at(1, __VA_ARGS__), metamacro_at(2, __VA_ARGS__)); \
-        nn_associated_setter(frist_type, metamacro_at(0, __VA_ARGS__), metamacro_at(1, __VA_ARGS__), metamacro_at(3, __VA_ARGS__)); \
-        \
+\
+dynamic metamacro_at(2, __VA_ARGS__); \
+nn_associated_getter(frist_type, metamacro_at(0, __VA_ARGS__), metamacro_at(1, __VA_ARGS__), metamacro_at(2, __VA_ARGS__)); \
+nn_associated_setter(frist_type, metamacro_at(0, __VA_ARGS__), metamacro_at(1, __VA_ARGS__), metamacro_at(3, __VA_ARGS__)); \
 
 #ifndef nn_synthesize
 

@@ -32,16 +32,21 @@
 #pragma mark - getter
 
 #define nn_associated_getter(atomic_type, arc_type, data_type, ...) \
-        metamacro_concat(nn_associated_getter, \
-        metamacro_concat(_, arc_type))\
-        (atomic_type, arc_type, data_type, nn_associated_getter_args_fill(3, __VA_ARGS__)) \
+\
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wcompound-token-split-by-macro\"") \
+metamacro_concat(nn_associated_getter, \
+metamacro_concat(_, arc_type))\
+(atomic_type, arc_type, data_type, nn_associated_getter_args_fill(3, __VA_ARGS__)) \
+_Pragma("clang diagnostic pop")\
 
 
 #pragma mark - getter tools
 
 #define nn_associated_getter_args_fill(expect_number, ...) \
-        metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
-        (__VA_ARGS__) \
+\
+metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(__VA_ARGS__, ,) \
+(__VA_ARGS__) \
 
 
 #pragma mark - getter strong

@@ -49,16 +49,18 @@
 
 #define nn_lazygetter(type, ...)\
 \
-metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, __VA_ARGS__))\
-(metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams3(type, __VA_ARGS__))\
-(metamacro_if_eq(3, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams4(type, __VA_ARGS__))\
-(nn_lazygetterparamsother(type, __VA_ARGS__))))\
-\
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wcompound-token-split-by-macro\"") \
+metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetter_params_2(type, __VA_ARGS__))\
+(metamacro_if_eq(2, metamacro_argcount(__VA_ARGS__))(nn_lazygetter_params_3(type, __VA_ARGS__))\
+(metamacro_if_eq(3, metamacro_argcount(__VA_ARGS__))(nn_lazygetter_params_4(type, __VA_ARGS__))\
+(nn_lazygetter_params_other(type, __VA_ARGS__))))\
+_Pragma("clang diagnostic pop")\
 
 
-#define nn_lazygetterparamsother(type, __VA_ARGS__)
+#define nn_lazygetter_params_other(type, __VA_ARGS__)
 
-#define nn_lazygetterparams2(type, ...)\
+#define nn_lazygetter_params_2(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
@@ -68,7 +70,7 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, _
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
 
-#define nn_lazygetterparams3(type, ...)\
+#define nn_lazygetter_params_3(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
@@ -78,7 +80,7 @@ metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(nn_lazygetterparams2(type, _
     return metamacro_concat(_, metamacro_at(0, __VA_ARGS__));\
 }\
 
-#define nn_lazygetterparams4(type, ...)\
+#define nn_lazygetter_params_4(type, ...)\
 \
 - (type *)metamacro_at(0, __VA_ARGS__)\
 {\
