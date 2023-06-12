@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670A09412A36C8FA00BB04D0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 670A09402A36C8F900BB04D0 /* README.md */; };
 		67CE835A280A5D3E0037E3F5 /* NNMacrosCheckExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CE8359280A5D3E0037E3F5 /* NNMacrosCheckExample.m */; };
 		7AD2E217239E486A0028EAD9 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E216239E486A0028EAD9 /* AppDelegate.mm */; };
 		7AD2E21D239E486A0028EAD9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E21C239E486A0028EAD9 /* ViewController.m */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		670A09402A36C8F900BB04D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		67CE8358280A5D3E0037E3F5 /* NNMacrosCheckExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMacrosCheckExample.h; sourceTree = "<group>"; };
 		67CE8359280A5D3E0037E3F5 /* NNMacrosCheckExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMacrosCheckExample.m; sourceTree = "<group>"; };
 		7AD2E212239E486A0028EAD9 /* NNMacrosExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNMacrosExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 		7AD2E209239E486A0028EAD9 = {
 			isa = PBXGroup;
 			children = (
+				670A09402A36C8F900BB04D0 /* README.md */,
 				7AD2E214239E486A0028EAD9 /* NNMacrosExample */,
 				7AD2E230239E486C0028EAD9 /* NNMacrosExampleTests */,
 				7AD2E23B239E486C0028EAD9 /* NNMacrosExampleUITests */,
@@ -342,6 +345,7 @@
 			files = (
 				7AD2E225239E486C0028EAD9 /* LaunchScreen.storyboard in Resources */,
 				7AD2E222239E486C0028EAD9 /* Assets.xcassets in Resources */,
+				670A09412A36C8FA00BB04D0 /* README.md in Resources */,
 				7AD2E220239E486A0028EAD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

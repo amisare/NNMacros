@@ -13,12 +13,12 @@
 ## 功能介绍
 
 ### nn_lazygetter
-nn_lazygetter简写懒加载getter实现
+nn_lazygetter 简写懒加载 getter 实现
 
 ### nn_associated_synthesize
 nn_associated_synthesize用于简化通过associated为类动态添加属性时的getter和setter实现。
 
-- nn_associated_synthesize: 属性getter/setter方法实现，类似于@implementation中的@synthesize
+- nn_associated_synthesize: 属性getter/setter方法实现，类似于 @implementation 中的 @synthesize
 - nn_associated_getter: 属性getter方法实现
 - nn_associated_setter: 属性setter方法实现
 
@@ -91,7 +91,6 @@ nn_lazygetter宏替换了懒加载getter方法中的if判断部分，精简了�
 @end
 
 ```
-
 
 #### 2.实现懒加载getter
 
@@ -327,7 +326,7 @@ $ gem install cocoapods
 在 `podfile` 中添加：
 
 ```ruby
-pod 'NNMacros', '~> 2.5.1'
+pod 'NNMacros', '~> 2.6.0'
 ```
 
 然后在终端执行：
