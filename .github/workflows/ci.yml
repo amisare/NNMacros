@@ -44,18 +44,6 @@ jobs:
      
   Build_Examples:
     runs-on: macos-latest
-    strategy:
-      matrix:
-        sdk: [ iOS13.3, iOS13.4 ]
-        include:
-          - sdk: iOS13.3
-            developer_dir: /Applications/Xcode_11.3.1.app
-            destination: OS=13.3,name=iPhone 11 Pro Max
-            scheme: NNMacrosExample
-          - sdk: iOS13.4
-            developer_dir: /Applications/Xcode_11.4.app
-            destination: OS=13.4,name=iPhone 11 Pro Max
-            scheme: NNMacrosExample
     steps:
       - uses: actions/checkout@v2
         with:
@@ -64,39 +52,18 @@ jobs:
         run: bundle install
       - name: build_examples
         env:
-          DEVELOPER_DIR: ${{ matrix.developer_dir }}
+          scheme: ${{ 'default' }}
+          platform: ${{ 'iOS Simulator' }}
         run: |
-          echo ""
-          set -o pipefail
-          xcodebuild -version -sdk
-          xcodebuild build -workspace "${{ env.POP_OBJC_WORKSPACE }}" -scheme "${{ matrix.scheme }}" -destination "${{ matrix.destination }}" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO | bundle exec xcpretty -c;
+          # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
+          device=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}' | sed -e "s/ Simulator$//"`
+          if [ $scheme = default ]; then scheme=$(cat default); fi
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
     
   Unit_Tests:
     runs-on: macos-latest
-    strategy:
-      matrix:
-        sdk: [ macOS, iOS13.3, tvOS13.3, iOS13.4, tvOS13.4 ]
-        include:
-          - sdk: macOS
-            developer_dir: /Applications/Xcode_11.3.1.app
-            destination: arch=x86_64
-            scheme: NNMacros macOS
-          - sdk: iOS13.3
-            developer_dir: /Applications/Xcode_11.3.1.app
-            destination: OS=13.3,name=iPhone 11 Pro Max
-            scheme: NNMacros iOS
-          - sdk: tvOS13.3
-            developer_dir: /Applications/Xcode_11.3.1.app
-            destination: OS=13.3,name=Apple TV 4K
-            scheme: NNMacros tvOS
-          - sdk: iOS13.4
-            developer_dir: /Applications/Xcode_11.4.app
-            destination: OS=13.4,name=iPhone 11 Pro Max
-            scheme: NNMacros iOS
-          - sdk: tvOS13.4
-            developer_dir: /Applications/Xcode_11.4.app
-            destination: OS=13.4,name=Apple TV 4K
-            scheme: NNMacros tvOS
     steps:
       - uses: actions/checkout@v2
         with:
@@ -105,9 +72,13 @@ jobs:
         run: bundle install
       - name: unit_tests
         env:
-          DEVELOPER_DIR: ${{ matrix.developer_dir }}
+          scheme: ${{ 'default' }}
+          platform: ${{ 'iOS Simulator' }}
         run: |
-          set -o pipefail
-          xcodebuild build build-for-testing -project "${{ env.POP_OBJC_PROJECT }}" -scheme "${{ matrix.scheme }}" -destination "${{ matrix.destination }}" -configuration Debug ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES ONLY_ACTIVE_ARCH=YES | bundle exec xcpretty -c;
-          xcodebuild analyze test-without-building -project "${{ env.POP_OBJC_PROJECT }}" -scheme "${{ matrix.scheme }}" -destination "${{ matrix.destination }}" -configuration Debug ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES ONLY_ACTIVE_ARCH=YES | bundle exec xcpretty -c;
+          # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
+          device=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}' | sed -e "s/ Simulator$//"`
+          if [ $scheme = default ]; then scheme=$(cat default); fi
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
       - uses: codecov/codecov-action@v1
