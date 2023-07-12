@@ -19,9 +19,6 @@ on:
 env:
    LANG: en_US.UTF-8
 
-   POP_OBJC_WORKSPACE: "NNMacros.xcworkspace"
-   POP_OBJC_PROJECT: "NNMacros.xcodeproj"
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   Cocoapods_Lint:
