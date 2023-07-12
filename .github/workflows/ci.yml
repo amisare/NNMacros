@@ -37,7 +37,7 @@ jobs:
         with:
           ref: ${{ github.sha }}
       - name: carthage_lint
-        run: carthage build --no-skip-current
+        run: carthage build --no-skip-current --use-xcframeworks
      
   Build_Examples:
     runs-on: macos-latest
@@ -49,7 +49,7 @@ jobs:
         run: bundle install
       - name: build_examples
         env:
-          scheme: ${{ 'default' }}
+          scheme: ${{ 'NNMacrosExample' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
           # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
@@ -69,7 +69,7 @@ jobs:
         run: bundle install
       - name: unit_tests
         env:
-          scheme: ${{ 'default' }}
+          scheme: ${{ 'NNMacrosExample' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
           # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
